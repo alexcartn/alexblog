@@ -2,7 +2,7 @@ baseURL = "http://localhost:1313/"
 title = "Dancing in the Rain"
 author = "Alex Carton"
 paginate = 5
-theme = hugo-apero
+theme = "apero"
 
 [params]
   orgName = "alexandrecarton"
