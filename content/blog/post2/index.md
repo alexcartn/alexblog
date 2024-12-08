@@ -1,5 +1,5 @@
 ---
-title: "Exploration des Fonctionnalités de Hugo"
+title: "Exploration des Fonctionnalités de Hugo, c'est cool ca change"
 date: 2024-12-05
 draft: false
 description: "Un article pour explorer les fonctionnalités avancées d'Hugo."
