@@ -1,0 +1,3 @@
+[submodule "themes/apero"]
+	path = themes/apero
+	url = https://github.com/hugo-apero/hugo-apero.git
