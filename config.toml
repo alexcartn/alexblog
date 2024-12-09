@@ -49,7 +49,7 @@ mainSections = ["blog", "project"]
   [[menu.header]]
     name = "À propos"
     title = "À propos"
-    url = "/about/"
+    url = "/aboutme/"
     weight = 3
 
   [[menu.footer]]
