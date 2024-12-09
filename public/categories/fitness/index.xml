@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fitness on Dancing in the Rain</title>
+    <link>http://localhost:1313/categories/fitness/</link>
+    <description>Recent content in Fitness on Dancing in the Rain</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/fitness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coherence Cardiaque</title>
+      <link>http://localhost:1313/blog/crossfit-pyramid/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/crossfit-pyramid/</guid>
+      <description>&lt;p&gt;Le Crossfit fonctionne par palier; Il est necessaire de valider, performer dans un palier pour pouvoir monter au palier suivant et profiter pleinement des adaptation physiologiques attendues.&lt;/p&gt;&#xA;&lt;p&gt;A la base c&amp;rsquo;est la nutrition; le carburant de notre moteur. Chaque athlete doit maitriser sa nutrition si il veut performer, c&amp;rsquo;est le premier facteur de performance.&lt;/p&gt;&#xA;&lt;p&gt;Ensuite le cardio, en effet, sans un systeme cardio-pulmonaire en bonne santé, la pratique du sport est dangereuse. Une base de cardio est obligatoire pour pouvoir commencer a montrer en charge, ou complexité, sur des entrainements a haute intensité.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

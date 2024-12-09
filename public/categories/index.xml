@@ -29,12 +29,5 @@
       <guid>http://localhost:1313/categories/r/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Développement</title>
-      <link>http://localhost:1313/categories/d%C3%A9veloppement/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/d%C3%A9veloppement/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
