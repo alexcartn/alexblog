@@ -1,15 +1,32 @@
 ---
 title: "Mon Premier Projet"
-date: 2024-12-07
+subtitle: "An R Package"
+excerpt: "This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the form front matter."
+date: 2019-07-01
+author: "Eric Anderson"
 draft: false
-description: "Un article pour tester mon blog avec Hugo Apéro."
-tags: ["blog", "hugo"]
-categories: ["Développement"]
+tags:
+  - hugo-site
+categories:
+  - Theme Features
+  - R
+  - package
 layout: single
-show_post_thumbnail: true
-thumbnail: "featured.jpg"
-author: "Alex CARTON"
+links:
+- icon: door-open
+  icon_pack: fas
+  name: website
+  url: https://bakeoff.netlify.com/
+- icon: github
+  icon_pack: fab
+  name: code
+  url: https://github.com/apreshill/bakeoff
 ---
+
+![Formspree Logo](formspree-logo.png)
+
+## [Formspree](https://formspree.io) makes it easy to receive submissions from HTML forms on your static website.
+
 
 # Bienvenue dans mon premier post !
 
@@ -18,5 +35,9 @@ Ceci est le contenu principal de mon article. Vous pouvez y écrire en **Markdow
 ## Voici une section !
 
 Ajoutez autant de texte, d'images ou de sections que vous souhaitez.
+
+
+
+
 
 

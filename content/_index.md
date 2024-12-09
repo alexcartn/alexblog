@@ -2,7 +2,7 @@
 title: "Alexandre Carton"
 subtitle: "Senior Lead Engineer, Project Leader"
 description: |
-  >**La vie, ce n’est pas d’attendre que les orages passent, c’est d’apprendre à danser sous la pluie.**
+  >**Life isn't about waiting for the storm to pass. It's about learning how to dance in the rain.**
 
   **Un espace dédié à mes idées, projets, et réflexions, conçu pour inspirer et partager.**
   

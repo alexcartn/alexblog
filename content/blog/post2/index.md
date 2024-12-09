@@ -1,14 +1,16 @@
 ---
-title: "Exploration des Fonctionnalités de Hugo, c'est cool ca change"
-date: 2024-12-05
+title: "Mon 2e post"
+subtitle: "Use a built-in color theme, or design your own with a Tachyons palette or your own hex codes."
+excerpt: "This theme offers three ways to customize your site's colors. Use one of 8 built-in color themes, or style your own palette using named colors from the Tachyons design system. You may also bring your own hex codes to make fully custom color palette that is all your own."
+date: 2021-01-27
+author: "Alison Hill & Eric Anderson"
 draft: false
-description: "Un article pour explorer les fonctionnalités avancées d'Hugo."
-tags: ["hugo", "fonctionnalités"]
-categories: ["Développement"]
+tags:
+  - style
+categories:
+  - Theme Features
+# layout options: single, single-sidebar
 layout: single
-show_post_thumbnail: true
-thumbnail: "featured.jpg"
-author: "Alexandre CARTON"
 ---
 
 # Découverte des Fonctionnalités d'Hugo
