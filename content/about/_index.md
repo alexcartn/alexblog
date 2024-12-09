@@ -1,8 +1,9 @@
 ---
 title: "À propos"
-date: 2024-12-07
-description: "En savoir plus sur mon parcours professionnel et mes compétences."
+description: "Un aperçu rapide de qui je suis."
+layout: "single"
 ---
+
 
 ## Profil
 
@@ -32,3 +33,6 @@ Avec une expertise éprouvée en gestion de projets techniques, je suis à la re
 
 - Réaliser la conception mécanique de prototypes d’échangeurs thermiques innovants.
 - Orchestrer la fabrication de la conception.
+
+
+

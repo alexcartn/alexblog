@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://alexandrecarton.netlify.app/"
 title = "Dancing in the Rain"
 author = "Alex Carton"
 paginate = 5
@@ -6,7 +6,7 @@ theme = "apero"
 
 [params]
   orgName = "alexandrecarton"
-  # orgLocal = "Localisation de votre organisation"
+  # orgLocal = "France"
   #description = "Description du blog"
   favicon = "/img/logosite.png"  # Placez votre favicon dans static/img/
   logo = "/img/logosite.png"        # Placez votre logo dans static/img/
