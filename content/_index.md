@@ -1,15 +1,14 @@
 ---
 title: "Alexandre Carton"
-subtitle: "Senior Lead Enginner, Project Leader"
+subtitle: "Senior Lead Engineer, Project Leader"
 description: |
- >"La vie, ce n’est pas d’attendre que les orages passent, c’est d’apprendre à danser sous la pluie." 
- 
- 
- Un espace dédié à mes idées, projets, et réflexions, conçu pour inspirer et partager.
+  >**La vie, ce n’est pas d’attendre que les orages passent, c’est d’apprendre à danser sous la pluie.**
+
+  **Un espace dédié à mes idées, projets, et réflexions, conçu pour inspirer et partager.**
   
 images:
   # goes in /static/img
-  - img/home.png
+  - img/home1.png
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
@@ -19,7 +18,4 @@ action_label: "About me ⮕"
 action_type: text # text, button
 type: home
 ---
-
-
-
 

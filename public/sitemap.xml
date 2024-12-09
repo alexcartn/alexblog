@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/legal/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
@@ -37,13 +43,5 @@
   </url><url>
     <loc>http://localhost:1313/tags/fonctionnalit%C3%A9s/</loc>
     <lastmod>2024-12-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/about/header/</loc>
-  </url><url>
-    <loc>http://localhost:1313/about/sidebar/</loc>
-  </url><url>
-    <loc>http://localhost:1313/about/main/</loc>
   </url>
 </urlset>

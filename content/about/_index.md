@@ -1,7 +1,8 @@
+
 ---
-title: "À propos"
-description: "Un aperçu rapide de qui je suis."
-layout: "single"
+title: "About me"
+date: 2024-12-09
+type: "page"
 ---
 
 

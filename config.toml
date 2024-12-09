@@ -10,15 +10,15 @@ theme = "apero"
   #description = "Description du blog"
   favicon = "/img/logosite.png"  # Placez votre favicon dans static/img/
   logo = "/img/logosite.png"        # Placez votre logo dans static/img/
-  sharing_image = "/img/partage.png"  # Image pour les partages sociaux
+  sharing_image = "/img/logosite.png"  # Image pour les partages sociaux
   twitter = "votre_twitter"  # Nom d'utilisateur Twitter sans @
   navallcaps = true  # Navigation en majuscules
 
   # Polices
-  textFontFamily = "sans-serif"
-  headingFontFamily = "serif"
-  customtextFontFamily = "Helvetica Neue, Arial, sans-serif"
-  customheadingFontFamily = "Georgia, Times New Roman, serif"
+  textFontFamily = "courier"
+  headingFontFamily = "baskerville"
+  customtextFontFamily = ""
+  customheadingFontFamily = ""
 
   # Thème de couleur
   theme = "forest"  # forest, grayscale, peach, plum, poppy, sky, violet, water
@@ -58,11 +58,7 @@ mainSections = ["blog", "project"]
     url = "/legal/"
     weight = 1
 
-  [[menu.footer]]
-    name = "Politique de Confidentialité"
-    title = "Politique de Confidentialité"
-    url = "/privacy/"
-    weight = 2
+
 
 
 
