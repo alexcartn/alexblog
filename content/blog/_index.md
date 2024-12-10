@@ -17,16 +17,16 @@ sidebar:
   description: |
     Une collection de mes articles sur divers sujets
   author: "Alexandre Carton"
-  text_link_label: Subscribe via RSS
+  # text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   categories_link: true
   series_link: true
-  tags_link: true
+  # tags_link: true
   show_sidebar_adunit: true # show ad container
 
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "The R Markdown Team @RStudio"
+  author: "Alexandre Carton"
   show_author_byline: true
   show_post_date: true
   show_comments: true # see site config to choose Disqus or Utterances
