@@ -44,7 +44,13 @@
     <loc>http://localhost:1313/project/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/series/a-strength-series/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/strength-series/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/strength/</loc>

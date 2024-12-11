@@ -4,8 +4,9 @@ author = "Alex Carton"
 paginate = 5
 theme = "apero"
 
+
 [params]
-  orgName = "alexandrecarton"
+  orgName = "Alexandre Carton, France"
   # orgLocal = "France"
   #description = "Description du blog"
   favicon = "/img/logosite.png"  # Placez votre favicon dans static/img/
@@ -37,6 +38,11 @@ theme = "apero"
     url = "https://www.linkedin.com/in/alexandre-carton-741146175/"
 
 mainSections = ["about", "blog", "project"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
 
 [menu]
   [[menu.header]]
