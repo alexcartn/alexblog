@@ -6,8 +6,15 @@
     <description>Recent content in Projets on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Profilage Cardio</title>
+      <link>http://localhost:1313/project/whatsmypace/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/whatsmypace/</guid>
+      <description>&lt;h1 id=&#34;mon-projet&#34;&gt;Mon projet&#xD;&#xA;  &lt;a href=&#34;#mon-projet&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;</description>
+    </item>
     <item>
       <title>5/3/1 Template</title>
       <link>http://localhost:1313/project/531_template/</link>

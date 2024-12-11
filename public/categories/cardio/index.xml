@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/project/ftp_profil_cardio/</guid>
       <description>&lt;h1 id=&#34;mon-projet&#34;&gt;Mon projet&#xD;&#xA;  &lt;a href=&#34;#mon-projet&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;</description>
     </item>
+    <item>
+      <title>Séance de FTP test</title>
+      <link>http://localhost:1313/project/whatsmypace/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/whatsmypace/</guid>
+      <description>&lt;h1 id=&#34;mon-projet&#34;&gt;Mon projet&#xD;&#xA;  &lt;a href=&#34;#mon-projet&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;</description>
+    </item>
   </channel>
 </rss>
