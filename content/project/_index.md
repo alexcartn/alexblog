@@ -1,5 +1,5 @@
 ---
-title: A Project Portfolio To Grow
+title: Projets
 description: "Divers projets"
 author: "Alexandre CARTON"
 show_post_thumbnail: true

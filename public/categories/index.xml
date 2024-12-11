@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Dancing in the Rain</title>
+    <title>Categories on Alexandre CARTON</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Dancing in the Rain</description>
+    <description>Recent content in Categories on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
@@ -27,6 +27,20 @@
       <link>http://localhost:1313/categories/strength/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/strength/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Force</title>
+      <link>http://localhost:1313/categories/force/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/force/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programmation</title>
+      <link>http://localhost:1313/categories/programmation/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/programmation/</guid>
       <description></description>
     </item>
   </channel>

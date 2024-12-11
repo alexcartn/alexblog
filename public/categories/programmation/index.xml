@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projets on Alexandre CARTON</title>
-    <link>http://localhost:1313/project/</link>
-    <description>Recent content in Projets on Alexandre CARTON</description>
+    <title>Programmation on Alexandre CARTON</title>
+    <link>http://localhost:1313/categories/programmation/</link>
+    <description>Recent content in Programmation on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/programmation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>5/3/1 Template</title>
       <link>http://localhost:1313/project/531_template/</link>

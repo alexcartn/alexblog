@@ -41,7 +41,20 @@
     <loc>http://localhost:1313/categories/strength/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/project/531_template/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/force/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/programmation/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/project/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/project/ftp_profil_cardio/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url>
