@@ -18,8 +18,15 @@
     <item>
       <title>Fitness</title>
       <link>http://localhost:1313/categories/fitness/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/fitness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programmation</title>
+      <link>http://localhost:1313/categories/programmation/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/programmation/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +41,6 @@
       <link>http://localhost:1313/categories/force/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/force/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programmation</title>
-      <link>http://localhost:1313/categories/programmation/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/programmation/</guid>
       <description></description>
     </item>
   </channel>

@@ -15,8 +15,12 @@ theme = "apero"
   navallcaps = true  # Navigation en majuscules
 
   # Polices
-  textFontFamily = "courier"
-  headingFontFamily = "baskerville"
+  # use an embedded font-family
+  # serif options: Fraunces / EB Garamond / Bitter
+  # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
+  
+  textFontFamily = "Atkinson Hyperlegible"
+  headingFontFamily = "EB Garamond"
   customtextFontFamily = ""
   customheadingFontFamily = ""
 

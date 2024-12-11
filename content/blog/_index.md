@@ -13,7 +13,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Mes articles
+  title: Blog
   description: |
     Une collection de mes articles sur divers sujets
   author: "Alexandre Carton"
