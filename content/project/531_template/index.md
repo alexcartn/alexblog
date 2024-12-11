@@ -15,7 +15,7 @@ layout: single
 links:
 - icon: door-open
   icon_pack: fas
-  name: Accés au Template
+  name: Accès au Template
   url: https://docs.google.com/spreadsheets/d/1jc_27dO1kWw4x7jRnOJMZslXYy-CLhI9/edit?usp=sharing&ouid=112204073087317390382&rtpof=true&sd=true/copy
 
 ---
