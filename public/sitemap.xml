@@ -6,7 +6,7 @@
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/strength-series/02-531prog/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
@@ -32,8 +32,20 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/series/a-strength-series/</loc>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/strength-series/</loc>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/fitness/</loc>
-    <lastmod>2024-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/strength/</loc>
+    <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/whatsmypace/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
@@ -43,18 +55,6 @@
   </url><url>
     <loc>http://localhost:1313/project/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/a-strength-series/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/strength-series/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/strength/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/project/531_template/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>

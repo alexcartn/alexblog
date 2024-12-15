@@ -1,7 +1,7 @@
 ---
 title: "Séance de FTP test"
 subtitle: "Une programmation de seance FTC20 pour determiner sa FTP"
-excerpt: "Pilier pour le profilage cardio... Une programmation de seance FTC20 pour determiner sa FTP"
+excerpt: "Une programmation de seance FTC20 pour determiner sa FTP"
 date: 2019-07-01
 author: "Alexandre CARTON"
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Convertisseur de Run"
+title: "ConvertWod : Convertisseur de Run"
 subtitle: "Une application Glide pratique pour les athlètes et les amateurs de fitness. Elle permet de convertir une distance de course en équivalents adaptés pour différents exercices courants dans les WODs (Workouts of the Day)."
 excerpt: "Une application Glide pratique pour les athlètes et les amateurs de fitness. Elle permet de convertir une distance de course en équivalents adaptés pour différents exercices courants dans les WODs (Workouts of the Day)."
 date: 2019-07-01

@@ -29,7 +29,7 @@ Connaître vos zones cardio est essentiel pour optimiser vos entraînements, que
 
 Les zones cardio permettent d'adapter l'intensité de vos séances à vos objectifs spécifiques. Elles sont au nombre de 7 :
 
-![pic](featured-hex.JPG)
+![pic](zones.JPG)
 
 ## Un Template pour Simplifier les Calculs
 
