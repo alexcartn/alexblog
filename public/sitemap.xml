@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/strength-series/01-definition/</loc>
+    <loc>http://localhost:1313/blog/archive-blog/strength-series/01-definition/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/strength-series/02-531prog/</loc>
+    <loc>http://localhost:1313/blog/archive-blog/strength-series/02-531prog/</loc>
     <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
@@ -20,7 +20,7 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/coherence_cardiaque/</loc>
+    <loc>http://localhost:1313/blog/archive-blog/coherence_cardiaque/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/legal/</loc>
@@ -35,7 +35,7 @@
     <loc>http://localhost:1313/series/a-strength-series/</loc>
     <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/strength-series/</loc>
+    <loc>http://localhost:1313/blog/archive-blog/strength-series/</loc>
     <lastmod>2024-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/fitness/</loc>
