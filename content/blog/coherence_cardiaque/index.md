@@ -31,8 +31,7 @@ Sous l’effet des systèmes sympathique et parasympathique, notre pouls, c’es
 Le facteur le plus important de la variabilité cardiaque est son amplitude, c’est-à-dire la différence entre la valeur maximale et la valeur minimale que l’on peut calculer à partir d’un logiciel de tracé de variabilité cardiaque.
 
 Cette amplitude cardiaque est un indicateur de bonne santé. Plus sa valeur est élevée, plus notre cœur est capable de répondre de façon dynamique aux aléas de notre quotidien. En effet, toutes les activités ayant un impact positif sur la santé tendent à augmenter cette amplitude cardiaque (activité sportive, méditation, techniques de respiration, etc.).
-
-![ampli](ampltiude.jpg)
+![varia](varia.jpg)
 
 ### Chaos cardiaque
 
@@ -41,7 +40,7 @@ Nous vivons dans un monde chaotique, ou il est difficile de prevoir à l'avance 
 
 - À l’inverse, le système nerveux parasympathique, par l’intermédiaire du nerf vague, ralentit le rythme cardiaque et diminue la force de contraction, favorisant un état de repos et de récupération.
 
-![varia](varia.jpg)
+![ampli](ampltiude.jpg)
 
 ### Coherence cardiaque
 
