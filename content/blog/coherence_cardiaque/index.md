@@ -31,6 +31,7 @@ Sous l’effet des systèmes sympathique et parasympathique, notre pouls, c’es
 Le facteur le plus important de la variabilité cardiaque est son amplitude, c’est-à-dire la différence entre la valeur maximale et la valeur minimale que l’on peut calculer à partir d’un logiciel de tracé de variabilité cardiaque.
 
 Cette amplitude cardiaque est un indicateur de bonne santé. Plus sa valeur est élevée, plus notre cœur est capable de répondre de façon dynamique aux aléas de notre quotidien. En effet, toutes les activités ayant un impact positif sur la santé tendent à augmenter cette amplitude cardiaque (activité sportive, méditation, techniques de respiration, etc.).
+
 ![varia](varia.jpg)
 
 ### Chaos cardiaque
@@ -55,6 +56,7 @@ Lorsqu’on utilise consciemment inspiration et expiration pour contrôler les a
 
 Il est d’ailleurs possible de confirmer cet effet en utilisant sa montre cardiaque et en réalisant un tracé de variabilité cardiaque suffisamment fin.
 
+
 Les effets bénéfiques sont multiples. On peut notamment citer (issus des recherches de l’institut HeartMath en Californie, travaillant sur la cohérence cardiaque depuis 1991) :
 
 **À court terme** (pendant 3 à 6 heures après une séance) :  
@@ -75,6 +77,7 @@ Les effets bénéfiques sont multiples. On peut notamment citer (issus des reche
 
 ![cohe](coherence.jpg)
 
+
 ## Comment mettre en place la cohérence cardiaque et la résonance cardiaque
 
 La résonance cardiaque est un cas particulier de la cohérence cardiaque qui permet d’amplifier son effet. Elle repose sur une fréquence respiratoire bien particulière de 0,1 Hz (c’est-à-dire 6 respirations par minute). Cette fréquence sert de référence pour la plupart des séances de cohérence cardiaque.
@@ -89,6 +92,9 @@ Un moyen mnémotechnique simple pour intégrer ces séances au quotidien provien
 La première séance, la plus importante de la journée, se situe environ 1 heure après le réveil. En effet, c’est à ce moment que notre sécrétion de cortisol est la plus élevée. Le cortisol nous aide à nous lever le matin et à nous lancer naturellement dans la journée. Cependant, avec l’accumulation des stresseurs de la vie, les niveaux moyens de cortisol se dérèglent. Mettre en place une séance de cohérence cardiaque à ce moment permet de rétablir un bon équilibre.
 
 Il est ensuite conseillé d’espacer ces séances d’environ 4 heures, car les effets immédiats durent en moyenne entre 3 et 6 heures selon les individus.
+
+![GIF fun depuis Giphy](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjdha3hqZ2Y2Z3Nib3VyZ2tjZHFzZnMxNDIzZDU0ZmNzZWwwNW83OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ry1MOAeAYXvRVQLPw3/giphy.webp)
+
 # Sources
 
 - **Armour J. A. (2004).** *Neurocardiology.* Oxford University Press.  
