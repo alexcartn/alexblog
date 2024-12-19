@@ -80,7 +80,11 @@ Les effets bénéfiques sont multiples. On peut notamment citer (issus des reche
 
 ## Comment mettre en place la cohérence cardiaque et la résonance cardiaque
 
-La résonance cardiaque est un cas particulier de la cohérence cardiaque qui permet d’amplifier son effet. Elle repose sur une fréquence respiratoire bien particulière de 0,1 Hz (c’est-à-dire 6 respirations par minute). Cette fréquence sert de référence pour la plupart des séances de cohérence cardiaque.
+La résonance cardiaque est un cas particulier de la cohérence cardiaque qui permet d’amplifier ses effets. Elle repose sur une fréquence respiratoire bien particulière de **0,1 Hz** (c’est-à-dire **6 respirations par minute**). Cette fréquence sert de référence pour la plupart des séances de cohérence cardiaque. En effet, cette fréquence est la fréquence de résonance des systèmes sympathique et parasympathique. 
+
+> **La fréquence de résonance** est la fréquence à laquelle un système oscille avec une amplitude maximale lorsqu'il est soumis à une excitation périodique, en raison de la correspondance entre la fréquence de l'excitation et la fréquence naturelle du système.
+
+Une respiration basée sur ce rythme a alors tendance à équilibrer parfaitement les deux systèmes, tout en rendant maximale l'amplitude de la variabilité cardiaque.
 
 Un moyen mnémotechnique simple pour intégrer ces séances au quotidien provient du livre *Cohérence cardiaque 365* de David O’Hare :
 
