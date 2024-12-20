@@ -68,6 +68,10 @@ mainSections = ["about", "blog", "project"]
     url = "/legal/"
     weight = 1
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 
 

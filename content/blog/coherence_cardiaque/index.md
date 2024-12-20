@@ -22,6 +22,22 @@ Le cœur n’est pas juste une pompe. Le réduire à une fonction aussi simplist
 
 met en lumière cette dimension méconnue. Cet organe, de prime abord simple, possède des attributs majeurs dans la gestion de nos émotions (qui n’a jamais senti son cœur battre la chamade sous l’effet du stress ?). Comprendre comment interagir avec notre cœur nous permettrait donc d’influer directement sur nos émotions…
 
+---
+
+<div style="text-align: center;">
+
+**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+
+<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
+  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
+  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;"><br><br>
+  <button type="submit">Envoyer</button>
+</form>
+
+</div>
+
+---
+
 ## Introduction rapide aux principe cardiaque clé
 
 Comprendre comment influer sur nos émotions nécessite une introduction aux principes clés de la cardiologie.
@@ -99,6 +115,23 @@ Il est ensuite conseillé d’espacer ces séances d’environ 4 heures, car les
 
 ![GIF fun depuis Giphy](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjdha3hqZ2Y2Z3Nib3VyZ2tjZHFzZnMxNDIzZDU0ZmNzZWwwNW83OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ry1MOAeAYXvRVQLPw3/giphy.webp)
 
+---
+
+<div style="text-align: center;">
+
+**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+
+<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
+  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
+  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;"><br><br>
+  <button type="submit">Envoyer</button>
+</form>
+
+</div>
+
+---
+
+
 # Sources
 
 - **Armour J. A. (2004).** *Neurocardiology.* Oxford University Press.  
@@ -109,6 +142,8 @@ Il est ensuite conseillé d’espacer ces séances d’environ 4 heures, car les
 
 - **O’Hare D. (2016).** *Cohérence cardiaque 365.* Éditions Thierry Souccar.  
   *Méthode pratique pour intégrer la cohérence cardiaque dans sa routine quotidienne.*
+
+
 
 
 
