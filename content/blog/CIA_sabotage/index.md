@@ -17,7 +17,7 @@ layout: single
 > 
 > **William J. Donovan**, Directeur de la CIA, 1944
 
-Il existe en libre accès des guides d'espionnage conçu par CIA. Lobjectif du **Presidential Executive Order 13526** de 2009 est de promouvoir la transparence par la diffusion de documents confidentiels datant de plus de 25 ans au minimum. Ainsi, la CIA publie régulièrement des documents déclassifiés, nous permettant de découvrir certains de leurs sujets d'étude. On peut noter, par exemple :
+Il existe en libre accès des guides d'espionnage conçu par CIA. L'objectif du **Presidential Executive Order 13526** de 2009 est de promouvoir la transparence par la diffusion de documents confidentiels datant de plus de 25 ans au minimum. Ainsi, la CIA publie régulièrement des documents déclassifiés, nous permettant de découvrir certains de leurs sujets d'étude. On peut noter, par exemple :
 
 - **MK Ultra** : Développement de techniques de contrôle mental.
 - **Projet Stargate** : Étude des des pouvoirs psychiques.
@@ -94,13 +94,11 @@ Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des 
 - Favoriser la prise d'initiative en répondant au "Pourquoi" et pas au "Comment"
 - Promouvoir une ambiance de travail positive, ou les erreurs sont vues comme des opportunités d'apprentissage, réduisant ainsi les comportement défensifs et querelleurs. 
 
+En adoptant ces quelques principes clés, nous créons les bases d'une organisation plus agile, efficace et résiliente. Il ne s'agit pas seulement d'éviter les pièges du sabotage, mais de favoriser une dynamique où la communication, la clarté et la confiance deviennent les piliers du succès. 
+
 >*Elle m’a dit aussi que celui qui gouverne doit apprendre à convaincre et non à obliger. Et aussi qu’il doit construire l’âtre le plus chaud afin d’attirer auprès de lui les meilleurs.* 
 >
 >**Frank Herbert**, Dune
-
-En adoptant ces quelques principes clés, nous créons les bases d'une organisation plus agile, efficace et résiliente. Il ne s'agit pas seulement d'éviter les pièges du sabotage, mais de favoriser une dynamique où la communication, la clarté et la confiance deviennent les piliers du succès. 
-
-
 
 ---
 
