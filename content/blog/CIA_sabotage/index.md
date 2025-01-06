@@ -23,15 +23,12 @@ Il existe en libre accès des guides d'espionnage conçu par CIA. L'objectif du 
 - **Projet Stargate** : Étude des des pouvoirs psychiques.
 - **Empoisonnement de Pont-Saint-Esprit** : Empoisonnement au LSD en 1951 (possiblement par la CIA) dans le village français de Pont-Saint-Esprit.
 
-C'est ainsi que le[ **Simple Sabotage Field Manual**](https://www.cia.gov/static/5c875f3ec660e092cf893f60b4a288df/SimpleSabotage.pdf), publié originellement en 1944 durant la Seconde Guerre mondiale est diffusé. Il propose une procedure de sabotage pour les agent doubles travaillant dans des organisation ennemies. 
+C'est ainsi que le[ **Simple Sabotage Field Manual**](https://www.cia.gov/static/5c875f3ec660e092cf893f60b4a288df/SimpleSabotage.pdf), publié originellement en 1944 durant la Seconde Guerre mondiale est diffusé. Ce manuel a été conçu pour armer les agents alliés opérant dans les territoires occupés contre les forces ennemies. L'objectif était de perturber les opérations ennemies de manière discrète, en ciblant des processus internes plutôt que des infrastructures physiques.
 
 Sa lecture nous permet alors de découvrir qui sont les espions cachés parmi nous... Il peut aussi etre lu comme un **manuel inversé** : tout ce qui y est décrit pour faire échouer un groupe peut être étudié à l’envers pour en assurer le succès
 
-**Dans cet article, j'aimerais revoir à la lueur d'aujourd'hui les points suivants :**
+Dans cet article, j'aimerais présenter pourquoi le Simple Sabotage Field Manual, bien que rédigé il y a plus de 70 ans, reste d'actualité. **Ses enseignements, initialement conçus pour perturber les organisations ennemies, peuvent aujourd'hui être interprétés comme des pièges à éviter.**
 
-1. Les grandes lignes du sabotage organisationnel,
-2. Pourquoi ces techniques fonctionnent et comment elles se manifestent aujourd'hui dans nos organisations,
-3. Comment s'en prémunir et devenir un expert en contre-sabotage.
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/orUDTj9Q5TMzTdB892" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/orUDTj9Q5TMzTdB892"></a></p>
 
@@ -54,7 +51,7 @@ Sa lecture nous permet alors de découvrir qui sont les espions cachés parmi no
 
 # Les grandes lignes du sabotage organisationnelle
 
-Bien que le guide propose un large éventail de plans de sabotage, incluant des procédés pour saboter notamment les bâtiments, les carburants, les trains ou les batteries, je vais me concentrer sur le paragraphe intitulé **Interférence organisationnelle détaillée**.
+Bien que le guide propose un large éventail de plans de sabotage, incluant des procédés pour saboter notamment les bâtiments, les carburants, les trains ou les batteries, je vais me concentrer sur le paragraphe intitulé **Interférence organisationnelle détaillée**. Il permet de bien mettre en valeur les actions et techniques d'apparences anodines qui sape la productivité des équipes. 
 
 ## Organisation générale
 
