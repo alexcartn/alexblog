@@ -31,6 +31,8 @@ Sa lecture nous permet alors de découvrir qui sont les espions cachés parmi no
 2. Pourquoi ces techniques fonctionnent et comment elles se manifestent aujourd'hui dans nos organisations,
 3. Comment s'en prémunir et devenir un expert en contre-sabotage.
 
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/orUDTj9Q5TMzTdB892" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/orUDTj9Q5TMzTdB892"></a></p>
+
 ---
 
 <div style="text-align: center;">
@@ -96,7 +98,7 @@ Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des 
 
 En adoptant ces quelques principes clés, nous créons les bases d'une organisation plus agile, efficace et résiliente. Il ne s'agit pas seulement d'éviter les pièges du sabotage, mais de favoriser une dynamique où la communication, la clarté et la confiance deviennent les piliers du succès. 
 
-<iframe src="https://giphy.com/embed/orUDTj9Q5TMzTdB892" width="700" height="300" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/orUDTj9Q5TMzTdB892"></a></p>
+
 
 ---
 
