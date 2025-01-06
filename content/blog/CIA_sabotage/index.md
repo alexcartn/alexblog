@@ -3,7 +3,7 @@ title: Le Simple Sabotage Field Manual, Quand la CIA enseignait l'art du sabotag
 weight: 
 subtitle: Découvrez comment un manuel d'espionnage des années 1940 peut encore influencer la gestion moderne des organisations et apprenez à déjouer ces tactiques.
 excerpt: Découvrez comment un manuel d'espionnage des années 1940 peut encore influencer la gestion moderne des organisations et apprenez à déjouer ces tactiques.
-date: 2024-12-19
+date: 2025-01-06
 draft: false
 tags: 
 categories: 
