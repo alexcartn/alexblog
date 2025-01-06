@@ -7,6 +7,8 @@ date: 2024-12-19
 draft: false
 tags: 
 categories: 
+  - Management
+  - Organisation
 layout: single
 ---
 # Qu’est-ce que le Simple Sabotage Field Manual ?

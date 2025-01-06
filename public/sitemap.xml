@@ -11,13 +11,19 @@
     <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/cia_sabotage/</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cardio/</loc>
-    <lastmod>2024-12-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/management/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/categories/organisation/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/cardio/</loc>
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/fitness/</loc>
