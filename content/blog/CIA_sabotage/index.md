@@ -75,7 +75,7 @@ Bien que le guide propose un large éventail de plans de sabotage, incluant des 
 **Valoriser l'incompétence** : Pour démoraliser le personnel et faire baisser la production, soyez agréable avec les travailleurs inefficaces ; accordez-leur des promotions imméritées. Faites preuve de discrimination envers les travailleurs efficaces ; critiquez injustement leur travail.
 # Pourquoi ca fonctionne et comment s'en protéger ? 
 
-Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des comportements ordinaires et peuvent passer pour de simples maladresses, un manque d'organisation ou encore un management défaillant. Pourtant, leur effet cumulatif ralentit insidieusement les projets et sape la productivité.
+Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des comportements ordinaires et peuvent passer pour de simples maladresses, un manque d'organisation ou encore un management défaillant. Pourtant, leur effet cumulatif ralentit insidieusement les projets et sape la productivité. Toutefois, l'application de certains réflexes clés dans notre organisation permettent de s'en prémunir facilement. 
 ### Savoir se remettre en question et analyser son contexte
 
 - Réduire le nombre de réunions inutiles pour privilégier les actions concrètes et opérationnelles.
@@ -91,7 +91,7 @@ Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des 
 - Favoriser la prise d'initiative en répondant au "Pourquoi" et pas au "Comment"
 - Promouvoir une ambiance de travail positive, ou les erreurs sont vues comme des opportunités d'apprentissage, réduisant ainsi les comportement défensifs et querelleurs. 
 
->*Elle m’a dit aussi que celui qui gouverne doit apprendre à convaincre et non à obliger. Et aussi qu’il doit construire l’âtre le plus chaud afin d’attirer auprès de lui les meilleurs.* 
+>*Celui qui gouverne doit apprendre à convaincre et non à obliger. Et aussi qu’il doit construire l’âtre le plus chaud afin d’attirer auprès de lui les meilleurs.* 
 >
 >**Frank Herbert**, Dune
 
