@@ -76,22 +76,20 @@ Bien que le guide propose un large éventail de plans de sabotage, incluant des 
 # Pourquoi ca fonctionne et comment s'en protéger ? 
 
 Les techniques de sabotage décrites fonctionnent parce qu'elles exploitent des comportements ordinaires et peuvent passer pour de simples maladresses, un manque d'organisation ou encore un management défaillant. Pourtant, leur effet cumulatif ralentit insidieusement les projets et sape la productivité.
-
 ### Savoir se remettre en question et analyser son contexte
 
-- Limiter le nombre de réunions et favoriser le travail opérationnel.
-- Partager la prise de parole et savoir arbitrer entre les collaborateurs pendant une séance de travail de groupe.
-### Contre-saboter par des process clairs et flexibles
+- Réduire le nombre de réunions inutiles pour privilégier les actions concrètes et opérationnelles.
+- Encourager une prise de parole équilibrée en favorisant les échanges constructifs et en arbitrant efficacement lors des discussions de groupe.
+### Contre-saboter par des processus clairs et flexibles
 
-- Mettre en place un plan de communication clair et reproductible.
-- Confier les décisions clés à un nombre limité de personnes compétentes.
+- Mettre en place un plan de communication structuré et clair pour éviter les malentendus. 
+- Adopter une **planification** agile, facilitant l'action, et permettant l'adaptation du périmètre des tâches à réaliser.
+- Centraliser les décisions clés entre les mains de personnes compétentes, tout en favorisant une flexibilité suffisante pour s'adapter rapidement aux imprévus.
 
 ### Cultiver une culture de confiance
 
 - Favoriser la prise d'initiative en répondant au "Pourquoi" et pas au "Comment"
 - Promouvoir une ambiance de travail positive, ou les erreurs sont vues comme des opportunités d'apprentissage, réduisant ainsi les comportement défensifs et querelleurs. 
-
-En adoptant ces quelques principes clés, nous créons les bases d'une organisation plus agile, efficace et résiliente. Il ne s'agit pas seulement d'éviter les pièges du sabotage, mais de favoriser une dynamique où la communication, la clarté et la confiance deviennent les piliers du succès. 
 
 >*Elle m’a dit aussi que celui qui gouverne doit apprendre à convaincre et non à obliger. Et aussi qu’il doit construire l’âtre le plus chaud afin d’attirer auprès de lui les meilleurs.* 
 >
