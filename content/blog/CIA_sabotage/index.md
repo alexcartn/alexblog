@@ -20,7 +20,7 @@ layout: single
 Il existe en libre accès des guides d'espionnage conçu par CIA. L'objectif du **Presidential Executive Order 13526** de 2009 est de promouvoir la transparence par la diffusion de documents confidentiels datant de plus de 25 ans au minimum. Ainsi, la CIA publie régulièrement des documents déclassifiés, nous permettant de découvrir certains de leurs sujets d'étude. On peut noter, par exemple :
 
 - **MK Ultra** : Développement de techniques de contrôle mental.
-- **Projet Stargate** : Étude des des pouvoirs psychiques.
+- **Projet Stargate** : Étude des pouvoirs psychiques.
 - **Empoisonnement de Pont-Saint-Esprit** : Empoisonnement au LSD en 1951 (possiblement par la CIA) dans le village français de Pont-Saint-Esprit.
 
 C'est ainsi que le[ **Simple Sabotage Field Manual**](https://www.cia.gov/static/5c875f3ec660e092cf893f60b4a288df/SimpleSabotage.pdf), publié originellement en 1944 durant la Seconde Guerre mondiale est diffusé. Ce manuel a été conçu pour armer les agents alliés opérant dans les territoires occupés contre les forces ennemies. L'objectif était de perturber les opérations ennemies de manière discrète, en ciblant des processus internes plutôt que des infrastructures physiques.
