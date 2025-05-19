@@ -37,7 +37,7 @@ theme = "apero"
     icon_pack = "fab"
     url = "https://www.linkedin.com/in/alexandre-carton-741146175/"
 
-mainSections = ["about", "blog", "project"]
+mainSections = ["about", "blog", "project", "contact"]
 
 [taxonomies]
   category = "categories"
@@ -55,12 +55,19 @@ mainSections = ["about", "blog", "project"]
     title = "Mes projets"
     url = "/project/"
     weight = 2
- 
+
+  [[menu.header]]
+    name = "Contact"
+    title = "Contact"
+    url = "/contact/"
+    weight = 3 
   [[menu.header]]
     name = "À propos"
     title = "À propos"
     url = "/about/"
-    weight = 3
+    weight = 4
+
+
 
   [[menu.footer]]
     name = "Mentions Légales"

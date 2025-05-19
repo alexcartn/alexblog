@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.139.3">
-<title>Categories | Alexandre CARTON</title>
+<title> | Alexandre CARTON</title>
 
 
 <meta property="twitter:site" content="@votre_twitter">
@@ -28,10 +28,10 @@
 
 
 <meta property="og:site_name" content="Alexandre CARTON">
-<meta property="og:title" content="Categories | Alexandre CARTON">
+<meta property="og:title" content=" | Alexandre CARTON">
 <meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/categories/" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="http://localhost:1313/contact/" />
 <meta property="og:locale" content="en">
 
 
@@ -43,15 +43,13 @@
         <meta name="twitter:image" content="http://localhost:1313/img/logosite.png" >
     
   
-  <meta itemprop="name" content="Categories">
-  <meta itemprop="datePublished" content="2025-01-08T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-08T00:00:00+00:00">
+  <meta itemprop="name" content="Alexandre CARTON">
+  <meta itemprop="description" content="Entrons en contact ! Votre nom Votre email * Sujet Votre message * Envoyer Les informations saisies resteront confidentielles et ne seront jamais partagées.">
+  <meta itemprop="wordCount" content="28">
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="shortcut icon" href="/img/logosite.png" type="image/x-icon">
   <link rel="icon" href="/img/logosite.png" type="image/x-icon">
-  
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/index.xml" title="Alexandre CARTON" />
   
   
   <link rel="stylesheet" href="/style.main.min.eaa7f46d1167daadc30b7092ee51aaec332fa0f2fcbb295736fe5764fa3751f6.css" integrity="sha256-6qf0bRFn2q3DC3CS7lGq7DMvoPL8uylXNv5XZPo3UfY=" media="screen">
@@ -84,7 +82,7 @@
         
         
         
-      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact">Contact</a>
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/contact/" title="Contact">Contact</a>
       
         
         
@@ -119,189 +117,114 @@
   </nav>
 </header>
 
-
 <main class="page-main pa4" role="main">
-  <section class="blog-intro mw7 center mb5">
-    <h1 class="f2 f1-ns fw4 lh-solid tc center i">Categories</h1>
-    <p class="f6 f5-ns measure lh-copy tc center"></p>
-  </section>
-  <section class="blog-content mw7 center">
-  
-    
-                               
-     
-     
-<article class="mv4 mv5-l bb">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4"></h1>
+        
+        
+        
 
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/programmation/" class="db">Programmation</a></h1>
       
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <section class="mw7 center pa4">
+  <h1 class="tc f2 lh-title mb4">Entrons en contact !</h1>
+  <!-- Carte formulaire (légère ombre + fond clair) -->
+  <article class="bg-near-white br3 pa4 shadow-4">
+    <form
+      action="https://formspree.io/f/meogdeol"
+      method="POST"
+      aria-label="Formulaire de contact"
+      class="measure-wide center"
+    >
+      <!-- Nom -->
+      <label for="nom" class="f5 b db mb2">Votre nom</label>
+      <input
+        type="text" id="nom" name="nom"
+        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
+        placeholder="Jean Dupont"
+      />
+      <!-- Email -->
+      <label for="email" class="f5 b db mb2">Votre email <span class="red">*</span></label>
+      <input
+        type="email" id="email" name="email" required
+        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
+        placeholder="jean@example.com"
+      />
+      <!-- Sujet (optionnel) -->
+      <label for="sujet" class="f5 b db mb2">Sujet</label>
+      <input
+        type="text" id="sujet" name="sujet"
+        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
+        placeholder="À propos de…"
+      />
+      <!-- Message -->
+      <label for="message" class="f5 b db mb2">Votre message <span class="red">*</span></label>
+      <textarea
+        id="message" name="message" rows="6" required
+        class="input-reset ba b--black-20 pa2 br2 mb4 db w-100"
+        placeholder="Votre message…"></textarea>
+      <!-- Honeypot anti-spam (invisible) -->
+      <input type="text" name="_gotcha" style="display:none" />
+      <!-- Redirection après succès -->
+      <input type="hidden" name="_next" value="/merci/" />
+      <button
+        type="submit"
+        class="dib pv2 ph4 bg-blue hover-bg-dark-blue white b--none br2 grow pointer"
+      >
+        Envoyer
+      </button>
+      <!-- Note RGPD -->
+      <p class="f7 silver mt3">
+        Les informations saisies resteront confidentielles et ne seront jamais partagées.
+      </p>
+    </form>
+  </article>
+<p class="mt4">
+  Ou retrouvez-moi sur
+  <a href="https://www.linkedin.com/in/alexandre-carton-741146175/"
+     target="_blank" rel="noopener">LinkedIn</a>.
+</p>
   </div>
-  
-</article>
+</section>
 
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 1, 0001</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">1 minute read, 28 words</dd>
+  </dl>
   
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
+  </dl>
+</details>
 
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
   
   
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/fitness/" class="db">Fitness</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="http://localhost:1313/legal/">&larr; Mentions Légales</a>
   
-</article>
+  
+  
+</div>
 
-  
+      </footer>
+    </article>
     
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/entra%C3%AEnement/" class="db">Entraînement</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
-    
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/organisation/" class="db">Organisation</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
-    
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/management/" class="db">Management</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
-    
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/cardio/" class="db">Cardio</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
-    
-                               
-     
-     
-<article class="mv4 mv5-l bb">
-
-  
-  
-  <div class="measure-wide center mb4 mb5-l">
-    <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/categories/force/" class="db">Force</a></h1>
-      
-    </header>
-      
-      
-    <footer>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-  
   </section>
 </main>
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">

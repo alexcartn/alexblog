@@ -6,6 +6,28 @@
     <description>Recent content in Tags on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <lastBuildDate>Wed, 08 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fitness</title>
+      <link>http://localhost:1313/tags/fitness/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fitness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Renforcement</title>
+      <link>http://localhost:1313/tags/renforcement/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/renforcement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sans Matériel</title>
+      <link>http://localhost:1313/tags/sans-mat%C3%A9riel/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sans-mat%C3%A9riel/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
