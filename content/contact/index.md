@@ -4,6 +4,7 @@ description: |-
 show_header: true
 sidebar_left: false
 headless: false
+hide_footer_nav: true
 cascade:
   headless: true
 slug: contact
@@ -72,3 +73,5 @@ slug: contact
 
   </div>
 </section>
+
+
