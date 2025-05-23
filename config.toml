@@ -49,23 +49,31 @@ mainSections = ["about", "blog", "project", "contact"]
     name = "Blog"
     title = "Mes articles de blog"
     url = "/blog/"
-    weight = 1
+    weight = 2
+  
   [[menu.header]]
     name = "Projets"
     title = "Mes projets"
     url = "/project/"
-    weight = 2
+    weight = 3
+  
+  [[menu.header]]
+    name = "Coaching"
+    title = "Coaching"
+    url = "/coaching/"
+    weight = 5 
 
   [[menu.header]]
     name = "Contact"
     title = "Contact"
     url = "/contact/"
-    weight = 3 
+    weight = 5 
+  
   [[menu.header]]
     name = "À propos"
     title = "À propos"
     url = "/about/"
-    weight = 4
+    weight = 1
 
 
 
