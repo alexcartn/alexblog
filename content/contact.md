@@ -1,10 +1,8 @@
-
 ---
 title: ""
 date: 2024-12-09
 type: "page"
 ---
-
 <section class="mw7 center pa4">
   <h1 class="tc f2 lh-title mb4">Entrons en contact !</h1>
 
@@ -67,3 +65,7 @@ type: "page"
 </p>
 
   </div>
+</section>
+
+
+

@@ -1,11 +1,8 @@
-
 ---
 title: "Mentions Légales"
 date: 2024-12-09
 type: "page"
 ---
-
-
 
 ## Éditeur du site
 
@@ -14,8 +11,6 @@ type: "page"
 ## Propriété intellectuelle
 
 Le contenu de ce site (textes, images, vidéos, etc.) est protégé par le droit d'auteur. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable.
-
-
 
 ## Responsabilité
 
