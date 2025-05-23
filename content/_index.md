@@ -6,9 +6,9 @@ description: |
 
   **Un espace dédié à des idées, projets, et réflexions, conçu pour inspirer et partager.**
   
-#images:
+images:
   # goes in /static/img
-  #- img/home.png
+  - img/profile.png
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
