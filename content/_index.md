@@ -8,7 +8,7 @@ description: |
   
 images:
   # goes in /static/img
-  - img/profile.png
+  - img/profile1.png
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
