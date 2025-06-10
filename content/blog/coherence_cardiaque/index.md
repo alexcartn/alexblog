@@ -108,6 +108,17 @@ Un moyen mnémotechnique simple pour intégrer ces séances au quotidien provien
 >  - 3 fois par jour  
 >  - 6 respirations par minute  
 >  - pendant 5 minutes
+<link rel="stylesheet" href="/css/breathing.css">
+<div id="breathing-container">
+  <div id="breathing-circle"></div>
+  <p id="breath-message">Prêt&nbsp;?</p>
+  <button id="start-breath">Démarrer</button>
+  <label style="margin-left:0.5rem;">
+    <input type="checkbox" id="toggle-sound" checked> Son
+  </label>
+  <p class="f7 lh-copy" style="margin-top:0.5rem;">Astuce&nbsp;365&nbsp;: pratiquez trois fois par jour.</p>
+</div>
+<script src="/js/breathing.js"></script>
 
 La première séance, la plus importante de la journée, se situe environ 1 heure après le réveil. En effet, c’est à ce moment que notre sécrétion de cortisol est la plus élevée. Le cortisol nous aide à nous lever le matin et à nous lancer naturellement dans la journée. Cependant, avec l’accumulation des stresseurs de la vie, les niveaux moyens de cortisol se dérèglent. Mettre en place une séance de cohérence cardiaque à ce moment permet de rétablir un bon équilibre.
 

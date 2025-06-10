@@ -1,0 +1,20 @@
+#breathing-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+#breathing-circle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #79c;
+  transition: transform 5s ease-in-out;
+}
+#breathing-circle.grow {
+  transform: scale(1.5);
+}
+#breath-message {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
