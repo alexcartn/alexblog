@@ -1,6 +1,8 @@
 baseURL = "https://alexandrecarton.netlify.app/"
 title = "Alexandre CARTON"
 author = "Alex Carton"
+languageCode = "fr-fr"
+defaultContentLanguage = "fr"
 paginate = 5
 theme = "apero"
 
@@ -20,13 +22,13 @@ theme = "apero"
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
   
-  textFontFamily = "Atkinson Hyperlegible"
-  headingFontFamily = "EB Garamond"
+  textFontFamily = "Commissioner"
+  headingFontFamily = "Fraunces"
   customtextFontFamily = ""
   customheadingFontFamily = ""
 
   # Thème de couleur
-  theme = "forest"  # forest, grayscale, peach, plum, poppy, sky, violet, water
+  theme = "sky"  # forest, grayscale, peach, plum, poppy, sky, violet, water
 
   # Icônes sociales
   socialInHeader = true
