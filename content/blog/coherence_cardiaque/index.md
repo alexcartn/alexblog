@@ -112,11 +112,8 @@ Un moyen mnémotechnique simple pour intégrer ces séances au quotidien provien
 <div id="breathing-container">
   <div id="breathing-circle"></div>
   <p id="breath-message">Prêt&nbsp;?</p>
+  <p id="breath-timer">05:00</p>
   <button id="start-breath">Démarrer</button>
-  <label style="margin-left:0.5rem;">
-    <input type="checkbox" id="toggle-sound" checked> Son
-  </label>
-  <p class="f7 lh-copy" style="margin-top:0.5rem;">Astuce&nbsp;365&nbsp;: pratiquez trois fois par jour.</p>
 </div>
 <script src="/js/breathing.js"></script>
 

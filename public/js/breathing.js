@@ -1,29 +1,30 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',()=>{
   const startBtn=document.getElementById('start-breath');
-  const soundToggle=document.getElementById('toggle-sound');
   const circle=document.getElementById('breathing-circle');
   const message=document.getElementById('breath-message');
-  let running=false,ctx;
-  function beep(freq){
-    if(!soundToggle||!soundToggle.checked)return;
-    if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
-    const osc=ctx.createOscillator();
-    const gain=ctx.createGain();
-    osc.frequency.value=freq;
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    gain.gain.setValueAtTime(0.2,ctx.currentTime);
-    osc.start();
-    osc.stop(ctx.currentTime+0.15);
+  const timer=document.getElementById('breath-timer');
+  let running=false;
+
+  function updateTimer(sec){
+    const m=Math.floor(sec/60).toString().padStart(2,'0');
+    const s=(sec%60).toString().padStart(2,'0');
+    if(timer)timer.textContent=`${m}:${s}`;
   }
+
   function start(){
     if(running)return;
     running=true;
     startBtn.disabled=true;
-    let cycle=0,total=30;
-    beep(330); // gong like tone
+    let cycle=0,total=30,secondsLeft=300;
+    updateTimer(secondsLeft);
+    const interval=setInterval(()=>{
+      secondsLeft--; 
+      if(secondsLeft>=0)updateTimer(secondsLeft);
+    },1000);
+
     function breathe(){
       if(cycle>=total){
+        clearInterval(interval);
         running=false;
         startBtn.disabled=false;
         message.textContent='Terminé';
@@ -31,17 +32,16 @@ document.addEventListener('DOMContentLoaded',function(){
       }
       message.textContent='Inspirez...';
       circle.classList.add('grow');
-      beep(440);
       setTimeout(()=>{
         message.textContent='Expirez...';
         circle.classList.remove('grow');
-        beep(440);
         cycle++;
         if(running)setTimeout(breathe,5000);
       },5000);
     }
     breathe();
   }
+
   startBtn&&startBtn.addEventListener('click',start);
 });
 
