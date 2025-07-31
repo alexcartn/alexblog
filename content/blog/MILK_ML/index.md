@@ -54,8 +54,8 @@ Le choix du modèle dépend :
         
     - **non supervisé** : on cherche à découvrir des structures dans les données (ex : regroupements).
         
-
 ![Pasted image 20250730155424.png](ML.png)
+
 
 ### 🔁 Le workflow du machine learning, étape par étape
 
@@ -378,7 +378,7 @@ Le graphique ci-dessous représente **l’importance des variables** utilisées 
 | 4️⃣ à 7️⃣ | **Turbidity**, **Odor**, **Colour**, **Taste** | Ces variables ont un impact plus faible dans les décisions du modèle. Elles apportent sans doute des nuances utiles, mais sont moins déterminantes seules. |
 
 
-![[Pasted image 20250731130337.png]](feature.png)
+![[Pasted image 20250731130337.png]](variable.png)
 
 Réduction des features : compromis précision vs simplicité
 
