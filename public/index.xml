@@ -6,7 +6,8 @@
     <description>Recent content in Alexandre Carton on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <copyright>© 2025 Alexandre Carton, France</copyright>
+    <lastBuildDate>Thu, 31 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cohérence cardiaque, harmoniser le souffle, le cœur et l’esprit</title>
@@ -14,6 +15,13 @@
       <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/coherence_cardiaque/</guid>
       <description>&lt;h1 id=&#34;coherence-cardiaque&#34;&gt;Coherence cardiaque&#xD;&#xA;  &lt;a href=&#34;#coherence-cardiaque&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;h2 id=&#34;le-cœur-un-organe-méconnu&#34;&gt;Le cœur un organe méconnu&#xD;&#xA;  &lt;a href=&#34;#le-c%c5%93ur-un-organe-m%c3%a9connu&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xD;&#xA;      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;&#xD;&#xA;      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;&#xD;&#xA;    &lt;/svg&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Le cœur n’est pas juste une pompe. Le réduire à une fonction aussi simpliste nous fait passer à côté de son rôle primordial. En effet, le cœur est un véritable « cerveau secondaire » et joue un rôle important dans notre système nerveux autonome. L’essor récent de la neurocardiologie, c’est-à-dire :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Peut-on prédire la qualité du lait avec le machine learning ?</title>
+      <link>http://localhost:1313/blog/milk_ml/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/milk_ml/</guid>
+      <description>&lt;h1 id=&#34;introduction-et-contexte-du-machine-learning--le-workflow&#34;&gt;Introduction et contexte du machine learning — le workflow&#xD;&#xA;  &lt;a href=&#34;#introduction-et-contexte-du-machine-learning--le-workflow&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;L’objectif du machine learning, c’est &lt;strong&gt;de ne pas avoir besoin de connaître toutes les équations scientifiques&lt;/strong&gt; qui décrivent un système.&lt;br&gt;&#xA;Avec un modèle physique classique, on part des lois (mécaniques, chimiques…) → on prend les entrées → on calcule les sorties.&#xA;Mais parfois, ces lois sont &lt;strong&gt;trop complexes&lt;/strong&gt; ou &lt;strong&gt;impossibles à écrire précisément&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;👉 Le &lt;strong&gt;machine learning&lt;/strong&gt; propose une autre approche :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Le piège de la chaise</title>

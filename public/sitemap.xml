@@ -6,10 +6,19 @@
     <lastmod>2024-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/fitness/</loc>
+    <lastmod>2025-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/le_piege_chaise/</loc>
+    <lastmod>2025-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coaching/</loc>
     <lastmod>2025-05-23T00:00:00+00:00</lastmod>
@@ -32,9 +41,6 @@
     <loc>http://localhost:1313/tags/fitness/</loc>
     <lastmod>2025-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/fitness/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/programmation/</loc>
     <lastmod>2025-01-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -49,9 +55,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/cia_sabotage/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>

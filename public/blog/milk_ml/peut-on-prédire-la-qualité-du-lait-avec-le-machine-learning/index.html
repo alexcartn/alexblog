@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.139.3">
+<title>Peut-on prédire la qualité du lait avec le machine learning ? | Alexandre CARTON</title>
+
+
+<meta property="twitter:site" content="@votre_twitter">
+<meta property="twitter:creator" content="@votre_twitter">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Un projet pratique d’analyse de données et de classification">
+
+
+<meta property="og:site_name" content="Alexandre CARTON">
+<meta property="og:title" content="Peut-on prédire la qualité du lait avec le machine learning ? | Alexandre CARTON">
+<meta property="og:description" content="Un projet pratique d’analyse de données et de classification" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="http://localhost:1313/blog/milk_ml/peut-on-pr%C3%A9dire-la-qualit%C3%A9-du-lait-avec-le-machine-learning/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="http://localhost:1313/blog/sidebar-listing.JPG" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="http://localhost:1313/blog/sidebar-listing.JPG" >
+    
+    
+  
+  <meta itemprop="name" content="Peut-on prédire la qualité du lait avec le machine learning ?">
+  <meta itemprop="description" content="Introduction et contexte du machine learning — le workflowL’objectif du machine learning, c’est de ne pas avoir besoin de connaître toutes les équations scientifiques qui décrivent un système.
+Avec un modèle physique classique, on part des lois (mécaniques, chimiques…) → on prend les entrées → on calcule les sorties. Mais parfois, ces lois sont trop complexes ou impossibles à écrire précisément.
+👉 Le machine learning propose une autre approche :">
+  <meta itemprop="datePublished" content="2025-07-31T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-31T00:00:00+00:00">
+  <meta itemprop="wordCount" content="3198">
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/logosite.png" type="image/x-icon">
+  <link rel="icon" href="/img/logosite.png" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.eaa7f46d1167daadc30b7092ee51aaec332fa0f2fcbb295736fe5764fa3751f6.css" integrity="sha256-6qf0bRFn2q3DC3CS7lGq7DMvoPL8uylXNv5XZPo3UfY=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.7c1254e0915d5529eab24a50f05cccf8419556bd720e219917c67148513cc671.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="http://localhost:1313/" title="Home">
+      <img src="/img/logosite.png" class="dib db-l h2 w-auto" alt="Alexandre CARTON">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="À propos">À propos</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Mes articles de blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Mes projets">Projets</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/coaching/" title="Coaching">Coaching</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact">Contact</a>
+      
+      
+      <div class="dib v-mid">
+        <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/alexandre-carton-741146175/" title="linkedin" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+      </div>
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Peut-on prédire la qualité du lait avec le machine learning ?</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Un projet pratique d’analyse de données et de classification</h4>
+        <p class="f6 measure lh-copy mv1">By Alexandre Carton</p>
+        <p class="f7 db mv0 ttu">July 31, 2025</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h1 id="introduction-et-contexte-du-machine-learning--le-workflow">Introduction et contexte du machine learning — le workflow
+  <a href="#introduction-et-contexte-du-machine-learning--le-workflow"></a>
+</h1>
+<p>L’objectif du machine learning, c’est <strong>de ne pas avoir besoin de connaître toutes les équations scientifiques</strong> qui décrivent un système.<br>
+Avec un modèle physique classique, on part des lois (mécaniques, chimiques…) → on prend les entrées → on calcule les sorties.
+Mais parfois, ces lois sont <strong>trop complexes</strong> ou <strong>impossibles à écrire précisément</strong>.</p>
+<p>👉 Le <strong>machine learning</strong> propose une autre approche :</p>
+<blockquote>
+<p>« Et si, au lieu de connaître les équations, on apprenait directement des exemples ? »</p>
+</blockquote>
+
+
+
+
+<h3 id="-un-changement-de-logique">🔁 Un changement de logique
+  <a href="#-un-changement-de-logique"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>
+<p><strong>Modèle classique</strong> : on connaît les lois → on calcule la sortie à partir des entrées.</p>
+</li>
+<li>
+<p><strong>Machine learning</strong> : on donne <strong>plein d’exemples d’entrées et de sorties</strong>, et le modèle apprend <strong>la règle générale</strong> tout seul.</p>
+</li>
+</ul>
+
+
+
+
+<h2 id="-précision-du-modèle--laccuracy">🎯 Précision du modèle : l’accuracy
+  <a href="#-pr%c3%a9cision-du-mod%c3%a8le--laccuracy"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Une fois entraîné, le modèle doit être capable de <strong>prédire une sortie correcte</strong> à partir d’une <strong>nouvelle entrée qu’il n’a jamais vue</strong>.</p>
+<p>Mais attention : un modèle n’est jamais parfait !</p>
+<p>Par exemple, un modèle avec <strong>80 % de précision</strong> veut dire qu’il donne la bonne réponse 8 fois sur 10… mais se trompe encore dans 20 % des cas.</p>
+<blockquote>
+<p><strong>L’objectif ?</strong> Obtenir la <strong>meilleure précision possible</strong> (accuracy), sans surcharger inutilement le modèle.</p>
+</blockquote>
+<p>Le but est simple : <strong>maximiser cette précision</strong>.<br>
+Et pour ça, deux leviers principaux :</p>
+<ul>
+<li><strong>Plus de données pertinentes</strong> : capteurs, mesures, signaux fiables → plus de matière à apprendre.</li>
+<li><strong>Un modèle plus adapté</strong> : parfois un modèle plus complexe (mais pas trop !) permet d’améliorer les performances.</li>
+</ul>
+
+
+
+
+<h2 id="-typologie-de-modèles">🧠 Typologie de modèles
+  <a href="#-typologie-de-mod%c3%a8les"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Le choix du modèle dépend :</p>
+<ul>
+<li>
+<p>du type de sortie attendue (ex : une <strong>classe</strong> → modèle de classification ; une <strong>valeur continue</strong> → régression),</p>
+</li>
+<li>
+<p>et du type d’apprentissage :</p>
+<ul>
+<li>
+<p><strong>supervisé</strong> : on connaît les réponses pendant l’apprentissage,</p>
+</li>
+<li>
+<p><strong>non supervisé</strong> : on cherche à découvrir des structures dans les données (ex : regroupements).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>![[Pasted image 20250730155424.png]]</p>
+
+
+
+
+<h2 id="-le-workflow-du-machine-learning-étape-par-étape">🔁 Le workflow du machine learning, étape par étape
+  <a href="#-le-workflow-du-machine-learning-%c3%a9tape-par-%c3%a9tape"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Quel que soit le problème, la <strong>démarche reste la même</strong> :</p>
+<ol>
+<li>
+<p><strong>Collecte des données</strong> : capteurs, sondes, bases existantes</p>
+</li>
+<li>
+<p><strong>Nettoyage et préparation</strong> : vérifier, convertir, formater les données</p>
+</li>
+<li>
+<p><strong>Choix du type d’apprentissage</strong> :</p>
+<ul>
+<li>
+<p><em>Supervisé</em> : on a les réponses (ex : qualité du lait)</p>
+</li>
+<li>
+<p><em>Non supervisé</em> : on n’a pas les réponses (ex : grouper des profils similaires)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Entraînement du modèle</strong> : on lui montre les exemples et il apprend</p>
+</li>
+<li>
+<p><strong>Évaluation</strong> : on vérifie sur des données nouvelles s’il se débrouille bien</p>
+</li>
+<li>
+<p><strong>Déploiement</strong> : sur le cloud, dans un appareil embarqué, ou intégré dans un process industriel</p>
+</li>
+</ol>
+<p>![[Pasted image 20250730155215.png]]</p>
+
+
+
+
+<h1 id="prédiction-de-la-qualité-du-lait-avec-le-machine-learning">Prédiction de la qualité du lait avec le machine learning
+  <a href="#pr%c3%a9diction-de-la-qualit%c3%a9-du-lait-avec-le-machine-learning"></a>
+</h1>
+<p>Pour illustrer concrètement la méthode du machine learning, prenons un <strong>cas pratique</strong>.<br>
+Le site 
+<a href="https://www.kaggle.com" target="_blank" rel="noopener">Kaggle</a> propose des <strong>jeux de données gratuits</strong> pour s&rsquo;entraîner. Ici, nous allons utiliser un dataset qui contient des mesures sur des échantillons de lait, et essayer de prédire automatiquement leur <strong>qualité</strong>.</p>
+<blockquote>
+<p>🔧 Le projet est réalisé en <strong>Python</strong>, avec la bibliothèque <strong>Scikit-learn</strong>, (le lien avec le code source est disponible en bas de l’article).</p>
+</blockquote>
+<p>🎯 <strong>Objectif</strong>
+Ce projet a pour but de <strong>prédire automatiquement la qualité du lait</strong> à partir de mesures physico-chimiques et sensorielles, en utilisant des algorithmes de machine learning supervisé.</p>
+<p>L’objectif final est multiple :</p>
+<ul>
+<li>✅ <strong>Fiabiliser et automatiser les contrôles qualité</strong> : en remplaçant ou en complétant les inspections manuelles, souvent subjectives et coûteuses, par un système d’aide à la décision rapide, répétable et objectivable.</li>
+<li>💡 <strong>Optimiser les processus industriels</strong> : en détectant en temps réel les dérives de production (pH, goût, turbidité, etc.), le modèle permet d’anticiper les non-conformités, d’ajuster les paramètres de fabrication ou de trier les lots efficacement.</li>
+<li>💰 <strong>Réduire les coûts de production et les pertes</strong>, en identifiant précocement les lots non conformes ou dégradés, ce qui permet d’agir rapidement (ajustement du processus, élimination ou revalorisation des lots impropres à la consommation).</li>
+</ul>
+<p>📊 À propos du dataset
+Les données sont disponibles dans un simple fichier <strong>CSV</strong> (<code>milknew.csv</code>)
+Le jeu de données contient 1059 échantillons de lait, collectés manuellement, chacun décrit par 7 variables indépendantes.</p>
+<p><strong>Résumé des variables (features)</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Variable</strong></th>
+          <th><strong>Description</strong></th>
+          <th><strong>Valeurs possibles</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>pH</code></td>
+          <td>Mesure de l’acidité ou de l’alcalinité du lait. Influence la fraîcheur et la stabilité.</td>
+          <td>Valeurs continues entre 3.0 et 9.5</td>
+      </tr>
+      <tr>
+          <td><code>Temperature</code></td>
+          <td>Température de l’échantillon lors de l’analyse. Impacte la qualité microbiologique.</td>
+          <td>Valeurs continues entre 34°C et 90°C</td>
+      </tr>
+      <tr>
+          <td><code>Taste</code></td>
+          <td>Évaluation sensorielle du goût du lait, réalisée par un testeur ou un capteur.</td>
+          <td>0 = mauvais goût, 1 = bon goût</td>
+      </tr>
+      <tr>
+          <td><code>Odor</code></td>
+          <td>Évaluation olfactive, révélant la fraîcheur ou d’éventuelles altérations.</td>
+          <td>0 = mauvaise odeur, 1 = bonne odeur</td>
+      </tr>
+      <tr>
+          <td><code>Fat</code></td>
+          <td>Teneur en matière grasse, un indicateur clé pour la texture et la valeur nutritionnelle.</td>
+          <td>0 = faible, 1 = élevée</td>
+      </tr>
+      <tr>
+          <td><code>Turbidity</code></td>
+          <td>Mesure de la turbidité (opacité), souvent liée à des particules indésirables.</td>
+          <td>0 = limpide, 1 = trouble</td>
+      </tr>
+      <tr>
+          <td><code>Colour</code></td>
+          <td>Indication de la couleur du lait, influencée par la composition ou l’oxydation.</td>
+          <td>Valeurs entières entre 240 et 255</td>
+      </tr>
+  </tbody>
+</table>
+<p>La <strong>variable cible</strong> <code>Grade</code> indique la qualité du lait :</p>
+<ul>
+<li>
+<p><code>Low</code> → mauvaise qualité</p>
+</li>
+<li>
+<p><code>Medium</code> → qualité moyenne</p>
+</li>
+<li>
+<p><code>High</code> → bonne qualité</p>
+</li>
+</ul>
+<p>🧪 Ces classes ont été déterminées en fonction de seuils sur les variables décrites ci-dessus. Certaines d’entre elles sont binarisées selon des critères experts (ex. : goût acceptable = 1), tandis que d’autres (comme le pH ou la température) conservent leur valeur continue.</p>
+
+
+
+
+<h2 id="exploration-des-données">Exploration des données
+  <a href="#exploration-des-donn%c3%a9es"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>🧹 Vérification et nettoyage des données</p>
+<p>Nous commençons par une <strong>analyse exploratoire du fichier CSV</strong> fourni afin de :</p>
+<ul>
+<li>vérifier l’intégrité du jeu de données (présence de données manquantes),</li>
+<li>identifier le type de données associé à chaque variable.</li>
+</ul>
+<p>**Aperçu des 5 premières lignes</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>pH</th>
+          <th>Temprature</th>
+          <th>Taste</th>
+          <th>Odor</th>
+          <th>Fat</th>
+          <th>Turbidity</th>
+          <th>Colour</th>
+          <th>Grade</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>6.6</td>
+          <td>35</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>254</td>
+          <td>high</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>6.6</td>
+          <td>36</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>253</td>
+          <td>high</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>8.5</td>
+          <td>70</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>246</td>
+          <td>low</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>9.5</td>
+          <td>34</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>255</td>
+          <td>low</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>6.6</td>
+          <td>37</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>255</td>
+          <td>medium</td>
+      </tr>
+  </tbody>
+</table>
+<p>📋 <strong>Résumé des types de données :</strong></p>
+<p><code>Data columns (total 8 columns):  #   Column      Non-Null Count  Dtype  ---  ------      --------------  -----    0   pH          1059 non-null   float64  1   Temprature  1059 non-null   int64    2   Taste       1059 non-null   int64    3   Odor        1059 non-null   int64    4   Fat         1059 non-null   int64    5   Turbidity   1059 non-null   int64    6   Colour      1059 non-null   int64    7   Grade       1059 non-null   object</code></p>
+<p>👉 <strong>Résultat de l’analyse initiale :</strong></p>
+<ul>
+<li>Le dataset contient bien <strong>1059 échantillons</strong>, sans <strong>aucune donnée manquante</strong>.</li>
+<li>La typologie des colonnes est cohérente :
+<ul>
+<li>Les <strong>données continues</strong> (<code>pH</code>, <code>Temperature</code>) sont de type <code>float64</code> ou <code>int64</code> selon la précision,</li>
+<li>Les <strong>variables binaires</strong> (<code>Taste</code>, <code>Odor</code>, <code>Fat</code>, <code>Turbidity</code>) sont de type <code>int64</code>,</li>
+<li>La variable cible <code>Grade</code> est de type <code>object</code> (catégorielle, texte)</li>
+</ul>
+</li>
+</ul>
+<p>🔎 Aucune transformation n’est nécessaire à ce stade en ce qui concerne les types de données ou la gestion des valeurs manquantes. Le dataset est donc prêt à être utilisé pour l’étape de <strong>prétraitement</strong>.</p>
+
+
+
+
+<h2 id="statistiques-descriptives">Statistiques descriptives
+  <a href="#statistiques-descriptives"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Avant de construire un modèle de machine learning, il est essentiel de <strong>comprendre la structure et la distribution des données</strong>.<br>
+Nous commençons donc par une analyse descriptive pour identifier les tendances générales et les relations entre les variables.</p>
+<p>Cette phase se décompose en trois étapes :</p>
+<ol>
+<li>
+<p><strong>Analyse des valeurs centrales</strong> (moyenne, médiane, quartiles) pour visualiser la <strong>répartition des variables</strong> et détecter d’éventuelles asymétries ou valeurs extrêmes.</p>
+</li>
+<li>
+<p><strong>Analyse univariée</strong> à l’aide de <strong>boxplots</strong>, pour observer la dispersion et repérer les outliers.</p>
+</li>
+<li>
+<p><strong>Analyse bivariée</strong> via une <strong>matrice de corrélation</strong>, afin d’évaluer les relations linéaires entre les variables et identifier les éventuelles redondances.</p>
+</li>
+</ol>
+<p>Ces éléments nous permettront d’<strong>anticiper la pertinence de chaque variable dans le modèle prédictif</strong>, et d’orienter la phase de sélection de features.</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>pH</th>
+          <th>Temprature</th>
+          <th>Taste</th>
+          <th>Odor</th>
+          <th>Fat</th>
+          <th>Turbidity</th>
+          <th>Colour</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>count</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+          <td>1059.000</td>
+      </tr>
+      <tr>
+          <td>mean</td>
+          <td>6.630</td>
+          <td>44.227</td>
+          <td>0.547</td>
+          <td>0.432</td>
+          <td>0.671</td>
+          <td>0.491</td>
+          <td>251.840</td>
+      </tr>
+      <tr>
+          <td>std</td>
+          <td>1.400</td>
+          <td>10.098</td>
+          <td>0.498</td>
+          <td>0.496</td>
+          <td>0.470</td>
+          <td>0.500</td>
+          <td>4.307</td>
+      </tr>
+      <tr>
+          <td>min</td>
+          <td>3.000</td>
+          <td>34.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>240.000</td>
+      </tr>
+      <tr>
+          <td>25%</td>
+          <td>6.500</td>
+          <td>38.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>0.000</td>
+          <td>250.000</td>
+      </tr>
+      <tr>
+          <td>50%</td>
+          <td>6.700</td>
+          <td>41.000</td>
+          <td>1.000</td>
+          <td>0.000</td>
+          <td>1.000</td>
+          <td>0.000</td>
+          <td>255.000</td>
+      </tr>
+      <tr>
+          <td>75%</td>
+          <td>6.800</td>
+          <td>45.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>255.000</td>
+      </tr>
+      <tr>
+          <td>max</td>
+          <td>9.500</td>
+          <td>90.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>1.000</td>
+          <td>255.000</td>
+      </tr>
+  </tbody>
+</table>
+<p>![[Pasted image 20250730161934.png]]
+**Résumé des statistiques descriptives</p>
+<ul>
+<li>✅ <strong>Aucune donnée manquante</strong> : toutes les colonnes comptent 1059 valeurs.</li>
+<li>📉 <strong>pH</strong> : moyenne autour de 6.6, valeurs extrêmes entre 3.0 et 9.5 — quelques cas atypiques possibles.</li>
+<li>🌡 <strong>Température</strong> : moyenne à 44 °C, avec des pointes jusqu’à 90 °C — probablement des cas particuliers ou expérimentaux.</li>
+<li>🎨 <strong>Couleur</strong> : très homogène (moyenne à 251.8), majorité des échantillons proches du blanc standard (255).</li>
+</ul>
+<p>**Variables binaires :</p>
+<ul>
+<li>😋 <strong>Goût (<code>Taste</code>)</strong> : environ 55 % des échantillons sont jugés bons.</li>
+<li>👃 <strong>Odeur (<code>Odor</code>)</strong> : plus de la moitié présentent une odeur mauvaise.</li>
+<li>🧈 <strong>Matière grasse (<code>Fat</code>)</strong> : 67 % des échantillons ont une teneur élevée.</li>
+<li>💧 <strong>Turbidité</strong> : bien répartie entre limpide et trouble (valeurs équilibrées).</li>
+</ul>
+<p>🧠 Ces tendances permettront d’orienter la phase de modélisation et d’identifier les variables les plus discriminantes pour la prédiction de la qualité.</p>
+<p><strong>Boxplots par variable</strong> — <em>Analyse univariée</em></p>
+<p>Ces diagrammes permettent d’analyser la <strong>distribution</strong> de chaque variable et d’identifier les <strong>valeurs aberrantes (outliers)</strong>.</p>
+<ul>
+<li><strong>pH</strong> : Distribution centrée autour de 6,6. Quelques outliers vers le bas (&lt; 4) et le haut (&gt; 8.5), à surveiller.</li>
+<li><strong>Temperature</strong> : Médiane autour de 41-44°C. Des outliers élevés jusqu’à 90°C → échantillons potentiellement atypiques ou erreurs de saisie.</li>
+<li><strong>Taste / Odor / Fat / Turbidity</strong> : Variables binaires (0 ou 1), donc représentées par des barres fines → distribution claire (présence/absence).</li>
+<li><strong>Colour</strong> : Distribution concentrée vers 255, avec quelques valeurs plus basses (~240), reflétant une variation de teinte perceptible dans peu d’échantillons.</li>
+</ul>
+<p>👉 <strong>Conclusion</strong> :</p>
+<ul>
+<li>Peu de variabilité sur les données binaires (discrètes).</li>
+<li><code>Temperature</code> et <code>pH</code> nécessitent une attention particulière pour un éventuel <strong>traitement des valeurs extrêmes</strong>.</li>
+</ul>
+<p>![[Pasted image 20250730160622.png]]</p>
+<p>** <strong>Matrice de corrélation (%)</strong> — <em>Analyse bivariée</em></p>
+<p>Cette heatmap montre les <strong>corrélations linéaires</strong> entre les variables (coefficient de Pearson) exprimées en pourcentage.</p>
+<p>**💡 Corrélations significatives :</p>
+<ul>
+<li>
+<p><code>Odor</code> est positivement corrélée à :</p>
+<ul>
+<li><code>Taste</code> (<strong>32 %</strong>)</li>
+<li><code>Fat</code> (<strong>31 %</strong>)</li>
+<li><code>Turbidity</code> (<strong>46 %</strong>)<br>
+→ Une <strong>bonne odeur est souvent associée à un bon goût, une forte teneur en graisse et un lait trouble</strong>, ce qui peut refléter un lait riche mais non homogénéisé.</li>
+</ul>
+</li>
+<li>
+<p><code>Fat</code> ↔ <code>Taste</code> : <strong>32 %</strong><br>
+→ La matière grasse influence positivement la perception du goût.</p>
+</li>
+<li>
+<p><code>Fat</code> ↔ <code>Turbidity</code> : <strong>33 %</strong><br>
+→ Plus de matière grasse → lait plus trouble, ce qui est logique.</p>
+</li>
+<li>
+<p><code>pH</code> a une faible corrélation avec toutes les autres variables.<br>
+→ Il varie indépendamment du reste → <strong>bonne variable discriminante potentielle.</strong></p>
+</li>
+</ul>
+<p>**🔍 Corrélations faibles / négligeables :</p>
+<ul>
+<li><code>Colour</code> est <strong>peu corrélée</strong> aux autres variables.</li>
+<li><code>Temperature</code> n’est pas fortement liée aux critères sensoriels (goût, odeur…).</li>
+</ul>
+<p>![[Pasted image 20250730161806.png]]</p>
+<p><strong>Résumé exploratoire synthétique</strong></p>
+<p>L’analyse préliminaire du jeu de données met en évidence les points suivants :</p>
+<ul>
+<li>
+<p>✅ <strong>Données propres</strong> : 1059 échantillons, aucune valeur manquante.</p>
+</li>
+<li>
+<p>📉 <strong>Variables continues</strong> (<code>pH</code>, <code>Temperature</code>, <code>Colour</code>) :</p>
+<ul>
+<li>
+<p>Quelques <strong>valeurs extrêmes</strong> (notamment pour <code>Temperature</code> jusqu’à 90 °C).</p>
+</li>
+<li>
+<p><code>Colour</code> est très concentrée autour de 255 → <strong>faible variabilité</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>🔢 <strong>Variables binaires</strong> (<code>Taste</code>, <code>Odor</code>, <code>Fat</code>, <code>Turbidity</code>) :</p>
+<ul>
+<li>
+<p><code>Fat</code> est majoritairement élevée (67 %),</p>
+</li>
+<li>
+<p><code>Odor</code> est plus souvent mauvaise,</p>
+</li>
+<li>
+<p>Variables globalement <strong>bien réparties</strong> entre 0 et 1.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>📦 <strong>Boxplots</strong> :</p>
+<ul>
+<li>
+<p>Confirment les observations ci-dessus,</p>
+</li>
+<li>
+<p>Outliers visibles pour <code>Temperature</code> et <code>pH</code> uniquement.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>🔗 <strong>Corrélations</strong> :</p>
+<ul>
+<li>
+<p>Relations fortes entre variables sensorielles : <code>Taste</code>, <code>Fat</code>, <code>Odor</code>, <code>Turbidity</code>,</p>
+</li>
+<li>
+<p><code>pH</code> et <code>Colour</code> sont <strong>peu corrélés aux autres</strong> → apportent une information indépendante.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<h2 id="developpéer-un-modele-predictif-avec-le-machine-learnign">Developpéer un modele predictif avec le machine learnign
+  <a href="#developp%c3%a9er-un-modele-predictif-avec-le-machine-learnign"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<pre><code>1.Creaton du modele
+</code></pre>
+<p>Maintenant que nos données sont prêtes, voyons <strong>comment créer un « modèle »</strong> qui va apprendre à reconnaître la qualité du lait. Imaginez :</p>
+<ul>
+<li>
+<p>On montre au modèle <strong>beaucoup d’exemples</strong> de lait dont on connaît déjà la qualité.</p>
+</li>
+<li>
+<p>Le modèle étudie les mesures (goût, odeur, pH…) et repère des <strong>motifs</strong>.</p>
+</li>
+<li>
+<p>Puis, sur un nouvel échantillon, il prédit si la qualité est « Low », « Medium » ou « High ».</p>
+</li>
+</ul>
+
+
+
+
+<h3 id="choix-du-modèle--la-forêt-darbres-de-décision">Choix du modèle : la forêt d’arbres de décision
+  <a href="#choix-du-mod%c3%a8le--la-for%c3%aat-darbres-de-d%c3%a9cision"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Dans notre cas, nous utilisons un <strong>apprentissage supervisé</strong>, car nous connaissons la <strong>sortie attendue</strong> : c’est un problème de <strong>classification</strong>, puisque la sortie est une <strong>classe</strong> (le grade du lait).</p>
+<p>Nous avons choisi un algorithme de type <strong>Random Forest</strong> (forêt aléatoire d’arbres de décision), car il est :</p>
+<ul>
+<li>
+<p><strong>robuste</strong> face au bruit dans les données,</p>
+</li>
+<li>
+<p><strong>performant</strong> même sans réglages poussés,</p>
+</li>
+<li>
+<p>et nécessite <strong>peu d&rsquo;ajustements</strong> pour obtenir de bons résultats.</p>
+</li>
+</ul>
+<p>**🧠 Un arbre de décision, c’est quoi ?</p>
+<p>On peut le comparer à un petit <strong>organigramme logique</strong> :</p>
+<blockquote>
+<p>« Si la matière grasse &gt; X, alors bonne qualité ; sinon, vérifier l’odeur… »</p>
+</blockquote>
+<p>Chaque <strong>arbre</strong> prend ses propres décisions sur la base de critères simples.</p>
+<p>**🔧 Paramètres choisis</p>
+<p>Par défaut, pour l&rsquo;entraînement, nous avons utilisé <strong>100 arbres</strong> dans la forêt.</p>
+
+
+
+
+<h3 id="entraînement-vs-évaluation--pourquoi-on-découpe-les-données">Entraînement vs évaluation : pourquoi on découpe les données
+  <a href="#entra%c3%aenement-vs-%c3%a9valuation--pourquoi-on-d%c3%a9coupe-les-donn%c3%a9es"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Pour que le modèle apprenne et qu’on puisse mesurer s’il est vraiment bon, on sépare les données en deux morceaux :</p>
+<ul>
+<li>
+<p><strong>X_train</strong> et <strong>y_train</strong> : ce sont les entrées (X_train) et les bonnes réponses (y_train) que le modèle voit pendant <strong>l’entraînement</strong>. C’est là qu’il apprend les règles à partir des exemples.</p>
+</li>
+<li>
+<p><strong>X_test</strong> et <strong>y_test</strong> : ce sont des données <strong>nouvelles</strong>, que le modèle <strong>n’a pas vues</strong> pendant l’entraînement. On les utilise pour <strong>évaluer</strong> sa capacité à généraliser — autrement dit, pour vérifier qu’il ne fait pas que « mémoriser » mais qu’il sait bien prédire sur du neuf.</p>
+</li>
+</ul>
+<blockquote>
+<p>En résumé : on entraîne avec <code>X_train</code>/<code>y_train</code>, on teste avec <code>X_test</code>/<code>y_test</code>. Cela permet de savoir si le modèle fonctionne vraiment et pas seulement sur les exemples qu’on lui a montrés.</p>
+</blockquote>
+
+
+
+
+<h3 id="intreperation-des-resutats-du-modele-avec-la-matrice-de-confusion">Intreperation des resutats du modele avec la matrice de confusion
+  <a href="#intreperation-des-resutats-du-modele-avec-la-matrice-de-confusion"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>La <strong>matrice de confusion</strong> est un tableau qui compare ce que le modèle a <strong>prédit</strong> avec ce qui était <strong>vraiment vrai</strong>.<br>
+Chaque ligne correspond à la classe vraie, chaque colonne à la classe prédite. L’idée : voir non seulement combien de prédictions étaient correctes, mais <em>dans quel sens</em> les erreurs ont été faites.
+On voit <strong>non seulement que le modèle est bon</strong>, mais aussi <strong>quel type d’erreur il fait</strong>.</p>
+<p>Ici dans notre cas on peut noter :</p>
+<ul>
+<li>
+<p><strong>Précision globale élevée</strong> : la majorité des échantillons ont été correctement classés.</p>
+</li>
+<li>
+<p>Le modèle a :</p>
+<ul>
+<li>
+<p>correctement identifié <strong>85/86</strong> laits de qualité <code>low</code>,</p>
+<ul>
+<li><strong>1 a été confondu avec <code>high</code></strong>. Autrement dit, un lait mauvais a été jugé comme bon — c’est une erreur à surveiller car c’est une fausse alarme inverse (faux négatif sur <code>low</code> vu du point de vue de <code>high</code>).</li>
+</ul>
+</li>
+<li>
+<p>parfaitement reconnu les <strong>75/75</strong> laits <code>medium</code>,</p>
+</li>
+<li>
+<p>correctement classé <strong>51/51</strong> laits <code>high</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>![[Pasted image 20250731130051.png]]</p>
+
+
+
+
+<h2 id="amélioration--optimisation-du-modèle-actuel">Amélioration : optimisation du modèle actuel
+  <a href="#am%c3%a9lioration--optimisation-du-mod%c3%a8le-actuel"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Le modèle fonctionne déjà très bien (≈99 % de précision), mais il utilise <strong>7 features</strong> pour faire sa prédiction.<br>
+Or, dans certains contextes (embarqué, temps réel, coût de collecte des données), <strong>réduire le nombre de variables</strong> tout en gardant une précision élevée est une optimisation très utile : on diminue la complexité, on accélère les inférences, et on simplifie la maintenance.</p>
+<p>**Quelles sont les variables les plus importantes ?</p>
+<p>Le graphique ci-dessous représente <strong>l’importance des variables</strong> utilisées par le modèle Random Forest pour prédire la qualité du lait..</p>
+<ul>
+<li>
+<p>Chaque barre correspond à une <strong>caractéristique du lait</strong>.</p>
+</li>
+<li>
+<p>La <strong>longueur de la barre</strong> indique à quel point cette caractéristique a été <strong>utile pour prendre des décisions</strong> dans les arbres du modèle.</p>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Rang</th>
+          <th>Variable</th>
+          <th>Interprétation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td><strong>pH</strong></td>
+          <td>C’est la variable la plus influente. Un certain seuil de pH semble être un indicateur fort de la qualité du lait.</td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td><strong>Temperature</strong></td>
+          <td>La température est également très discriminante, sans doute liée à la conservation ou à la fraîcheur du lait.</td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td><strong>Fat</strong></td>
+          <td>Le taux de matière grasse joue un rôle significatif dans la distinction entre les catégories.</td>
+      </tr>
+      <tr>
+          <td>4️⃣ à 7️⃣</td>
+          <td><strong>Turbidity</strong>, <strong>Odor</strong>, <strong>Colour</strong>, <strong>Taste</strong></td>
+          <td>Ces variables ont un impact plus faible dans les décisions du modèle. Elles apportent sans doute des nuances utiles, mais sont moins déterminantes seules.</td>
+      </tr>
+  </tbody>
+</table>
+<p>![[Pasted image 20250731130337.png]]</p>
+<p>Réduction des features : compromis précision vs simplicité</p>
+<p>En relançant l’entraînement avec <strong>100 arbres</strong> mais en ne gardant que les trois variables les plus importantes (<code>pH</code>, <code>Temperature</code>, <code>Fat</code>), on obtient cette comparaison :</p>
+<table>
+  <thead>
+      <tr>
+          <th>Jeu de variables</th>
+          <th>Accuracy</th>
+          <th>Perte par rapport au complet</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Toutes les variables</strong></td>
+          <td>0.998</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><strong>pH + Temperature + Fat</strong></td>
+          <td>0.942</td>
+          <td>≈ −6 points</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Garder uniquement ces trois features permet d’obtenir un modèle beaucoup plus léger tout en conservant une précision élevée (~94 %). C’est un compromis raisonnable : on sacrifie environ 6 points de performance pour simplifier la collecte des données, accélérer l’inférence et améliorer l’explicabilité.</p>
+</blockquote>
+<p>Il reste maintenant à décider, en fonction du contexte de déploiement (contraintes de calcul, coût des capteurs, exigence de précision), si cette simplification vaut la légère baisse de performance.</p>
+
+
+
+
+<h2 id="déploiement-léger--prédiction-dans-google-sheets-no-code-light">Déploiement léger : prédiction dans Google Sheets (no-code light)
+  <a href="#d%c3%a9ploiement-l%c3%a9ger--pr%c3%a9diction-dans-google-sheets-no-code-light"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Pour rendre la prédiction de la qualité du lait accessible sans infrastructure lourde, on a construit une version <strong>light</strong>, directement exploitable dans <strong>Google Sheets</strong>, qui repose uniquement sur les trois variables les plus influentes : <strong>pH</strong>, <strong>Temperature</strong> et <strong>Fat</strong>. L’idée n’est pas de répliquer exactement la Random Forest, mais d’approximer sa logique avec une <strong>règle pondérée</strong> simple et interprétable.</p>
+
+
+
+
+<h3 id="comment-ça-marche">Comment ça marche
+  <a href="#comment-%c3%a7a-marche"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ol>
+<li>
+<p><strong>Score par variable</strong> :<br>
+Chaque mesure est transformée en un score entre 0 et 1 selon sa proximité d’une plage “idéale” :</p>
+<ul>
+<li>
+<p><strong>pH</strong> : idéal entre 6,5 et 6,8.</p>
+</li>
+<li>
+<p><strong>Temperature</strong> : idéal entre 35 et 45 °C.</p>
+</li>
+<li>
+<p><strong>Fat</strong> : 1 signifie matière grasse élevée (bonne).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Combinaison pondérée</strong> :<br>
+On recombine ces trois scores en tenant compte de leur importance relative issue de la Random Forest :</p>
+<ul>
+<li>
+<p>pH : 53 %</p>
+</li>
+<li>
+<p>Temperature : 32 %</p>
+</li>
+<li>
+<p>Fat : 15 %<br>
+Le score global est donc une moyenne pondérée qui reflète ce que le modèle “voit” comme signal fort.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Décision</strong> :<br>
+En fonction du score pondéré, on classe l’échantillon en <code>high</code>, <code>medium</code> ou <code>low</code>. Des seuils simples (par exemple ≥0,7 = high, ≥0,5 = medium, sinon low) permettent d’avoir une prédiction rapide et compréhensible.</p>
+</li>
+<li>
+<p><strong>Alerte</strong> :<br>
+Si au moins deux des trois variables principales sont hors de leur plage idéale, une fenêtre “Vérifier” s’active pour signaler un contrôle manuel.</p>
+</li>
+</ol>
+<p>![[Pasted image 20250731142401.png]]</p>
+
+
+
+
+<h1 id="conclusion">Conclusion
+  <a href="#conclusion"></a>
+</h1>
+<p>En parcourant l’ensemble du workflow <strong>machine learning</strong>, nous avons démontré qu’il est possible de bâtir, à partir de simples mesures physico-chimiques et sensorielles, un modèle de prédiction <strong>rapide, fiable et explicable</strong> pour la qualité du lait.</p>
+<p>Après exploration, préparation des données et expérimentation de plusieurs variantes, la <strong>Random Forest</strong> s’est avérée la plus performante : avec seulement trois variables : <code>pH</code>, <code>Temperature</code> et <code>Fat</code>,  elle atteint <strong>94 % de précision</strong> tout en restant légère à déployer.</p>
+<p>🥛 **Recommandations aux producteurs de lait</p>
+<ul>
+<li><strong>Surveiller en priorité le pH et la température</strong> : ces deux mesures expliquent à elles seules l’essentiel des variations de qualité.</li>
+<li><strong>Former le personnel</strong> à l’interprétation des prédictions : un outil de scoring n’est utile que si les opérateurs savent en tirer des actions concrètes (réglage de température, tri de lots, nettoyage de ligne).</li>
+</ul>
+<p>Variables prioritaires (top 3)</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Valeur cible / plage</th>
+          <th>Pourquoi c’est important</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>pH</strong></td>
+          <td>6,5 – 6,8</td>
+          <td>Meilleure discrimination de qualité. Valeurs hors intervalle = alerte.</td>
+      </tr>
+      <tr>
+          <td><strong>Temperature</strong></td>
+          <td>35–45 °C (analyse) / &lt;4 °C (stockage)</td>
+          <td>Indicateur de fraîcheur et sécurité microbiologique.</td>
+      </tr>
+      <tr>
+          <td><strong>Fat</strong></td>
+          <td>1 (élevé dans ce dataset)</td>
+          <td>Influence directe du goût et perception de richesse.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+
+
+
+<h1 id="-sources">🔗 Sources
+  <a href="#-sources"></a>
+</h1>
+<ul>
+<li>
+<p><strong>Jeu de données – Prédiction de la qualité du lait</strong><br>
+
+<a href="https://www.kaggle.com/datasets/cpluzshrijayan/milkquality" target="_blank" rel="noopener">Milk Quality Prediction – Kaggle</a></p>
+</li>
+<li>
+<p><strong>Feuille de route – Cheat Sheet du projet</strong><br>
+
+<a href="https://docs.google.com/spreadsheets/d/1sYr5gzNDJyGrXJHyWE9kadEQYA8IlG0DcVmru-fceMY/edit?usp=sharing" target="_blank" rel="noopener">Google Sheet – Workflow &amp; logique Machine Learning</a></p>
+</li>
+</ul>
+<hr>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">July 31, 2025</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">16 minute read, 3198 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="http://localhost:1313/blog/coherence_cardiaque/">&larr; Cohérence cardiaque, harmoniser le souffle, le cœur et l’esprit</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="http://localhost:1313/blog/le_piege_chaise/">Le piège de la chaise &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      <div class="post-comments pa0 pa4-l mt4">
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      © 2025 Alexandre Carton, France
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/alexandre-carton-741146175/" title="linkedin" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/legal/" title="Mentions Légales">Mentions Légales</a>
+      
+    </div>
+  </nav>
+  
+</footer>
+
+      </div>
+    </body>
+</html>

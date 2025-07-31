@@ -6,8 +6,16 @@
     <description>Recent content in Categories on Alexandre CARTON</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate>
+    <copyright>© 2025 Alexandre Carton, France</copyright>
+    <lastBuildDate>Tue, 17 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fitness</title>
+      <link>http://localhost:1313/categories/fitness/</link>
+      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/fitness/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Web</title>
       <link>http://localhost:1313/categories/web/</link>
@@ -20,13 +28,6 @@
       <link>http://localhost:1313/categories/entra%C3%AEnement/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/entra%C3%AEnement/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fitness</title>
-      <link>http://localhost:1313/categories/fitness/</link>
-      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/fitness/</guid>
       <description></description>
     </item>
     <item>
