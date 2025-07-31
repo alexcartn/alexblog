@@ -337,7 +337,7 @@ Pour que le modèle apprenne et qu’on puisse mesurer s’il est vraiment bon, 
     
 
 > En résumé : on entraîne avec `X_train`/`y_train`, on teste avec `X_test`/`y_test`. Cela permet de savoir si le modèle fonctionne vraiment et pas seulement sur les exemples qu’on lui a montrés.
-### Intreperation des resutats du modele avec la matrice de confusion
+### Interprétation des résultats du modèle à l’aide de la matrice de confusion
 
 La **matrice de confusion** est un tableau qui compare ce que le modèle a **prédit** avec ce qui était **vraiment vrai**.  
 Chaque ligne correspond à la classe vraie, chaque colonne à la classe prédite. L’idée : voir non seulement combien de prédictions étaient correctes, mais _dans quel sens_ les erreurs ont été faites.
