@@ -324,6 +324,8 @@ Chaque **arbre** prend ses propres décisions sur la base de critères simples.
 
 Par défaut, pour l'entraînement, nous avons utilisé **100 arbres** dans la forêt.
 
+![alt text](forest.png)
+
 
 ### Entraînement vs évaluation : pourquoi on découpe les données
 
