@@ -79,6 +79,25 @@ Quel que soit le problème, la **démarche reste la même** :
 
 ![Pasted image 20250730155215.png](workflow.png)
 
+
+---
+
+<div style="text-align: center;">
+
+**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+
+<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
+
+  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
+  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;">
+
+  <button type="submit">Envoyer</button>
+</form>
+</div>
+
+---
+
+
 # Prédiction de la qualité du lait avec le machine learning
 
 Pour illustrer concrètement la méthode du machine learning, prenons un **cas pratique**.  
@@ -446,6 +465,21 @@ Variables prioritaires (top 3)
 |**Temperature**|35–45 °C (analyse) / <4 °C (stockage)|Indicateur de fraîcheur et sécurité microbiologique.|
 |**Fat**|1 (élevé dans ce dataset)|Influence directe du goût et perception de richesse.|
   
+---
+
+<div style="text-align: center;">
+
+**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+
+<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
+
+  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
+  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;">
+
+  <button type="submit">Envoyer</button>
+</form>
+</div>
+
 ---
 
 # Sources
