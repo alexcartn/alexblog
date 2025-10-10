@@ -1,7 +1,6 @@
 ---
-title: "About"
-description: |
-  A website template for Hugo developed by RStudio & Formspree and available for free.
+title: "À propos - Alexandre Carton"
+description: "Ingénieur chef de projet chez Yanmar Construction Equipment Europe. Expert en R&D industrielle, data science et coaching technique. Découvrez mon parcours et mes réalisations."
 show_header: true
 sidebar_left: false
 # Keep this! Do not edit.

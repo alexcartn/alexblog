@@ -9,7 +9,7 @@ copyright = "© 2025 Alexandre Carton, France"
 [params]
   orgName = "Alexandre Carton, France"
   # orgLocal = "France"
-  #description = "Description du blog"
+  description = "Blog technique et coaching par Alexandre Carton, ingénieur chef de projet. Découvrez des articles sur le CrossFit, la data science, le management et l'innovation industrielle."
   favicon = "/img/logosite.png"  # Placez votre favicon dans static/img/
   logo = "/img/logosite.png"        # Placez votre logo dans static/img/
   sharing_image = "/img/logosite.png"  # Image pour les partages sociaux
@@ -88,6 +88,19 @@ mainSections = ["about", "blog", "project", "contact"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# SEO Configuration
+enableRobotsTXT = true
+canonifyURLs = true
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Language and localization
+languageCode = "fr-FR"
+defaultContentLanguage = "fr"
 
 
 

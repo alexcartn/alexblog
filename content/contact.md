@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Contact - Alexandre Carton"
+description: "Contactez Alexandre Carton, ingénieur chef de projet et coach. Discutons de vos projets techniques, besoins en coaching ou collaborations professionnelles."
 date: 2024-12-09
 type: "page"
 ---

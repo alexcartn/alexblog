@@ -1,5 +1,6 @@
 ---
-title: "Coaching"
+title: "Coaching Professionnel - Alexandre Carton"
+description: "Coaching pour ingénieurs et profils techniques. Développez vos soft skills, clarifiez votre évolution de carrière et transformez la pression en performance. Sessions individuelles et packs sur mesure."
 date: 2025-05-23
 type: "page"
 ---
