@@ -24,16 +24,26 @@ met en lumière cette dimension méconnue. Cet organe, de prime abord simple, po
 
 ---
 
-<div style="text-align: center;">
+<div style="border:1px solid #e5e5e5; border-radius:12px; padding:1.5rem; margin:2rem 0; background-color:#fafafa;">
+  <h3 style="margin-top:0; margin-bottom:0.5rem;">Ne ratez plus aucune nouveauté 👋</h3>
+  <p style="margin-bottom:1.2rem; color:#555;">
+    Abonnez-vous à la newsletter pour recevoir les prochains articles directement dans votre boîte mail.
+  </p>
 
-**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+  <iframe data-tally-src="https://tally.so/embed/3yVAz8?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="150"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Newsletter form"></iframe>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 
-<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
-  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
-  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;"><br><br>
-  <button type="submit">Envoyer</button>
-</form>
-
+  <p style="font-size:0.9rem; color:#888; margin-top:1rem;">
+    Pour en savoir plus sur nos pratiques en matière de confidentialité et notre engagement à protéger vos données personnelles,
+    consultez notre <a href="/privacy/" target="_blank" style="color:#007acc; text-decoration:none;">Politique de confidentialité</a>.
+  </p>
 </div>
 
 ---
@@ -117,16 +127,26 @@ Il est ensuite conseillé d’espacer ces séances d’environ 4 heures, car les
 
 ---
 
-<div style="text-align: center;">
+<div style="border:1px solid #e5e5e5; border-radius:12px; padding:1.5rem; margin:2rem 0; background-color:#fafafa;">
+  <h3 style="margin-top:0; margin-bottom:0.5rem;">Ne ratez plus aucune nouveauté 👋</h3>
+  <p style="margin-bottom:1.2rem; color:#555;">
+    Abonnez-vous à la newsletter pour recevoir les prochains articles directement dans votre boîte mail.
+  </p>
 
-**Ne ratez plus aucune nouveauté : abonnez-vous à la newsletter 👋**
+  <iframe data-tally-src="https://tally.so/embed/3yVAz8?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="150"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Newsletter form"></iframe>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 
-<form action="https://formspree.io/f/xwpkgwjd" method="POST" style="display:inline-block;">
-  <label for="email" style="display:block; margin-bottom:0.5rem;">Votre email :</label>
-  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="margin-bottom:0.5rem;"><br><br>
-  <button type="submit">Envoyer</button>
-</form>
-
+  <p style="font-size:0.9rem; color:#888; margin-top:1rem;">
+    Pour en savoir plus sur nos pratiques en matière de confidentialité et notre engagement à protéger vos données personnelles,
+    consultez notre <a href="/privacy/" target="_blank" style="color:#007acc; text-decoration:none;">Politique de confidentialité</a>.
+  </p>
 </div>
 
 ---
