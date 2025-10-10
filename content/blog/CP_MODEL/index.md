@@ -202,6 +202,17 @@ Cette équation formalise l'évolution de ton réservoir énergétique :
 
 ![skibapng.png](skibapng.png)
 
+**Interprétation en français :**
+
+Cette formule calcule le **W' restant** (ton réservoir anaérobie disponible) à chaque instant :
+
+- **W'(t)** = énergie anaérobie encore disponible au temps t
+- **W'** = capacité totale de ton réservoir (déterminée par tes tests)
+- **∫(P-CP)dt** = énergie dépensée au-dessus de CP (quand tu pousses fort)
+- **e^(-Δt/τ)** = terme de récupération qui modélise comment ton W' se recharge pendant les phases sous CP
+
+👉 **En pratique** : si tu pousses à 300 W alors que ta CP est à 220 W, tu consommes (300-220) = 80 W de ton réservoir W' chaque seconde. Si ensuite tu redescends sous CP, le réservoir se recharge progressivement selon une constante de temps τ (tau).
+
 ## 2.2 Construire Votre Courbe Puissance-Durée
 
 ### Protocole de test
