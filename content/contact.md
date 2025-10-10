@@ -8,64 +8,23 @@ type: "page"
 
   <!-- Carte formulaire (légère ombre + fond clair) -->
   <article class="bg-near-white br3 pa4 shadow-4">
-    <form
-      action="https://formspree.io/f/meogdeol"
-      method="POST"
-      aria-label="Formulaire de contact"
-      class="measure-wide center"
-    >
-      <!-- Nom -->
-      <label for="nom" class="f5 b db mb2">Votre nom</label>
-      <input
-        type="text" id="nom" name="nom"
-        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
-        placeholder="Jean Dupont"
-      />
-      <!-- Email -->
-      <label for="email" class="f5 b db mb2">Votre email <span class="red">*</span></label>
-      <input
-        type="email" id="email" name="email" required
-        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
-        placeholder="jean@example.com"
-      />
-      <!-- Sujet (optionnel) -->
-      <label for="sujet" class="f5 b db mb2">Sujet</label>
-      <input
-        type="text" id="sujet" name="sujet"
-        class="input-reset ba b--black-20 pa2 br2 mb3 db w-100"
-        placeholder="À propos de…"
-      />
-      <!-- Message -->
-      <label for="message" class="f5 b db mb2">Votre message <span class="red">*</span></label>
-      <textarea
-        id="message" name="message" rows="6" required
-        class="input-reset ba b--black-20 pa2 br2 mb4 db w-100"
-        placeholder="Votre message…"></textarea>
-      <!-- Honeypot anti-spam (invisible) -->
-      <input type="text" name="_gotcha" style="display:none" />
-      <!-- Redirection après succès -->
-      <input type="hidden" name="_next" value="/merci/" />
-      <button
-        type="submit"
-        class="dib pv2 ph4 bg-blue hover-bg-dark-blue white b--none br2 grow pointer"
-      >
-        Envoyer
-      </button>
-      <!-- Note RGPD -->
-      <p class="f7 silver mt3">
-        Les informations saisies resteront confidentielles et ne seront jamais partagées.
-      </p>
-    </form>
+    <div class="measure-wide center">
+      <iframe data-tally-src="https://tally.so/embed/wA1REW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="276"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Contact"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
   </article>
 
-<p class="mt4">
-  Ou retrouvez-moi sur
-  <a href="https://www.linkedin.com/in/alexandre-carton-741146175/"
-     target="_blank" rel="noopener">LinkedIn</a>.
-</p>
+  <p class="mt4">
+    Ou retrouvez-moi sur
+    <a href="https://www.linkedin.com/in/alexandre-carton-741146175/"
+       target="_blank" rel="noopener">LinkedIn</a>.
+  </p>
 
-  </div>
 </section>
-
-
-
