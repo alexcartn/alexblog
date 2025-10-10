@@ -40,45 +40,46 @@ Enfin sur les formats de type **sprint max calories Echo Bike** : dans ce cas, s
 
 ---
 
-# Les bases : Les Fondamentaux Physiologiques
+# 1. Les Fondamentaux Physiologiques
 
-On comprend donc que le pacing ne peut pas être laissé au hasard.  
-Pour prendre les bonnes décisions pendant un WOD, il faut s’appuyer sur des repères objectifs, en plus de nos sensations.
+On comprend donc que le pacing ne peut pas être laissé au hasard.
+Pour prendre les bonnes décisions pendant un WOD, il faut s'appuyer sur des repères objectifs, en plus de nos sensations.
 
-C’est là qu’entrent en jeu trois notions clés, couramment utilisées dans les sport d'endurance :
+C'est là qu'entrent en jeu trois notions clés, couramment utilisées dans les sports d'endurance :
 
 - la **fréquence cardiaque (FC)**,
 - la **FTP (Functional Threshold Power)**,
 - et la **CP20 (Critical Power 20 minutes)**.
 
-Avant de voir comment les appliquer concrètement en CrossFit, prenons le temps de poser les bases et de comprendre ce que ces concepts signifient vraiment d’un point de vue physiologique.
- 
---- 
+Avant de voir comment les appliquer concrètement en CrossFit, prenons le temps de poser les bases et de comprendre ce que ces concepts signifient vraiment d'un point de vue physiologique.
+
+## 1.1 Les Trois Concepts Clés
+
+### Fréquence Cardiaque (FC)
 
 La **fréquence cardiaque** (FC) est le nombre de battements de ton cœur par minute (bpm).
 
-- Elle permet de suivre l’intensité de l’effort.
-- On distingue la **FC au repos**, la **FC maximale** et les **zones de FC** utilisées pour calibrer l’entraînement (endurance, seuil, haute intensité).
-- et les **zones de FC** (Z1 à Z5) qui servent à calibrer l’entraînement (endurance, seuil, haute intensité).
+- Elle permet de suivre l'intensité de l'effort.
+- On distingue la **FC au repos**, la **FC maximale** et les **zones de FC** (Z1 à Z5) qui servent à calibrer l'entraînement (endurance, seuil, haute intensité).
 
----  
+### FTP (Functional Threshold Power)
 
 La **FTP** est la puissance moyenne maximale que tu peux maintenir de façon stable pendant environ **1 heure**.
 
 - Elle est mesurée en watts.
-- C’est une référence pour définir les **zones d’entraînement** en cyclisme, rameur ou Assault Bike.
-CP20
+- C'est une référence pour définir les **zones d'entraînement** en cyclisme, rameur ou Assault Bike.
 
---- 
+### CP20 (Critical Power 20 minutes)
+
 La **CP20** est la puissance moyenne maximale que tu peux soutenir pendant **20 minutes**.
 
-- C’est un test de performance brute, sans conversion.
+- C'est un test de performance brute, sans conversion.
 - Elle est souvent utilisée comme base pour estimer la **FTP** (95 % de la CP20 ≈ FTP).
-- Plus “courte” que la FTP, elle est plus facile à tester régulièrement.
+- Plus "courte" que la FTP, elle est plus facile à tester régulièrement.
 
-## 🧪 Application : Du Test à la Réalité du WOD
+## 1.2 Réaliser Votre Test CP20
 
-### Réaliser son test CP20
+### Le protocole
 
 1. Choisis un ergomètre (BikeErg, RowErg, SkiErg)
 	👉 En pratique, le **BikeErg** est souvent privilégié car il minimise la part technique (plus simple de pédaler que de maintenir une technique parfaite au rameur).
@@ -88,8 +89,12 @@ La **CP20** est la puissance moyenne maximale que tu peux soutenir pendant **20 
 
 > Pour les perfectionnistes, on peut réaliser un **test CP20 spécifique à chaque machine** afin d’obtenir une table de référence adaptée à chaque ergo.
 
-### Exemple concret
-Voici la courbe de puissance obtenue lors de mon test CP20 (juillet 2024 sur BikeErg).  
+### Mon exemple : BikeErg juillet 2024
+
+> ⚠️ **Ces données sont personnelles**
+> Voici la courbe de puissance obtenue lors de **mon** test CP20 (juillet 2024 sur BikeErg).
+> Les valeurs présentées ci-dessous ne sont valables **que pour moi**. Vous devez réaliser vos propres tests pour obtenir des données exploitables.
+
 Sur cette base, on calcule :
 
 - **CP20 = 215 W**
@@ -97,26 +102,31 @@ Sur cette base, on calcule :
 
 ![ftp.png](ftp.png)
 
-### 🧭 Utiliser les Zones pour le Pacing
+## 1.3 Définir Vos Zones d'Entraînement
 
 Une fois que l’on a défini ses **zones de puissance** (ou de fréquence cardiaque), on peut commencer à les utiliser pour **calibrer son effort** pendant un WOD.
 
 Les études en physiologie de l’endurance montrent qu’à chaque zone correspond un **temps soutenable maximal** avant que la performance ne s’effondre.  
 👉 Autrement dit : plus tu montes dans les zones, plus la durée pendant laquelle tu peux tenir cette intensité diminue.
 
-> 🔍 En CrossFit, la majorité des WODs se situent **entre 5 et 20 minutes** d’effort effectif.  
-> On évolue donc principalement dans les **zones Z5 à Z7**, c’est-à-dire autour du **seuil lactique** et de la **capacité anaérobie**.
+> 🔍 En CrossFit, la majorité des WODs se situent **entre 5 et 20 minutes** d'effort effectif.
+> On évolue donc principalement dans les **zones Z5 à Z7**, c'est-à-dire autour du **seuil lactique** et de la **capacité anaérobie**.
 
-| Zone   | % FTP     | Row/Ski (split/500m) Bike (split/1000m) | Echo Bike (Cal/min) | Temps soutenable |
-| ------ | --------- | --------------------------------------- | ------------------- | ---------------- |
-| **Z1** | ≤ 55 %    | 2:26 – 9:15                             | 2–5                 | Plusieurs heures |
-| **Z2** | 56–75 %   | 2:11 – 2:25                             | 5–7                 | 1.5–4 h          |
-| **Z3** | 76–90 %   | 2:04 – 2:11                             | 7–9                 | 30–90 min        |
-| **Z4** | 91–105 %  | 1:58 – 2:04                             | 9–11                | 40–70 min (~FTP) |
-| **Z5** | 106–120 % | 1:53 – 1:57                             | 11–13               | 4–8 min          |
-| **Z6** | 121–150 % | 1:44 – 1:52                             | 13–16               | 30 s – 2 min     |
-| **Z7** | > 150 %   | 1:35 – 1:43                             | 16–20+              | 5–20 s           |
-### ⚡ Exemple concret – Rameur, 12 minutes d’effort
+> ⚠️ **Important : Valeurs personnelles**
+> Les valeurs ci-dessous (splits et calories) correspondent à **mon profil personnel** basé sur ma FTP de 205 W.
+> Pour utiliser ce tableau efficacement, vous devez d'abord **réaliser vos propres tests** (CP20 ou FTP) et recalculer les splits correspondant à vos zones.
+
+| Zone   | % FTP     | Row/Ski (split/500m) | Bike (split/1000m) | Echo Bike (Cal/min) | Temps soutenable |
+| ------ | --------- | -------------------- | ------------------ | ------------------- | ---------------- |
+| **Z1** | ≤ 55 %    | 2:26 – 9:15          | 2:26 – 9:15        | 2–5                 | Plusieurs heures |
+| **Z2** | 56–75 %   | 2:11 – 2:25          | 2:11 – 2:25        | 5–7                 | 1.5–4 h          |
+| **Z3** | 76–90 %   | 2:04 – 2:11          | 2:04 – 2:11        | 7–9                 | 30–90 min        |
+| **Z4** | 91–105 %  | 1:58 – 2:04          | 1:58 – 2:04        | 9–11                | 40–70 min (~FTP) |
+| **Z5** | 106–120 % | 1:53 – 1:57          | 1:53 – 1:57        | 11–13               | 4–8 min          |
+| **Z6** | 121–150 % | 1:44 – 1:52          | 1:44 – 1:52        | 13–16               | 30 s – 2 min     |
+| **Z7** | > 150 %   | 1:35 – 1:43          | 1:35 – 1:43        | 16–20+              | 5–20 s           |
+
+### Application WOD : Rameur 12 minutes
 
 Prenons un athlète avec une **FTP de 200 W** sur rameur.
 
@@ -131,10 +141,11 @@ Tu iras chercher une bonne intensité sans risquer de compromettre les mouvement
 
 > (ex. _Row + Thrusters + Toes-to-Bar_)
 
-Ici, l’objectif est de **préserver ton système anaérobie** pour les transitions.  
-Tu restes donc plutôt sur une intensité **proche de Z4 haute**, autour de **2:00 à 2:03/500 m**.  
-Tu perds 15–20 secondes sur le row, mais tu restes capable d’enchaîner efficacement sur les mouvements lourds.
-### 🎯 Les limites du zonage classique
+Ici, l'objectif est de **préserver ton système anaérobie** pour les transitions.
+Tu restes donc plutôt sur une intensité **proche de Z4 haute**, autour de **2:00 à 2:03/500 m**.
+Tu perds 15–20 secondes sur le row, mais tu restes capable d'enchaîner efficacement sur les mouvements lourds.
+
+### Les limites du zonage classique
 
 Le **zonage d’entraînement** (Z1 à Z7) est un excellent outil pour apprendre à calibrer son effort.  
 Mais dès qu’on parle de **performance compétitive**, ce découpage devient **trop approximatif**.
@@ -144,9 +155,12 @@ Par exemple, la zone 5 s’étend de **106 à 120 % de FTP**, soit une différen
 👉 Pourtant, sur le terrain, cette différence change tout :  
 tu peux tenir 8 minutes à 105 %, mais à 120 %, tu exploses en moins de 3.
 
-C’est un peu comme dire à un pilote de Formule 1 de “rester entre 200 et 300 km/h” :  
-utile pour situer le type d’effort, mais insuffisant pour **optimiser le virage**.
-## 🚀 Aller plus loin avec les Modèles **Critical Power (CP) et W′**
+C'est un peu comme dire à un pilote de Formule 1 de "rester entre 200 et 300 km/h" :
+utile pour situer le type d'effort, mais insuffisant pour **optimiser le virage**.
+
+---
+
+# 2. Aller Plus Loin avec le Modèle Critical Power (CP/W′)
 
 En compétition, les marges sont faibles :  
 gagner **2 secondes sur un split rameur**, ou **maintenir 10 W de plus** sur un BikeErg peut faire la différence entre un top 10 et un top 3.
@@ -163,10 +177,12 @@ Le modèle CP repose sur deux composantes :
 
 | Variable                | Signification                       | Interprétation simplifiée                                               |
 | ----------------------- | ----------------------------------- | ----------------------------------------------------------------------- |
-| **CP (Critical Power)** | Puissance critique                  | Ton “seuil aérobie durable” — ce que tu peux tenir longtemps            |
-| **W′ (W prime)**        | Capacité de travail au-dessus de CP | Ton “réservoir anaérobie” — énergie disponible pour les phases intenses |
+| **CP (Critical Power)** | Puissance critique                  | Ton "seuil aérobie durable" — ce que tu peux tenir longtemps            |
+| **W′ (W prime)**        | Capacité de travail au-dessus de CP | Ton "réservoir anaérobie" — énergie disponible pour les phases intenses |
 
-### ⚡ Comprendre la logique énergétique
+## 2.1 Comprendre le Modèle
+
+### La logique énergétique
 
 - Si tu travailles **au-dessus de CP**, tu consommes progressivement ton **réservoir W′**.  
     → Tu te fatigues vite, mais tu vas vite.
@@ -180,13 +196,15 @@ Cette approche traduit en chiffres la réalité physiologique entre les deux fil
 | **Aérobie (“avec oxygène”)**   | Effort modéré, durable, basé sur l’oxygène.             | Jogging, WOD long type “Murph”                |
 | **Anaérobie (“sans oxygène”)** | Effort intense, court, sans apport d’oxygène suffisant. | Sprint max cal Echo Bike, fin de WOD for time |
 
-**Formule de Skiba (2012) :**
-Cette équation formalise l’évolution de ton réservoir énergétique :
+### Formule de Skiba (2012)
+
+Cette équation formalise l'évolution de ton réservoir énergétique :
 
 ![skibapng.png](skibapng.png)
 
+## 2.2 Construire Votre Courbe Puissance-Durée
 
-### 📈 Construire sa courbe puissance–durée
+### Protocole de test
 
 Se baser uniquement sur un test CP20 donne une bonne estimation du seuil, mais c’est trop réducteur.
 En réalité, la relation entre puissance et durée n’est pas linéaire :
@@ -196,9 +214,9 @@ on ne produit pas la même puissance sur 1 minute, 5 minutes ou 20 minutes — e
 au minimum 3 efforts maximaux répartis entre 1 et 20 minutes (ex. : 1 min / 5 min / 20 min).
 Ces valeurs servent à ajuster la courbe CP/W′ et refléter ta physiologie réelle.
 
-### ⚙️ Exemple concret : BikeErg vs RowErg
+### Mon exemple : BikeErg vs RowErg
 
-Dans mon cas, j’ai choisi de tracer deux courbes pour l'exemple, et qui demontre qu'on delivre des niveaux de puissance differents entre les ergos :
+Dans mon cas, j'ai choisi de tracer deux courbes pour l'exemple, et qui démontre qu'on délivre des niveaux de puissance différents entre les ergos :
 
 - une pour le **BikeErg**, construite à partir de mon test CP20,
 - et une pour le **RowErg**, calculée à partir de mes chronos sur 1000 m, 2000 m et 5000 m.
@@ -215,11 +233,11 @@ En pratique, cela aide l’athlète (et son coach) à devenir plus homogène et 
 
 ![power_duration_bike_vs_row.png](power_duration_bike_vs_row.png)
 
-### Exemple : interprétation concrète
+### Interprétation de la courbe
 
-Si on prend ma courbe rameur, on retrouve : 
-- **CP (Critical Power)** = 220W ←mon "seuil aérobie", l'intensité que tu peux tenir quasi-indéfiniment
-- **W'** (W-prime) = 27 kJ ← ma "batterie anaérobie", l'énergie disponible au-dessus de CP
+Si on prend ma courbe rameur, on retrouve :
+- **CP (Critical Power)** = 220W — mon "seuil aérobie", l'intensité que tu peux tenir quasi-indéfiniment
+- **W'** (W-prime) = 27 kJ — ma "batterie anaérobie", l'énergie disponible au-dessus de CP
 
 Grâce à ce modèle, on peut **prédire la puissance soutenable pour n’importe quelle durée**
 
@@ -227,6 +245,8 @@ Grâce à ce modèle, on peut **prédire la puissance soutenable pour n’import
 ![output (10).png](cprow.png)
 
 ### Rappel des prédictions rameur (arrondies)
+
+> 📊 **Exemple basé sur mes données personnelles (CP = 220 W, W' = 27 kJ)**
 
 - **1 min** → **610 W** (~**1:23**/500 m) — _sprint max cal_
 - **3 min** → **343 W** (~**1:41**/500 m) — _row 1k race_
@@ -236,9 +256,9 @@ Grâce à ce modèle, on peut **prédire la puissance soutenable pour n’import
 - **20 min** → **230 W** (~**1:55**/500 m) — _AMRAP long_
 - **>30 min** (1800 s) → **223 W** (~**1:56**/500 m) — _endurance/CP_
 
-### 🧠 Application pratique au CrossFit
+## 2.3 Application Pratique au CrossFit
 
-#### **Cas #1 – WOD 12 min avec 2000 m Row**
+### Cas #1 – WOD 12 min avec 2000 m Row
 
 `For Time (cap 12 min): 40 Thrusters (42.5/30 kg) 2000 m Row 20 Bar Muscle-ups`
 
@@ -254,7 +274,7 @@ Grâce à ce modèle, on peut **prédire la puissance soutenable pour n’import
 
 ---
 
-#### **Cas #2 – AMRAP 20 min**
+### Cas #2 – AMRAP 20 min
 
 `AMRAP 20: 500 m Row 15 Wall Balls 10 Box Jumps`
 
@@ -266,7 +286,7 @@ Grâce à ce modèle, on peut **prédire la puissance soutenable pour n’import
 
 ---
 
-### 🧩 En résumé
+## 2.4 Points Clés à Retenir
 
 Utiliser le modèle **CP/W′**, c’est passer du “ressenti empirique” à la **stratégie quantifiée**.  
 Tu sais **combien de temps tu peux tenir au-dessus du seuil**, et **quand ralentir avant de casser**.
