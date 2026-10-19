@@ -1,0 +1,5 @@
+{{- /* CSS et script de la recherche Ctrl K, chargés sur toutes les pages. */ -}}
+{{- $css := resources.Get "css/search.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- $js := resources.Get "js/search.js" | minify | fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

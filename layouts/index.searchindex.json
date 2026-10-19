@@ -1,0 +1,32 @@
+{{- /*
+  Index de recherche Ctrl K, publié en /search-index.json.
+  Articles et projets, plus les pages Coaching, Contact et À propos.
+  Champs : t titre, u url, k type, s sous-titre, g mots-clés, x texte, d date.
+  Les blocs de newsletter et de confidentialité répétés dans les articles sont retirés du texte.
+*/ -}}
+{{- $pages := slice -}}
+{{- range where site.RegularPages "Section" "in" (slice "blog" "project") -}}
+  {{- $pages = $pages | append . -}}
+{{- end -}}
+{{- range slice "/coaching" "/contact" "/about" -}}
+  {{- with site.GetPage . -}}{{- $pages = $pages | append . -}}{{- end -}}
+{{- end -}}
+{{- $items := slice -}}
+{{- range $pages -}}
+  {{- $kind := "Page" -}}
+  {{- if eq .Section "blog" -}}{{- $kind = "Article" -}}{{- else if eq .Section "project" -}}{{- $kind = "Projet" -}}{{- end -}}
+  {{- $sub := or .Params.subtitle .Params.excerpt .Params.description "" -}}
+  {{- $tags := slice -}}
+  {{- range (.Params.tags | default slice) }}{{ if . }}{{ $tags = $tags | append . }}{{ end }}{{ end -}}
+  {{- range (.Params.categories | default slice) }}{{ if . }}{{ $tags = $tags | append . }}{{ end }}{{ end -}}
+  {{- $text := .Plain | replaceRE `Ne ratez plus aucune nouveauté\S*` "" | replaceRE `Abonnez-vous à la newsletter[^.]*\.` "" | replaceRE `Pour en savoir plus sur nos pratiques[^.]*\.` "" | replaceRE `\s+` " " -}}
+  {{- $items = $items | append (dict
+        "t" .Title
+        "u" .RelPermalink
+        "k" $kind
+        "s" ($sub | plainify | truncate 180)
+        "g" $tags
+        "x" (substr (printf "%s %s" ($sub | plainify) $text) 0 40000)
+        "d" (.Date.Format "2006-01-02")) -}}
+{{- end -}}
+{{- $items | jsonify -}}

@@ -102,8 +102,12 @@ canonifyURLs = true
 languageCode = "fr-FR"
 defaultContentLanguage = "fr"
 
+# Index de recherche (Ctrl K), publié en /search-index.json
+[outputFormats.SearchIndex]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true
+  notAlternative = true
 
-
-
-
-
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
