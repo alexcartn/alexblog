@@ -211,7 +211,7 @@ Cette approche traduit en chiffres la réalité physiologique entre les deux fil
 
 Cette équation formalise l'évolution de ton réservoir énergétique :
 
-![skibapng.png](skibapng.png)
+![skibapng.png](skibaPNG.PNG)
 
 **Interprétation en français :**
 
