@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Maquettes Alexblog</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@500;600;700&display=swap">
+<style>
+/* Layout: bandeau collant + une colonne de lecture, widgets plus larges que le texte.
+   Direction: clair, vert forêt du thème Apero actuel, widgets = instruments de mesure du corps. */
+:root {
+  --bg: #f4f7f5;
+  --surface: #ffffff;
+  --surface-2: #ecf2ee;
+  --fg: #15221a;
+  --muted: #56675c;
+  --line: #d3dfd7;
+  --accent: #2d6a4f;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcefe3;
+  --power: #35588f;
+  --seat: #b9c9be;
+  --crit: #b3261e;
+  --crit-soft: #fbe6e3;
+  --warn: #8a5a00;
+  --warn-soft: #fbefd2;
+  --font-head: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1713; --surface: #16211b; --surface-2: #1d2b23; --fg: #e6efe9; --muted: #9db0a4;
+    --line: #2b3b32; --accent: #6fcf97; --accent-ink: #0b1a12; --accent-soft: #1f3a2b;
+    --power: #8fb0e8; --seat: #3a4d41; --crit: #ff8a80; --crit-soft: #3b1f1d;
+    --warn: #f0c36a; --warn-soft: #3a2f12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1713; --surface: #16211b; --surface-2: #1d2b23; --fg: #e6efe9; --muted: #9db0a4;
+  --line: #2b3b32; --accent: #6fcf97; --accent-ink: #0b1a12; --accent-soft: #1f3a2b;
+  --power: #8fb0e8; --seat: #3a4d41; --crit: #ff8a80; --crit-soft: #3b1f1d;
+  --warn: #f0c36a; --warn-soft: #3a2f12;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 17px/1.6 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 30; background: var(--surface);
+}
+h1, h2, h3 { font-family: var(--font-head); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+a { color: var(--accent); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.num { font-variant-numeric: tabular-nums; }
+.label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+/* Bandeau */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px));
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.top-in { max-width: 62rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.5rem; }
+.brand { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; letter-spacing: .02em; padding: .7rem 0; }
+.brand small { font-family: var(--font-body); font-weight: 400; font-size: .8125rem; color: var(--muted); margin-left: .5rem; letter-spacing: 0; }
+.tabs { display: flex; gap: .25rem; margin-left: auto; flex-wrap: wrap; }
+.tab {
+  background: none; border: 0; border-bottom: 3px solid transparent; padding: .8rem .75rem .65rem;
+  cursor: pointer; font-size: .9375rem; color: var(--muted); letter-spacing: .02em;
+}
+.tab:hover { color: var(--fg); }
+.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); font-weight: 700; }
+.note {
+  max-width: 62rem; margin: 1rem auto 0; font-size: .875rem; color: var(--muted);
+  background: var(--surface-2); border-radius: 8px; padding: .55rem .85rem;
+}
+main { max-width: 62rem; margin: 0 auto; }
+
+/* Article */
+.crumb { margin-top: 2rem; font-size: .875rem; color: var(--muted); }
+.post-head { padding: .75rem 0 1.5rem; max-width: 44rem; }
+.post-head h1 { font-size: clamp(2rem, 5vw, 2.9rem); }
+.post-head .sub { font-size: 1.2rem; color: var(--muted); margin: .75rem 0 .5rem; font-family: var(--font-head); font-style: italic; }
+.meta { font-size: .875rem; color: var(--muted); display: flex; gap: .5rem 1rem; flex-wrap: wrap; }
+.prose > p, .prose > h2 { max-width: 40rem; }
+.prose > h2 { font-size: 1.7rem; margin: 2.25rem 0 .6rem; }
+.prose > p { margin: 0 0 1rem; }
+.prose mark { background: var(--accent-soft); color: inherit; padding: 0 .2em; border-radius: 3px; }
+.sep {
+  display: flex; align-items: center; gap: .75rem; margin: 3rem 0 1rem; color: var(--muted); font-size: .8125rem;
+}
+.sep::before, .sep::after { content: ""; flex: 1; border-top: 1px dashed var(--line); }
+
+/* Widgets */
+.widget { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin: 1.75rem 0 .5rem; overflow: hidden; }
+.wh {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  padding: .55rem .9rem; border-bottom: 1px solid var(--line); background: var(--surface-2); font-size: .8125rem;
+}
+.wh .name { font-weight: 700; letter-spacing: .02em; }
+.wh .hint { color: var(--muted); margin-left: auto; }
+.dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--accent); flex: none; }
+.wb { display: grid; grid-template-columns: minmax(0, 1fr) 16rem; }
+.wchart { padding: .9rem .9rem .5rem; min-width: 0; position: relative; }
+.wpanel { border-left: 1px solid var(--line); padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .85rem; min-width: 0; }
+@media (max-width: 760px) {
+  .wb { grid-template-columns: minmax(0, 1fr); }
+  .wpanel { border-left: 0; border-top: 1px solid var(--line); }
+}
+.wcap { font-size: .8125rem; color: var(--muted); margin: 0 0 2.5rem; }
+.wcap code { background: var(--surface-2); padding: .1em .4em; border-radius: 4px; font-size: .95em; }
+
+.ctl { display: grid; gap: .15rem; }
+.ctl-row { display: flex; justify-content: space-between; gap: .5rem; font-size: .875rem; }
+.ctl-row output { font-weight: 700; }
+input[type="range"] { width: 100%; accent-color: var(--accent); margin: 0; min-height: 1.5rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: .25rem .7rem;
+  font-size: .8125rem; cursor: pointer; line-height: 1.4;
+}
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.btn {
+  background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: .55rem 1rem;
+  font-weight: 700; cursor: pointer;
+}
+.btn.ghost { background: var(--surface-2); color: var(--fg); }
+
+.result { border-radius: 10px; padding: .65rem .8rem; background: var(--accent-soft); display: grid; gap: .1rem; }
+.result strong { font-size: 1.05rem; }
+.result span { font-size: .8125rem; color: var(--muted); }
+.result.warn { background: var(--warn-soft); }
+.result.bad { background: var(--crit-soft); }
+.tank { height: .6rem; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: .4rem; border: 1px solid var(--line); }
+.tank i { display: block; height: 100%; background: var(--accent); width: 50%; transition: width .25s; }
+.result.warn .tank i { background: var(--warn); }
+.result.bad .tank i { background: var(--crit); }
+
+/* Graphique W' */
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; touch-action: pan-y; }
+.chart text { fill: var(--muted); font: 11px var(--font-body); }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .cp { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.chart .pline { fill: none; stroke: var(--power); stroke-width: 2; stroke-linejoin: round; }
+.chart .wline { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.chart .warea { fill: var(--accent); fill-opacity: .14; }
+.chart .redline { stroke: var(--crit); stroke-width: 1; stroke-dasharray: 2 4; stroke-opacity: .8; }
+.chart .redlbl { fill: var(--crit); }
+.chart .empty { stroke: var(--crit); stroke-width: 1.5; }
+.chart .emptylbl { fill: var(--crit); font-weight: 700; }
+.chart .cross { stroke: var(--fg); stroke-width: 1; stroke-opacity: .5; }
+.chart .mark { stroke: var(--surface); stroke-width: 2; }
+.tip {
+  position: absolute; pointer-events: none; z-index: 5; background: var(--fg); color: var(--bg);
+  border-radius: 8px; padding: .35rem .6rem; font-size: .8125rem; line-height: 1.35; white-space: nowrap; top: .5rem;
+}
+.tip b { font-variant-numeric: tabular-nums; }
+
+/* Respiration */
+.breath { display: grid; grid-template-columns: 13.5rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: 1rem; }
+@media (max-width: 760px) { .breath { grid-template-columns: minmax(0, 1fr); justify-items: center; } .breath > * { width: 100%; } .breath .pacer { max-width: 13.5rem; } }
+.pacer { aspect-ratio: 1; position: relative; }
+.pacer svg { width: 100%; height: 100%; display: block; }
+.pacer .ring { fill: none; stroke: var(--line); stroke-width: 2; }
+.pacer .orb { fill: var(--accent); fill-opacity: .2; stroke: var(--accent); stroke-width: 2; }
+.pacer .prog { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.pacer .txt { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+.pacer .txt b { font-family: var(--font-head); font-size: 1.6rem; line-height: 1; }
+.pacer .txt span { font-size: .8125rem; color: var(--muted); }
+.hr-card { display: grid; gap: .6rem; min-width: 0; }
+.hr-top { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: var(--surface); padding: .35rem .75rem; cursor: pointer; font-size: .8125rem; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.stat { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: .875rem; }
+.stat b { font-size: 1.15rem; display: block; line-height: 1.2; }
+.hrsvg { width: 100%; height: auto; display: block; }
+.hrsvg text { fill: var(--muted); font: 11px var(--font-body); }
+@media (max-width: 760px) { .chart text, .hrsvg text { font-size: 21px; } }
+.fine { font-size: .75rem; color: var(--muted); margin: 0; }
+
+/* Chaise */
+.sit-main { padding: 1rem; display: grid; gap: .5rem; min-width: 0; align-content: center; }
+#sit-rows { display: grid; gap: .55rem; }
+.sit-row { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: center; gap: .5rem; font-size: .8125rem; color: var(--muted); }
+.sit-track { position: relative; height: 1.5rem; border-radius: 6px; overflow: hidden; background: var(--seat); }
+.sit-track i { position: absolute; top: 0; bottom: 0; background: var(--accent); min-width: 3px; }
+.legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .8125rem; color: var(--muted); margin-top: .35rem; }
+.legend span::before { content: ""; display: inline-block; width: .8rem; height: .8rem; border-radius: 3px; margin-right: .4rem; vertical-align: -1px; background: var(--seat); }
+.legend span.mv::before { background: var(--accent); }
+
+/* Accueil */
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; padding: 3rem 0 2rem; }
+@media (max-width: 800px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding-top: 2rem; } }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+.hero p { color: var(--muted); font-size: 1.1rem; max-width: 30rem; margin: .9rem 0 1.2rem; }
+.feature { border: 1px solid var(--line); background: var(--surface); border-radius: 14px; padding: 1rem; display: grid; gap: .5rem; }
+.feature h3 { font-size: 1.3rem; }
+@media (prefers-reduced-motion: reduce) { .tank i { transition: none; } }
+.searchbtn {
+  display: flex; align-items: center; gap: .6rem; width: 100%; max-width: 30rem; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 10px; padding: .6rem .85rem; cursor: pointer; text-align: left; color: var(--muted);
+}
+.searchbtn:hover { border-color: var(--accent); }
+.kbd { margin-left: auto; font-size: .75rem; border: 1px solid var(--line); border-radius: 5px; padding: 0 .4rem; background: var(--surface-2); }
+.filters { display: grid; gap: .6rem; margin: 1rem 0; }
+.filters .chips { align-items: center; }
+.filters .label { margin-right: .25rem; }
+.finput { width: 100%; max-width: 26rem; border: 1px solid var(--line); border-radius: 8px; padding: .5rem .75rem; background: var(--surface); }
+.list { display: grid; border-top: 1px solid var(--line); }
+.row {
+  display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) auto; gap: .25rem 1rem; padding: .85rem .25rem;
+  border-bottom: 1px solid var(--line); cursor: pointer; align-items: baseline; background: none; border-inline: 0; border-top: 0; text-align: left; width: 100%;
+}
+.row:hover { background: var(--surface); }
+.row h3 { font-size: 1.2rem; }
+.row p { margin: .1rem 0 0; color: var(--muted); font-size: .9rem; }
+.row .type { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.tag { font-size: .75rem; border-radius: 999px; padding: .1rem .6rem; background: var(--surface-2); color: var(--muted); white-space: nowrap; border: 1px solid var(--line); }
+.tag.live { background: var(--accent-soft); color: var(--fg); border-color: var(--accent); font-weight: 700; }
+@media (max-width: 640px) { .row { grid-template-columns: minmax(0, 1fr); } }
+.count { font-size: .875rem; color: var(--muted); margin: .5rem 0; }
+
+/* Palette de commandes */
+#palette { position: fixed; inset: 0; z-index: 50; background: rgb(10 20 14 / .55); display: grid; justify-items: center; align-content: start; padding: 12vh 16px 16px; }
+.pal { width: 100%; max-width: 34rem; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 20px 50px rgb(0 0 0 / .3); }
+.pal input { width: 100%; border: 0; border-bottom: 1px solid var(--line); padding: .9rem 1rem; background: var(--surface); outline: none; font-size: 1.05rem; }
+.pal ul { list-style: none; margin: 0; padding: .35rem; max-height: 50vh; overflow: auto; }
+.pal li { padding: .5rem .7rem; border-radius: 8px; cursor: pointer; display: flex; gap: .6rem; align-items: baseline; }
+.pal li[aria-selected="true"] { background: var(--accent-soft); }
+.pal li small { color: var(--muted); margin-left: auto; white-space: nowrap; }
+.pal .foot { border-top: 1px solid var(--line); padding: .5rem 1rem; font-size: .75rem; color: var(--muted); }
+#toast {
+  position: fixed; left: 50%; bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
+  background: var(--fg); color: var(--bg); padding: .55rem 1rem; border-radius: 10px; font-size: .875rem; z-index: 60; max-width: calc(100vw - 32px);
+}
+
+/* Faisabilité */
+.fz h2 { font-size: 1.7rem; margin: 2.5rem 0 .75rem; }
+.fz > p { max-width: 42rem; }
+.tscroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 44rem; font-size: .9rem; }
+th { text-align: left; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: .65rem .8rem; border-bottom: 1px solid var(--line); background: var(--surface-2); }
+td { padding: .65rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.n { white-space: nowrap; }
+.eff { font-weight: 700; white-space: nowrap; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-top: .5rem; }
+.box { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 1rem 1.1rem; }
+.box h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+.box ul { margin: 0; padding-left: 1.1rem; }
+.box li { margin: .25rem 0; }
+code { font-size: .9em; }
+</style>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">Alexandre CARTON<small>maquettes</small></div>
+    <div class="tabs" role="tablist" aria-label="Maquettes">
+      <button class="tab" role="tab" id="t-article" data-tab="article" aria-selected="true" aria-controls="tab-article">Article</button>
+      <button class="tab" role="tab" id="t-accueil" data-tab="accueil" aria-selected="false" aria-controls="tab-accueil" tabindex="-1">Accueil</button>
+      <button class="tab" role="tab" id="t-faisabilite" data-tab="faisabilite" aria-selected="false" aria-controls="tab-faisabilite" tabindex="-1">Faisabilité</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="note">Maquettes jouables. Rien n'est branché sur ton blog. Les courbes de respiration sont illustratives, les chiffres de pacing reprennent ceux de ton article (CP 220 W, W′ 27 kJ).</p>
+
+  <!-- ============ ARTICLE ============ -->
+  <section id="tab-article" role="tabpanel" aria-labelledby="t-article">
+    <div class="crumb">Blog / Performance</div>
+    <header class="post-head">
+      <h1>Gérer son Pacing en CrossFit - Science, Données et Application Concrète</h1>
+      <p class="sub">Ce n'est pas celui qui part le plus vite qui gagne, mais celui qui ralentit le moins.</p>
+      <div class="meta"><span>3 octobre 2025</span><span>CrossFit</span><span>Data</span><span>Rameur, BikeErg</span></div>
+    </header>
+
+    <div class="prose">
+      <p>En CrossFit, on se pose souvent la question de la gestion de notre allure, du <mark>pacing</mark> sur un WOD avec ergomètres : rameur, Assault Bike, SkiErg… La gestion de l'allure est déterminante pour performer.</p>
+      <h2>Le modèle Critical Power (CP/W′)</h2>
+      <p>Si tu travailles au-dessus de ta <mark>CP</mark>, tu consommes progressivement ton réservoir <mark>W′</mark>. Quand tu redescends sous CP, il se recharge. Au lieu de lire ça, essaie : choisis une puissance et regarde quand le réservoir se vide.</p>
+    </div>
+
+    <!-- Widget 1 : réservoir W' -->
+    <div class="widget" id="w-wprime">
+      <div class="wh"><span class="dot"></span><span class="name">Ton réservoir W′</span><span class="hint">12 min de rameur : bouge les curseurs</span></div>
+      <div class="wb">
+        <div class="wchart">
+          <svg class="chart" id="wp-svg" viewBox="0 0 640 330" role="img" tabindex="0"
+               aria-label="Courbes de puissance et de réservoir W prime sur 12 minutes. Flèches gauche et droite pour parcourir."></svg>
+          <div class="tip" id="wp-tip" hidden></div>
+        </div>
+        <div class="wpanel">
+          <div class="ctl"><div class="ctl-row"><label for="wp-cp">CP</label><output id="wp-cp-o" class="num"></output></div>
+            <input id="wp-cp" type="range" min="180" max="280" step="5" value="220"></div>
+          <div class="ctl"><div class="ctl-row"><label for="wp-w">W′</label><output id="wp-w-o" class="num"></output></div>
+            <input id="wp-w" type="range" min="10" max="40" step="0.5" value="27"></div>
+          <div class="ctl"><div class="ctl-row"><label for="wp-p">Puissance moyenne visée</label><output id="wp-p-o" class="num"></output></div>
+            <input id="wp-p" type="range" min="200" max="290" step="1" value="255"></div>
+          <div class="ctl"><div class="ctl-row"><label for="wp-d">Alternance toutes les minutes</label><output id="wp-d-o" class="num"></output></div>
+            <input id="wp-d" type="range" min="0" max="60" step="5" value="0"></div>
+          <div class="chips" role="group" aria-label="Scénarios">
+            <button class="chip" data-p="255" data-d="0" aria-pressed="false">Régulier</button>
+            <button class="chip" data-p="255" data-d="40" aria-pressed="false">Alterné ±40 W</button>
+            <button class="chip" data-p="265" data-d="0" aria-pressed="false">Trop ambitieux</button>
+          </div>
+          <div class="result" id="wp-res" aria-live="polite"><strong></strong><span></span><div class="tank"><i></i></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="wcap">Intégration prévue : <code>{{&lt; wprime cp="220" w="27" &gt;}}</code> dans le Markdown. Environ 6 Ko de JavaScript sans bibliothèque, chargé uniquement sur cette page. Le modèle est la forme différentielle de Skiba, la même famille de formule que dans ton article.</p>
+
+    <div class="sep">Extrait de l'article « Cohérence cardiaque »</div>
+    <div class="prose">
+      <p>La résonance cardiaque repose sur une fréquence respiratoire de <mark>0,1 Hz</mark>, c'est-à-dire 6 respirations par minute. Inspirer agit comme un accélérateur, expirer ralentit le rythme cardiaque.</p>
+    </div>
+
+    <!-- Widget 2 : respiration -->
+    <div class="widget" id="w-breath">
+      <div class="wh"><span class="dot"></span><span class="name">Cohérence 365 : essaie 1 minute</span><span class="hint">3 fois par jour, 6 respirations par minute, 5 minutes</span></div>
+      <div class="breath">
+        <div class="pacer">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ring" cx="100" cy="100" r="92"/>
+            <circle class="prog" id="b-prog" cx="100" cy="100" r="92" transform="rotate(-90 100 100)" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+            <circle class="orb" id="b-orb" cx="100" cy="100" r="62"/>
+          </svg>
+          <div class="txt"><b id="b-word">Prêt</b><span id="b-sub">6 par minute</span></div>
+        </div>
+        <div class="hr-card">
+          <div class="hr-top">
+            <button class="btn" id="b-go" aria-pressed="false">Démarrer</button>
+            <div class="seg" role="group" aria-label="Rythme">
+              <button id="b-r6" aria-pressed="true">6 / min</button>
+              <button id="b-r12" aria-pressed="false">12 / min</button>
+            </div>
+            <div class="stat num"><div><b id="b-left">5:00</b>restant</div><div><b id="b-cyc">0</b>cycles</div><div><b id="b-amp">±9</b>bpm</div></div>
+          </div>
+          <svg class="hrsvg" id="b-trace" viewBox="0 0 640 150" role="img" aria-label="Courbe illustrative de la fréquence cardiaque sur 30 secondes"></svg>
+          <p class="fine">Courbe illustrative : ce n'est pas une mesure. Elle montre l'effet décrit dans l'article, le cœur accélère à l'inspiration et ralentit à l'expiration, avec une amplitude maximale autour de 6 respirations par minute.</p>
+        </div>
+      </div>
+    </div>
+    <p class="wcap">Intégration prévue : <code>{{&lt; respiration rythme="6" duree="5" &gt;}}</code>. Environ 4 Ko, animation lancée seulement au clic, réduite si le visiteur a demandé moins d'animations.</p>
+
+    <div class="sep">Extrait de l'article « Le piège de la chaise »</div>
+    <div class="prose">
+      <p>Fractionner la station assise : « for every 30 minutes that you are desk-bound, move for at least 2 minutes ». Regarde à quoi ressemble ta journée de bureau selon ta fréquence de pauses.</p>
+    </div>
+
+    <!-- Widget 3 : chaise -->
+    <div class="widget" id="w-sit">
+      <div class="wh"><span class="dot"></span><span class="name">Ta journée de 9 h à 17 h</span><span class="hint">2 min de mouvement à chaque pause</span></div>
+      <div class="wb">
+        <div class="sit-main">
+          <div id="sit-rows"></div>
+          <div class="legend"><span>Assis</span><span class="mv">Mouvement (2 min)</span></div>
+        </div>
+        <div class="wpanel">
+          <div class="ctl"><div class="ctl-row"><label for="sit-e">Une pause toutes les</label><output id="sit-e-o" class="num"></output></div>
+            <input id="sit-e" type="range" min="20" max="120" step="10" value="60"></div>
+          <div class="result" id="sit-res" aria-live="polite"><strong></strong><span></span></div>
+        </div>
+      </div>
+    </div>
+    <p class="wcap">Intégration prévue : <code>{{&lt; pauses &gt;}}</code>. Environ 2 Ko. C'est le plus simple des trois et il se lit en 10 secondes.</p>
+  </section>
+
+  <!-- ============ ACCUEIL ============ -->
+  <section id="tab-accueil" role="tabpanel" aria-labelledby="t-accueil" hidden>
+    <div class="hero">
+      <div>
+        <div class="label">Blog technique et coaching</div>
+        <h1>Comprendre son corps, ses données et ses équipes</h1>
+        <p>Ingénieur chef de projet. J'écris sur le CrossFit, la data science, le management et l'innovation industrielle, avec des outils à essayer dans les articles.</p>
+        <button class="searchbtn" id="open-pal" type="button" aria-haspopup="dialog">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Rechercher un article ou un outil <span class="kbd">Ctrl K</span>
+        </button>
+      </div>
+      <div class="feature">
+        <div class="label">À la une, à essayer</div>
+        <h3>Ton réservoir W′ se vide-t-il avant la fin ?</h3>
+        <svg id="feat-svg" viewBox="0 0 300 110" role="img" aria-label="Le réservoir W prime se vide progressivement à 262 watts"></svg>
+        <a href="#article" id="feat-go">Jouer avec les curseurs →</a>
+      </div>
+    </div>
+
+    <div class="filters">
+      <input class="finput" id="f-q" type="search" placeholder="Filtrer la liste" aria-label="Filtrer la liste">
+      <div class="chips" role="group" aria-label="Type"><span class="label">Type</span>
+        <button class="chip" data-ft="Tout" aria-pressed="true">Tout</button>
+        <button class="chip" data-ft="Article" aria-pressed="false">Articles</button>
+        <button class="chip" data-ft="Outil" aria-pressed="false">Outils</button>
+      </div>
+      <div class="chips" role="group" aria-label="Thème"><span class="label">Thème</span>
+        <button class="chip" data-fh="Tout" aria-pressed="true">Tous</button>
+        <button class="chip" data-fh="Performance" aria-pressed="false">Performance</button>
+        <button class="chip" data-fh="Santé" aria-pressed="false">Santé</button>
+        <button class="chip" data-fh="Data" aria-pressed="false">Data</button>
+        <button class="chip" data-fh="Management" aria-pressed="false">Management</button>
+      </div>
+    </div>
+    <div class="count" id="f-count" aria-live="polite"></div>
+    <div class="list" id="f-list"></div>
+  </section>
+
+  <!-- ============ FAISABILITÉ ============ -->
+  <section id="tab-faisabilite" role="tabpanel" aria-labelledby="t-faisabilite" hidden class="fz">
+    <h2>Ce qui est faisable sur ton blog</h2>
+    <p>Ton blog est un site Hugo avec le thème Apero, et le HTML brut est déjà autorisé dans tes articles. Tout ce qui est montré ici se branche sans changer d'outil, sans migrer vers Astro ni React, et sans build JavaScript. Chaque widget devient un shortcode Hugo qui charge son propre petit fichier JavaScript, seulement sur les pages qui l'utilisent.</p>
+
+    <div class="tscroll"><table>
+      <thead><tr><th>Idée</th><th>Où</th><th>Effort</th><th>Poids estimé</th><th>Ce qu'il faut</th></tr></thead>
+      <tbody>
+        <tr><td><b>Réservoir W′</b> (curseurs et courbes)</td><td>Pacing CrossFit</td><td class="eff">Moyen</td><td class="n">6 Ko</td><td>JavaScript et SVG. Maquette ci-dessus.</td></tr>
+        <tr><td><b>Pacer de respiration</b></td><td>Cohérence cardiaque</td><td class="eff">Moyen</td><td class="n">4 Ko</td><td>JavaScript et SVG. Maquette ci-dessus.</td></tr>
+        <tr><td><b>Journée assise / pauses</b></td><td>Piège de la chaise</td><td class="eff">Petit</td><td class="n">2 Ko</td><td>JavaScript. Maquette ci-dessus.</td></tr>
+        <tr><td><b>Recherche Ctrl K</b></td><td>Tout le site</td><td class="eff">Moyen</td><td class="n">3 Ko et un index JSON</td><td>Un format de sortie JSON dans Hugo, aucun service externe.</td></tr>
+        <tr><td><b>Filtres par type et thème</b></td><td>Blog et projets</td><td class="eff">Petit</td><td class="n">2 Ko</td><td>Les tags et catégories existent déjà dans tes fichiers.</td></tr>
+        <tr><td><b>Termes au survol</b> (CP, FTP, W′)</td><td>Tous les articles</td><td class="eff">Petit</td><td class="n">1 Ko</td><td>Un glossaire en données Hugo et un shortcode.</td></tr>
+        <tr><td><b>Calculateur de zones</b> depuis ta CP20</td><td>Pacing CrossFit</td><td class="eff">Moyen</td><td class="n">3 Ko</td><td>Reprend les tableaux de ton article, tu fournis les formules.</td></tr>
+        <tr><td><b>Matrice de confusion avec seuil</b></td><td>Qualité du lait</td><td class="eff">Moyen</td><td class="n">4 Ko</td><td>Possible avec les chiffres publiés dans l'article.</td></tr>
+        <tr><td><b>Prédire la qualité du lait</b> avec des curseurs</td><td>Qualité du lait</td><td class="eff">Gros</td><td class="n">à mesurer</td><td>Exporter les règles du modèle entraîné. Sans ça le résultat serait inventé : à éviter.</td></tr>
+        <tr><td><b>Auto-diagnostic</b> de réunion</td><td>Sabotage CIA</td><td class="eff">Petit</td><td class="n">2 Ko</td><td>Questionnaire local, rien n'est enregistré.</td></tr>
+        <tr><td><b>Viewer 3D</b> à la Dorian Todd</td><td>Aucun</td><td class="eff">Gros</td><td class="n">600 Ko et plus</td><td>Utile seulement s'il y a un objet 3D à montrer. Pas ici.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Mon conseil</h2>
+    <div class="cols">
+      <div class="box">
+        <h3>Phase 1, à faire</h3>
+        <ul>
+          <li>Les trois widgets de la maquette.</li>
+          <li>Le style commun (cartes à barre de titre, curseurs, résultat en une phrase) pour que tout se ressemble.</li>
+          <li>Les filtres de la liste.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Phase 2, si ça te plaît</h3>
+        <ul>
+          <li>Recherche Ctrl K.</li>
+          <li>Termes au survol.</li>
+          <li>Calculateur de zones et matrice de confusion.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>À éviter</h3>
+        <ul>
+          <li>Migrer vers Astro ou React : gros chantier pour peu de gain ici.</li>
+          <li>3D et WebGL sans objet à montrer.</li>
+          <li>Un thème sombre par défaut. Il reste disponible si le visiteur l'a choisi dans son système.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Direction visuelle proposée</h2>
+    <p>Clair par défaut, vert forêt comme ton thème actuel, titres en EB Garamond et texte en Atkinson Hyperlegible, donc aucun changement de fonts. Là où Dorian Todd mise sur la mécanique et le CAD, les widgets ici parlent de corps et de temps : une courbe de fatigue, un souffle, une journée de bureau. Seul le cadre des widgets (barre de titre, panneau de réglages à droite) rappelle une interface d'outil.</p>
+
+    <h2>Ce qui change dans le dépôt</h2>
+    <div class="cols">
+      <div class="box"><h3>Ajouts</h3><ul>
+        <li><code>layouts/shortcodes/</code> : un fichier par widget</li>
+        <li><code>static/js/widgets/</code> : un script par widget</li>
+        <li><code>static/css/widgets.css</code> : style commun</li>
+      </ul></div>
+      <div class="box"><h3>Dans un article</h3><ul>
+        <li>Une ligne de shortcode à l'endroit voulu</li>
+        <li>Le reste de l'article ne bouge pas</li>
+      </ul></div>
+      <div class="box"><h3>À savoir</h3><ul>
+        <li>Le dossier <code>public/</code> est versionné dans ton dépôt : il faut le reconstruire avec Hugo avant chaque commit.</li>
+        <li>Le thème est un sous-module à initialiser.</li>
+      </ul></div>
+    </div>
+  </section>
+</main>
+
+<div id="palette" role="dialog" aria-modal="true" aria-label="Recherche" hidden>
+  <div class="pal">
+    <input id="pal-q" type="text" placeholder="Rechercher un article ou un outil" aria-label="Rechercher" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="pal-list">
+    <ul id="pal-list" role="listbox"></ul>
+    <div class="foot">↑ ↓ pour naviguer · Entrée pour ouvrir · Échap pour fermer</div>
+  </div>
+</div>
+<div id="toast" role="status" hidden></div>
+
+<script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var fr = function (n, d) { d = d == null ? 1 : d; return n.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  var mmss = function (s) { s = Math.round(s); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+  var NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- Onglets ---------- */
+  var tabs = $$('.tab'), panels = $$('[role=tabpanel]');
+  function showTab(id, noScroll) {
+    tabs.forEach(function (t) { var on = t.dataset.tab === id; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+    panels.forEach(function (p) { p.hidden = p.id !== 'tab-' + id; });
+    try { history.replaceState(null, '', '#' + id); } catch (e) {}
+    if (!noScroll) window.scrollTo(0, 0);
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { showTab(t.dataset.tab); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); showTab(n.dataset.tab);
+    });
+  });
+  var h0 = (location.hash || '').slice(1);
+  if (['article', 'accueil', 'faisabilite'].indexOf(h0) > -1) showTab(h0, true);
+
+  function goWidget(id) {
+    showTab('article', true);
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+  }
+  var toastT;
+  function toast(msg) {
+    var t = $('#toast'); t.textContent = msg; t.hidden = false;
+    clearTimeout(toastT); toastT = setTimeout(function () { t.hidden = true; }, 2600);
+  }
+
+  /* ---------- Modèle W' ---------- */
+  function sim(cp, wpKJ, p, d) {
+    var Wp = wpKJ * 1000, pw = new Float32Array(720), bal = new Float32Array(721), w = Wp, empty = null;
+    bal[0] = Wp;
+    for (var t = 0; t < 720; t++) {
+      var pp = d === 0 ? p : (Math.floor(t / 60) % 2 === 0 ? p + d : p - d);
+      pw[t] = pp;
+      if (pp > cp) w -= pp - cp; else w += (cp - pp) * (Wp - w) / Wp;
+      if (w <= 0) { w = 0; if (empty === null) empty = t + 1; }
+      bal[t + 1] = w;
+    }
+    return { pw: pw, bal: bal, empty: empty, Wp: Wp };
+  }
+
+  /* ---------- Widget 1 : réservoir W' ---------- */
+  var S = { cp: 220, w: 27, p: 255, d: 0 };
+  var VW = 640, X0 = 48, X1 = VW - 14, PY0 = 20, PY1 = 124, WY0 = 172, WY1 = 296, PMIN = 140, PMAX = 360;
+  var px = function (t) { return X0 + t / 720 * (X1 - X0); };
+  var py = function (p) { return PY1 - (p - PMIN) / (PMAX - PMIN) * (PY1 - PY0); };
+  var wy = function (v) { return WY1 - v * (WY1 - WY0); };
+  var svg = $('#wp-svg'), tip = $('#wp-tip'), cur = null, R = null;
+  var f1 = function (v) { return (Math.round(v * 10) / 10).toFixed(1); };
+
+  function drawWP() {
+    R = sim(S.cp, S.w, S.p, S.d);
+    var s = '';
+    [160, 240, 320].forEach(function (v) {
+      s += '<line class="grid" x1="' + X0 + '" x2="' + X1 + '" y1="' + py(v) + '" y2="' + py(v) + '"/><text x="' + (X0 - 8) + '" y="' + (py(v) + 4) + '" text-anchor="end">' + v + '</text>';
+    });
+    s += '<text x="' + X0 + '" y="9" >Puissance (W)</text>';
+    s += '<line class="cp" x1="' + X0 + '" x2="' + X1 + '" y1="' + py(S.cp) + '" y2="' + py(S.cp) + '"/><text x="' + (X1 - 2) + '" y="' + (py(S.cp) + 15) + '" text-anchor="end">CP ' + S.cp + ' W</text>';
+    // chemin puissance par segments
+    var segs = [], t0 = 0;
+    for (var t = 1; t <= 720; t++) { if (t === 720 || R.pw[t] !== R.pw[t0]) { segs.push([t0, t, R.pw[t0]]); t0 = t; } }
+    var pd = segs.map(function (g, i) { return (i ? 'L' : 'M') + px(g[0]) + ',' + py(g[2]) + ' L' + px(g[1]) + ',' + py(g[2]); }).join(' ');
+    s += '<path class="pline" d="' + pd + '"/>';
+    // W'
+    s += '<text x="' + X0 + '" y="' + (WY0 - 8) + '">Réservoir W′ (kJ)</text>';
+    s += '<line class="redline" x1="' + X0 + '" x2="' + X1 + '" y1="' + wy(0.2) + '" y2="' + wy(0.2) + '"/>';
+    [0, 0.5, 1].forEach(function (v) {
+      var val = S.w * v;
+      s += '<line class="grid" x1="' + X0 + '" x2="' + X1 + '" y1="' + wy(v) + '" y2="' + wy(v) + '"/><text x="' + (X0 - 8) + '" y="' + (wy(v) + 4) + '" text-anchor="end">' + (Number.isInteger(val) ? val : fr(val, 1)) + '</text>';
+    });
+    s += '<text class="redlbl" x="' + (X0 + 6) + '" y="' + (wy(0.2) - 5) + '">zone rouge sous 20 %</text>';
+    var line = '';
+    for (var i = 0; i <= 720; i += 2) line += (i ? 'L' : 'M') + px(i) + ',' + wy(R.bal[i] / R.Wp) + ' ';
+    s += '<path class="warea" d="' + line + 'L' + px(720) + ',' + WY1 + ' L' + px(0) + ',' + WY1 + ' Z"/><path class="wline" d="' + line + '"/>';
+    for (var m = 0; m <= 12; m += 2) s += '<text x="' + px(m * 60) + '" y="' + (WY1 + 18) + '" text-anchor="middle">' + m + '</text>';
+    s += '<text x="' + X1 + '" y="' + (WY1 + 32) + '" text-anchor="end">minutes</text>';
+    if (R.empty !== null) {
+      var ex = px(R.empty), left = ex > 480;
+      s += '<line class="empty" x1="' + ex + '" x2="' + ex + '" y1="' + PY0 + '" y2="' + WY1 + '"/><text class="emptylbl" x="' + (ex + (left ? -6 : 6)) + '" y="' + (WY0 + 16) + '" text-anchor="' + (left ? 'end' : 'start') + '">vide à ' + mmss(R.empty) + '</text>';
+    }
+    s += '<g id="wp-hov" hidden><line class="cross" id="wp-x" y1="' + PY0 + '" y2="' + WY1 + '"/><circle class="mark" id="wp-dp" r="5" fill="var(--power)"/><circle class="mark" id="wp-dw" r="5" fill="var(--accent)"/></g>';
+    s += '<rect id="wp-hit" x="' + X0 + '" y="0" width="' + (X1 - X0) + '" height="' + (WY1 + 4) + '" fill="transparent"/>';
+    svg.innerHTML = s;
+    bindHover();
+    if (cur != null) hover(cur);
+    result();
+  }
+
+  function hover(t) {
+    t = clamp(Math.round(t), 0, 720); cur = t;
+    var g = $('#wp-hov'); if (!g) return; g.removeAttribute('hidden');
+    var x = px(t), p = R.pw[Math.min(t, 719)], b = R.bal[t];
+    $('#wp-x').setAttribute('x1', x); $('#wp-x').setAttribute('x2', x);
+    $('#wp-dp').setAttribute('cx', x); $('#wp-dp').setAttribute('cy', py(p));
+    $('#wp-dw').setAttribute('cx', x); $('#wp-dw').setAttribute('cy', wy(b / R.Wp));
+    tip.hidden = false;
+    tip.innerHTML = '<b>' + mmss(t) + '</b> · ' + Math.round(p) + ' W · reste <b>' + fr(b / 1000) + ' kJ</b>';
+    var pct = x / VW * 100;
+    tip.style.left = pct > 62 ? 'auto' : 'calc(' + pct + '% + 1.4rem)';
+    tip.style.right = pct > 62 ? 'calc(' + (100 - pct) + '% + 1.4rem - 0.2rem)' : 'auto';
+  }
+  function bindHover() {
+    var hit = $('#wp-hit');
+    hit.addEventListener('pointermove', function (e) {
+      var r = svg.getBoundingClientRect(), xv = (e.clientX - r.left) / r.width * VW;
+      hover((xv - X0) / (X1 - X0) * 720);
+    });
+    hit.addEventListener('pointerleave', function () { cur = null; var g = $('#wp-hov'); if (g) g.setAttribute('hidden', ''); tip.hidden = true; });
+  }
+  svg.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); hover((cur == null ? 360 : cur) + (e.key === 'ArrowRight' ? 15 : -15)); }
+    if (e.key === 'Escape') { cur = null; var g = $('#wp-hov'); if (g) g.setAttribute('hidden', ''); tip.hidden = true; }
+  });
+
+  function result() {
+    var box = $('#wp-res'), strong = $('strong', box), sub = $('span', box), tank = $('.tank i', box), cls, pct;
+    if (R.empty !== null) {
+      cls = 'bad'; pct = 0;
+      strong.textContent = '✕ Réservoir vide à ' + mmss(R.empty);
+      sub.textContent = 'Il manque ' + mmss(720 - R.empty) + ' pour finir les 12 minutes.';
+    } else {
+      var left = R.bal[720] / 1000; pct = left / S.w * 100;
+      cls = pct < 20 ? 'warn' : '';
+      strong.textContent = (pct < 20 ? '! ' : '✓ ') + 'Tu finis avec ' + fr(left) + ' kJ';
+      sub.textContent = fr(pct, 0) + ' % du réservoir à 12:00' + (S.d ? ', pour la même puissance moyenne.' : '.');
+    }
+    box.className = 'result ' + (cls || '');
+    tank.style.width = pct + '%';
+    $('#wp-cp-o').textContent = S.cp + ' W';
+    $('#wp-w-o').textContent = fr(S.w) + ' kJ';
+    $('#wp-p-o').textContent = S.p + ' W';
+    $('#wp-d-o').textContent = S.d ? '± ' + S.d + ' W' : 'aucune';
+    $$('.chip[data-p]').forEach(function (c) { c.setAttribute('aria-pressed', +c.dataset.p === S.p && +c.dataset.d === S.d); });
+  }
+  [['wp-cp', 'cp'], ['wp-w', 'w'], ['wp-p', 'p'], ['wp-d', 'd']].forEach(function (a) {
+    $('#' + a[0]).addEventListener('input', function (e) { S[a[1]] = parseFloat(e.target.value); drawWP(); });
+  });
+  $$('.chip[data-p]').forEach(function (c) {
+    c.addEventListener('click', function () {
+      S.p = +c.dataset.p; S.d = +c.dataset.d; $('#wp-p').value = S.p; $('#wp-d').value = S.d; drawWP();
+    });
+  });
+  drawWP();
+
+  /* ---------- Widget 2 : respiration ---------- */
+  var B = { rate: 6, running: false, t0: 0, elapsed: 0, raf: 0 }, SESSION = 300;
+  var orb = $('#b-orb'), prog = $('#b-prog'), trace = $('#b-trace');
+  function hrAt(t, T, A) {
+    var ph = (t % T) / T;                       // 0 à 1
+    return 68 + A * Math.sin(2 * Math.PI * (ph - 0.30)); // pic un peu après la fin de l'inspiration
+  }
+  function drawTrace(now) {
+    var T = 60 / B.rate, A = B.rate === 6 ? 9 : 3.5, win = 30, W = 640, H = 150, ml = 40, mb = 20, pts = '';
+    var tEnd = now < win ? win : now, tStart = tEnd - win;
+    for (var i = 0; i <= 150; i++) {
+      var t = tStart + i / 150 * win, x = ml + i / 150 * (W - ml - 6), y = (H - mb) - (hrAt(t, T, A) - 55) / 30 * (H - mb - 26);
+      pts += (i ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1);
+    }
+    var g = '';
+    [60, 70, 80].forEach(function (v) { var y = (H - mb) - (v - 55) / 30 * (H - mb - 26); g += '<line class="grid" x1="' + ml + '" x2="' + (W - 6) + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)"/><text x="' + (ml - 6) + '" y="' + (y + 4) + '" text-anchor="end">' + v + '</text>'; });
+    g += '<text x="' + (W - 6) + '" y="' + (H - 3) + '" text-anchor="end">30 dernières secondes</text><text x="' + ml + '" y="15">bpm</text>';
+    trace.innerHTML = g + '<path d="' + pts + '" fill="none" stroke="var(--crit)" stroke-width="2" stroke-linejoin="round"/>';
+    $('#b-amp').textContent = '±' + A;
+  }
+  function frame() {
+    if (!B.running) return;
+    var el = (performance.now() - B.t0) / 1000 + B.elapsed, T = 60 / B.rate;
+    if (el >= SESSION) { stopB(true); return; }
+    var ph = (el % T) / T, s = 0.5 - 0.5 * Math.cos(2 * Math.PI * ph);
+    orb.setAttribute('r', reduce ? 62 : 38 + s * 56);
+    $('#b-word').textContent = ph < 0.5 ? 'Inspire' : 'Expire';
+    $('#b-sub').textContent = Math.ceil((ph < 0.5 ? 0.5 - ph : 1 - ph) * T) + ' s';
+    prog.setAttribute('stroke-dashoffset', 1 - (ph < 0.5 ? ph * 2 : (1 - ph) * 2));
+    $('#b-left').textContent = mmss(SESSION - el);
+    $('#b-cyc').textContent = Math.floor(el / T);
+    drawTrace(el);
+    B.raf = requestAnimationFrame(frame);
+  }
+  function startB() { B.running = true; B.t0 = performance.now(); $('#b-go').textContent = 'Pause'; $('#b-go').setAttribute('aria-pressed', 'true'); B.raf = requestAnimationFrame(frame); }
+  function stopB(done) {
+    if (B.running) B.elapsed += (performance.now() - B.t0) / 1000;
+    B.running = false; cancelAnimationFrame(B.raf);
+    $('#b-go').setAttribute('aria-pressed', 'false');
+    $('#b-go').textContent = done ? 'Recommencer' : 'Reprendre';
+    if (done) { B.elapsed = 0; $('#b-word').textContent = 'Bravo'; $('#b-sub').textContent = 'séance terminée'; orb.setAttribute('r', 62); prog.setAttribute('stroke-dashoffset', 1); }
+  }
+  $('#b-go').addEventListener('click', function () { B.running ? stopB(false) : startB(); });
+  function setRate(r) {
+    B.rate = r; B.elapsed = 0; B.t0 = performance.now();
+    $('#b-r6').setAttribute('aria-pressed', r === 6); $('#b-r12').setAttribute('aria-pressed', r === 12);
+    if (!B.running) { $('#b-left').textContent = '5:00'; $('#b-cyc').textContent = '0'; drawTrace(0); }
+  }
+  $('#b-r6').addEventListener('click', function () { setRate(6); });
+  $('#b-r12').addEventListener('click', function () { setRate(12); });
+  drawTrace(0);
+
+  /* ---------- Widget 3 : journée assise ---------- */
+  function drawSit() {
+    var every = +$('#sit-e').value, segs = [], t = 0;
+    while (t < 480) {
+      var e = Math.min(t + every, 480); segs.push([t, e, 0]); t = e; if (t >= 480) break;
+      var b = Math.min(t + 2, 480); segs.push([t, b, 1]); t = b;
+    }
+    var rows = '';
+    for (var r = 0; r < 4; r++) {
+      var a = r * 120, z = a + 120, inner = '';
+      segs.forEach(function (g) {
+        var s0 = Math.max(g[0], a), s1 = Math.min(g[1], z);
+        if (s1 > s0 && g[2]) inner += '<i style="left:' + ((s0 - a) / 120 * 100) + '%;width:' + ((s1 - s0) / 120 * 100) + '%"></i>';
+      });
+      rows += '<div class="sit-row"><span class="num">' + (9 + r * 2) + ' h</span><div class="sit-track">' + inner + '</div></div>';
+    }
+    $('#sit-rows').innerHTML = rows;
+    var moves = segs.filter(function (g) { return g[2]; }), nb = moves.length;
+    var tot = moves.reduce(function (n, g) { return n + g[1] - g[0]; }, 0);
+    var longest = Math.max.apply(null, segs.filter(function (g) { return !g[2]; }).map(function (g) { return g[1] - g[0]; }));
+    var ok = every <= 30, box = $('#sit-res');
+    $('strong', box).textContent = (ok ? '✓ ' : '! ') + 'Plus long bloc assis : ' + longest + ' min';
+    $('span', box).textContent = nb + ' pauses, ' + tot + ' min de mouvement. ' + (ok ? 'Dans la règle citée dans l\'article.' : 'La règle de l\'article : 2 min toutes les 30 min.');
+    box.className = 'result ' + (ok ? '' : 'warn');
+    $('#sit-e-o').textContent = every + ' min';
+  }
+  $('#sit-e').addEventListener('input', drawSit);
+  drawSit();
+
+  /* ---------- Accueil : carte à la une ---------- */
+  (function () {
+    var r = sim(220, 27, 262, 0), W = 300, H = 110, ml = 4, mb = 16, d = '';
+    for (var i = 0; i <= 720; i += 4) d += (i ? 'L' : 'M') + (ml + i / 720 * (W - ml - 4)).toFixed(1) + ',' + (4 + (1 - r.bal[i] / r.Wp) * (H - mb - 8)).toFixed(1) + ' ';
+    var base = H - mb;
+    $('#feat-svg').innerHTML =
+      '<line x1="' + ml + '" x2="' + (W - 4) + '" y1="' + base + '" y2="' + base + '" stroke="var(--line)"/>' +
+      '<path d="' + d + 'L' + (W - 4) + ',' + base + ' L' + ml + ',' + base + ' Z" fill="var(--accent)" fill-opacity=".12"/>' +
+      '<path id="feat-path" d="' + d + '" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>' +
+      (reduce ? '' : '<circle r="4.5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.75;1" path="' + d + '"/></circle>') +
+      '<text x="' + ml + '" y="' + (H - 2) + '" fill="var(--muted)" font-size="10">0 min</text>' +
+      '<text x="' + (W - 4) + '" y="' + (H - 2) + '" text-anchor="end" fill="var(--muted)" font-size="10">12 min · à 262 W, vide à ' + mmss(r.empty) + '</text>';
+  })();
+  $('#feat-go').addEventListener('click', function (e) { e.preventDefault(); goWidget('w-wprime'); });
+
+  /* ---------- Accueil : liste filtrable ---------- */
+  var ITEMS = [
+    { type: 'Article', theme: 'Performance', title: 'Gérer son Pacing en CrossFit', sub: 'Ce n\'est pas celui qui part le plus vite qui gagne, mais celui qui ralentit le moins.', w: 'live', target: 'w-wprime', wl: 'Réservoir W′' },
+    { type: 'Article', theme: 'Santé', title: 'Cohérence cardiaque, harmoniser le souffle, le cœur et l\'esprit', sub: 'Une pratique respiratoire pour réduire le stress et mieux récupérer.', w: 'live', target: 'w-breath', wl: 'Pacer de respiration' },
+    { type: 'Article', theme: 'Santé', title: 'Le piège de la chaise', sub: 'Sitting is the new smoking : passer du constat à l\'action.', w: 'live', target: 'w-sit', wl: 'Journée assise' },
+    { type: 'Article', theme: 'Data', title: 'Peut-on prédire la qualité du lait avec le machine learning ?', sub: 'Un projet pratique d\'analyse de données et de classification.', w: 'idea', wl: 'Idée : matrice de confusion' },
+    { type: 'Article', theme: 'Management', title: 'Le Simple Sabotage Field Manual', sub: 'Quand la CIA enseignait l\'art du sabotage organisationnel.', w: 'idea', wl: 'Idée : auto-diagnostic' },
+    { type: 'Outil', theme: 'Santé', title: 'Coffee Caffeine Tracker', sub: 'Suivre sa caféine et sa demi-vie pour mieux dormir.', w: 'tool', wl: 'Application externe' },
+    { type: 'Outil', theme: 'Performance', title: 'FindYourWOD', sub: 'Plus de 500 WODs, filtrés selon ton matériel.', w: 'tool', wl: 'Application externe' },
+    { type: 'Outil', theme: 'Performance', title: 'ConvertWod : convertisseur de run', sub: 'Convertir une distance de course en équivalents pour les WODs.', w: 'tool', wl: 'Application externe' },
+    { type: 'Outil', theme: 'Performance', title: 'Profilage cardio', sub: 'Déterminer son profil cardio à partir d\'un test FTP.', w: 'tool', wl: 'Application externe' },
+    { type: 'Outil', theme: 'Performance', title: 'Séance de FTP test', sub: 'Une programmation de séance CP20 pour déterminer sa FTP.', w: 'tool', wl: 'Page projet' },
+    { type: 'Outil', theme: 'Performance', title: '5/3/1 Template', sub: 'Un template de programmation de force.', w: 'tool', wl: 'Page projet' },
+    { type: 'Outil', theme: 'Performance', title: 'S\'entraîner sans matériel', sub: 'Un programme de renforcement accessible n\'importe où.', w: 'tool', wl: 'Page projet' },
+    { type: 'Outil', theme: 'Santé', title: 'PupFinder', sub: 'Le QR code multilingue pour retrouver ton chien.', w: 'tool', wl: 'Page projet' }
+  ];
+  var F = { q: '', type: 'Tout', theme: 'Tout' };
+  var norm = function (s) { return s.toLowerCase().replace(/œ/g, 'oe').replace(/æ/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  function openItem(it) {
+    if (it.target) { closePal(); goWidget(it.target); }
+    else { closePal(); toast('Maquette : ouvrirait la page « ' + it.title + ' »'); }
+  }
+  function drawList() {
+    var q = norm(F.q), res = ITEMS.filter(function (it) {
+      return (F.type === 'Tout' || it.type === F.type) && (F.theme === 'Tout' || it.theme === F.theme) && (!q || norm(it.title + ' ' + it.sub + ' ' + it.theme).indexOf(q) > -1);
+    });
+    $('#f-count').textContent = res.length + (res.length > 1 ? ' résultats' : ' résultat');
+    var list = $('#f-list'); list.innerHTML = '';
+    res.forEach(function (it) {
+      var b = document.createElement('button'); b.className = 'row'; b.type = 'button';
+      b.innerHTML = '<span class="type">' + it.type + '</span><span><h3>' + esc(it.title) + '</h3><p>' + esc(it.sub) + '</p></span><span class="tag ' + (it.w === 'live' ? 'live' : '') + '">' + esc(it.w === 'live' ? '▶ ' + it.wl : it.wl) + '</span>';
+      b.addEventListener('click', function () { openItem(it); });
+      list.appendChild(b);
+    });
+    if (!res.length) list.innerHTML = '<p class="count">Aucun résultat. Essaie « cœur » ou « pacing ».</p>';
+  }
+  $('#f-q').addEventListener('input', function (e) { F.q = e.target.value; drawList(); });
+  $$('[data-ft]').forEach(function (c) { c.addEventListener('click', function () { F.type = c.dataset.ft; $$('[data-ft]').forEach(function (x) { x.setAttribute('aria-pressed', x === c); }); drawList(); }); });
+  $$('[data-fh]').forEach(function (c) { c.addEventListener('click', function () { F.theme = c.dataset.fh; $$('[data-fh]').forEach(function (x) { x.setAttribute('aria-pressed', x === c); }); drawList(); }); });
+  drawList();
+
+  /* ---------- Palette Ctrl K ---------- */
+  var pal = $('#palette'), pq = $('#pal-q'), pl = $('#pal-list'), pSel = 0, pRes = [], lastFocus = null;
+  function drawPal() {
+    var q = norm(pq.value);
+    pRes = ITEMS.filter(function (it) { return !q || norm(it.title + ' ' + it.sub + ' ' + it.theme).indexOf(q) > -1; });
+    pSel = clamp(pSel, 0, Math.max(0, pRes.length - 1));
+    pl.innerHTML = '';
+    pRes.forEach(function (it, i) {
+      var li = document.createElement('li'); li.setAttribute('role', 'option'); li.setAttribute('aria-selected', i === pSel);
+      li.innerHTML = '<span>' + esc(it.title) + '</span><small>' + it.type + ' · ' + it.theme + '</small>';
+      li.addEventListener('click', function () { openItem(it); });
+      li.addEventListener('mousemove', function () { if (pSel !== i) { pSel = i; markPal(); } });
+      pl.appendChild(li);
+    });
+    if (!pRes.length) pl.innerHTML = '<li aria-selected="false">Aucun résultat</li>';
+  }
+  function markPal() { $$('li', pl).forEach(function (li, i) { li.setAttribute('aria-selected', i === pSel); }); var s = $$('li', pl)[pSel]; if (s && s.scrollIntoView) s.scrollIntoView({ block: 'nearest' }); }
+  function openPal() { lastFocus = document.activeElement; pal.hidden = false; pq.value = ''; pSel = 0; drawPal(); pq.focus(); }
+  function closePal() { if (pal.hidden) return; pal.hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  $('#open-pal').addEventListener('click', openPal);
+  pal.addEventListener('mousedown', function (e) { if (e.target === pal) closePal(); });
+  pq.addEventListener('input', function () { pSel = 0; drawPal(); });
+  pq.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); pSel = Math.min(pSel + 1, pRes.length - 1); markPal(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); pSel = Math.max(pSel - 1, 0); markPal(); }
+    else if (e.key === 'Enter' && pRes[pSel]) { e.preventDefault(); openItem(pRes[pSel]); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.hidden ? openPal() : closePal(); }
+    else if (e.key === 'Escape') closePal();
+  });
+})();
+</script>
+
+</body>
+</html>
