@@ -123,6 +123,10 @@ La première séance, la plus importante de la journée, se situe environ 1 heur
 
 Il est ensuite conseillé d’espacer ces séances d’environ 4 heures, car les effets immédiats durent en moyenne entre 3 et 6 heures selon les individus.
 
+Pour te lancer, voici un guide de respiration. Suis le cercle : il grandit à l'inspiration, il rétrécit à l'expiration.
+
+{{< respiration >}}
+
 ![GIF fun depuis Giphy](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjdha3hqZ2Y2Z3Nib3VyZ2tjZHFzZnMxNDIzZDU0ZmNzZWwwNW83OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ry1MOAeAYXvRVQLPw3/giphy.webp)
 
 ---

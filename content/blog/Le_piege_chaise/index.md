@@ -109,6 +109,10 @@ Bouger régulièrement dès que le besoin s'en fait sentir – par exemple, au b
 
 > For every 30 minutes that you are desk‑bound, move for at least 2 minutes. Prioritize position and mechanics whenever you can. Perform 10 to 15 minutes of daily maintenance on your body.
 
+Pour visualiser ce que ça change, déplace le curseur : à quoi ressemble une journée de bureau selon ta fréquence de pauses ?
+
+{{< pauses >}}
+
 ### 3. Programmer 10–15 min de « maintenance » corporelle quotidienne
 
 Mettre en place un protocole de maintenance pour contrebalancer les mauvaises postures de la journée, par exemple :

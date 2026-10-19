@@ -1,0 +1,144 @@
+/* Widgets interactifs des articles (shortcodes wprime, respiration, pauses).
+   Couleurs reprises du thème Apero "forest". Le site n'a pas de mode sombre. */
+.wgt {
+  --wg-surface: #ffffff;
+  --wg-surface-2: #eef1ec;
+  --wg-fg: #17261e;
+  --wg-muted: #56665c;
+  --wg-line: #ddddcf;
+  --wg-accent: #4a7862;
+  --wg-accent-strong: #2f4c3e;
+  --wg-accent-soft: #e1eee6;
+  --wg-on-accent: #faf9f0;
+  --wg-power: #35588f;
+  --wg-seat: #c9d3cb;
+  --wg-crit: #b3261e;
+  --wg-crit-soft: #fbe6e3;
+  --wg-warn: #8a5a00;
+  --wg-warn-soft: #fbefd2;
+  --wg-head-font: "EB Garamond", Georgia, "Times New Roman", serif;
+  container-type: inline-size;
+  margin: 2rem 0;
+  max-width: 100%;
+  color: var(--wg-fg);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+.wgt *, .wgt *::before, .wgt *::after { box-sizing: border-box; }
+.wgt [hidden] { display: none !important; }
+.wgt :where(button, input) { font: inherit; color: inherit; }
+.wgt :focus-visible { outline: 3px solid var(--wg-accent); outline-offset: 2px; border-radius: 4px; }
+.wgt-num { font-variant-numeric: tabular-nums; }
+
+.wgt-card { border: 1px solid var(--wg-line); border-radius: 14px; background: var(--wg-surface); overflow: hidden; }
+.wgt-head {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.25rem 0.6rem;
+  padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--wg-line); background: var(--wg-surface-2); font-size: 0.8125rem;
+}
+.wgt-name { font-weight: 700; letter-spacing: 0.02em; }
+.wgt-hint { color: var(--wg-muted); margin-left: auto; }
+.wgt-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--wg-accent); flex: none; }
+.wgt-body { display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; }
+.wgt-chart { padding: 0.9rem 0.9rem 0.5rem; min-width: 0; position: relative; }
+.wgt-panel {
+  border-left: 1px solid var(--wg-line); padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.85rem; min-width: 0;
+}
+.wgt-note { margin: 0; padding: 0.55rem 0.9rem 0.7rem; border-top: 1px solid var(--wg-line); font-size: 0.75rem; color: var(--wg-muted); }
+.wgt-nojs { margin: 0; padding: 0.8rem 1rem; border: 1px dashed var(--wg-line); border-radius: 10px; color: var(--wg-muted); font-size: 0.875rem; }
+
+@container (max-width: 50rem) {
+  .wgt-body { grid-template-columns: minmax(0, 1fr); }
+  .wgt-panel { border-left: 0; border-top: 1px solid var(--wg-line); }
+}
+/* Colonne d'article moyenne : réglages sur deux colonnes sous le graphique */
+@container (min-width: 34rem) and (max-width: 50rem) {
+  .wgt-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem 1.5rem; }
+  .wgt-panel .wgt-chips, .wgt-panel .wgt-result { grid-column: 1 / -1; }
+}
+
+/* Réglages */
+.wgt-ctl { display: grid; gap: 0.15rem; }
+.wgt-ctl-row { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.875rem; }
+.wgt-ctl-row output { font-weight: 700; }
+.wgt input[type="range"] { width: 100%; accent-color: var(--wg-accent); margin: 0; min-height: 1.5rem; }
+.wgt-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.wgt-chip {
+  border: 1px solid var(--wg-line); background: var(--wg-surface); border-radius: 999px; padding: 0.25rem 0.7rem;
+  font-size: 0.8125rem; cursor: pointer; line-height: 1.4;
+}
+.wgt-chip:hover { border-color: var(--wg-accent); }
+.wgt-chip[aria-pressed="true"] { background: var(--wg-accent-strong); border-color: var(--wg-accent-strong); color: var(--wg-on-accent); font-weight: 700; }
+.wgt-btn {
+  background: var(--wg-accent-strong); color: var(--wg-on-accent); border: 0; border-radius: 8px; padding: 0.55rem 1rem;
+  font-weight: 700; cursor: pointer;
+}
+.wgt-btn:hover { background: var(--wg-accent); }
+
+/* Résultat */
+.wgt-result { border-radius: 10px; padding: 0.65rem 0.8rem; background: var(--wg-accent-soft); display: grid; gap: 0.1rem; }
+.wgt-result strong { font-size: 1.05rem; }
+.wgt-result span { font-size: 0.8125rem; color: var(--wg-muted); }
+.wgt-result.is-warn { background: var(--wg-warn-soft); }
+.wgt-result.is-bad { background: var(--wg-crit-soft); }
+.wgt-tank { height: 0.6rem; border-radius: 999px; background: var(--wg-surface-2); overflow: hidden; margin-top: 0.4rem; border: 1px solid var(--wg-line); }
+.wgt-tank i { display: block; height: 100%; background: var(--wg-accent); width: 50%; transition: width 0.25s; }
+.wgt-result.is-warn .wgt-tank i { background: var(--wg-warn); }
+.wgt-result.is-bad .wgt-tank i { background: var(--wg-crit); }
+@media (prefers-reduced-motion: reduce) { .wgt-tank i { transition: none; } }
+
+/* Graphiques */
+.wgt-svg { width: 100%; height: auto; display: block; overflow: visible; touch-action: pan-y; }
+.wgt-svg text { fill: var(--wg-muted); font-size: 11px; font-family: inherit; }
+.wgt-svg .grid { stroke: var(--wg-line); stroke-width: 1; }
+.wgt-svg .cp { stroke: var(--wg-muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.wgt-svg .pline { fill: none; stroke: var(--wg-power); stroke-width: 2; stroke-linejoin: round; }
+.wgt-svg .wline { fill: none; stroke: var(--wg-accent); stroke-width: 2; stroke-linejoin: round; }
+.wgt-svg .warea { fill: var(--wg-accent); fill-opacity: 0.14; }
+.wgt-svg .redline { stroke: var(--wg-crit); stroke-width: 1; stroke-dasharray: 2 4; stroke-opacity: 0.8; }
+.wgt-svg text.redlbl, .wgt-svg text.emptylbl { fill: var(--wg-crit); }
+.wgt-svg text.emptylbl { font-weight: 700; }
+.wgt-svg .empty { stroke: var(--wg-crit); stroke-width: 1.5; }
+.wgt-svg .cross { stroke: var(--wg-fg); stroke-width: 1; stroke-opacity: 0.5; }
+.wgt-svg .mark { stroke: var(--wg-surface); stroke-width: 2; }
+.wgt-tip {
+  position: absolute; pointer-events: none; z-index: 5; background: var(--wg-fg); color: #fff;
+  border-radius: 8px; padding: 0.35rem 0.6rem; font-size: 0.8125rem; line-height: 1.35; white-space: nowrap; top: 0.5rem;
+}
+@container (max-width: 34rem) { .wgt-svg text { font-size: 21px; } }
+
+/* Respiration */
+.wgt-breath { display: grid; grid-template-columns: 13.5rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: 1rem; }
+@container (max-width: 40rem) {
+  .wgt-breath { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .wgt-breath > * { width: 100%; }
+  .wgt-breath .wgt-pacer { max-width: 13.5rem; }
+}
+.wgt-pacer { aspect-ratio: 1; position: relative; }
+.wgt-pacer svg { width: 100%; height: 100%; display: block; }
+.wgt-pacer .ring { fill: none; stroke: var(--wg-line); stroke-width: 2; }
+.wgt-pacer .orb { fill: var(--wg-accent); fill-opacity: 0.2; stroke: var(--wg-accent); stroke-width: 2; }
+.wgt-pacer .prog { fill: none; stroke: var(--wg-accent); stroke-width: 4; stroke-linecap: round; }
+.wgt-pacer-txt { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+.wgt-pacer-txt b { font-family: var(--wg-head-font); font-size: 1.6rem; line-height: 1; font-weight: 600; }
+.wgt-pacer-txt span { font-size: 0.8125rem; color: var(--wg-muted); }
+.wgt-hr { display: grid; gap: 0.6rem; min-width: 0; }
+.wgt-hr-top { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; }
+.wgt-seg { display: inline-flex; border: 1px solid var(--wg-line); border-radius: 8px; overflow: hidden; }
+.wgt-seg button { border: 0; background: var(--wg-surface); padding: 0.35rem 0.75rem; cursor: pointer; font-size: 0.8125rem; }
+.wgt-seg button[aria-pressed="true"] { background: var(--wg-accent-strong); color: var(--wg-on-accent); font-weight: 700; }
+.wgt-stat { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.875rem; }
+.wgt-stat b { font-size: 1.15rem; display: block; line-height: 1.2; }
+.wgt-fine { font-size: 0.75rem; color: var(--wg-muted); margin: 0; }
+.wgt-trace-line { fill: none; stroke: var(--wg-crit); stroke-width: 2; stroke-linejoin: round; }
+
+/* Journée assise */
+.wgt-sit { padding: 1rem; display: grid; gap: 0.5rem; min-width: 0; align-content: center; }
+.wgt-sit-rows { display: grid; gap: 0.55rem; }
+.wgt-sit-row { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: var(--wg-muted); }
+.wgt-sit-track { position: relative; height: 1.5rem; border-radius: 6px; overflow: hidden; background: var(--wg-seat); }
+.wgt-sit-track i { position: absolute; top: 0; bottom: 0; background: var(--wg-accent-strong); min-width: 3px; }
+.wgt-legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.8125rem; color: var(--wg-muted); margin-top: 0.35rem; }
+.wgt-legend span::before {
+  content: ""; display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 3px; margin-right: 0.4rem; vertical-align: -1px; background: var(--wg-seat);
+}
+.wgt-legend span.mv::before { background: var(--wg-accent-strong); }

@@ -1,0 +1,16 @@
+{{- /*
+  Charge le CSS commun et le script d'un widget, une seule fois par page.
+  Appel : {{ partial "widget-assets.html" (dict "page" .Page "script" "wprime") }}
+*/ -}}
+{{- $page := .page -}}
+{{- if not ($page.Store.Get "widgets-css") -}}
+  {{- $page.Store.Set "widgets-css" true -}}
+  {{- $css := resources.Get "css/widgets.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end -}}
+{{- $key := printf "widgets-js-%s" .script -}}
+{{- if not ($page.Store.Get $key) -}}
+  {{- $page.Store.Set $key true -}}
+  {{- $js := resources.Get (printf "js/widgets/%s.js" .script) | minify | fingerprint -}}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{- end -}}

@@ -224,6 +224,10 @@ Cette formule calcule le **W' restant** (ton réservoir anaérobie disponible) �
 
 👉 **En pratique** : si tu pousses à 300 W alors que ta CP est à 220 W, tu consommes (300-220) = 80 W de ton réservoir W' chaque seconde. Si ensuite tu redescends sous CP, le réservoir se recharge progressivement selon une constante de temps τ (tau).
 
+À toi de jouer : choisis une puissance moyenne pour 12 minutes d'effort et regarde quand ton réservoir se vide. Essaie aussi l'alternance, même moyenne mais en alternant plus fort et moins fort chaque minute.
+
+{{< wprime >}}
+
 ## 2.2 Construire Votre Courbe Puissance-Durée
 
 ### Protocole de test

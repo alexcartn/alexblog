@@ -1,0 +1,9 @@
+{{- /*
+  Réservoir W' interactif (modèle Critical Power).
+  Usage : {{< wprime >}} ou {{< wprime cp="220" w="27" p="255" d="0" >}}
+    cp : puissance critique en W, w : W' en kJ, p : puissance moyenne visée en W, d : alternance en W
+*/ -}}
+{{- partial "widget-assets.html" (dict "page" .Page "script" "wprime") -}}
+<div class="wgt wgt-wprime" data-cp="{{ .Get "cp" | default "220" }}" data-w="{{ .Get "w" | default "27" }}" data-p="{{ .Get "p" | default "255" }}" data-d="{{ .Get "d" | default "0" }}">
+  <noscript><p class="wgt-nojs">Ce simulateur de réservoir W′ demande JavaScript.</p></noscript>
+</div>
