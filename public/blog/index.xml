@@ -1,48 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog on Alexandre CARTON</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blog on Alexandre CARTON</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>© 2025 Alexandre Carton, France</copyright>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cohérence cardiaque, harmoniser le souffle, le cœur et l’esprit</title>
-      <link>http://localhost:1313/blog/coherence_cardiaque/</link>
-      <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/coherence_cardiaque/</guid>
-      <description>&lt;h1 id=&#34;coherence-cardiaque&#34;&gt;Coherence cardiaque&#xD;&#xA;  &lt;a href=&#34;#coherence-cardiaque&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;h2 id=&#34;le-cœur-un-organe-méconnu&#34;&gt;Le cœur un organe méconnu&#xD;&#xA;  &lt;a href=&#34;#le-c%c5%93ur-un-organe-m%c3%a9connu&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xD;&#xA;      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;&#xD;&#xA;      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;&#xD;&#xA;    &lt;/svg&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Le cœur n’est pas juste une pompe. Le réduire à une fonction aussi simpliste nous fait passer à côté de son rôle primordial. En effet, le cœur est un véritable « cerveau secondaire » et joue un rôle important dans notre système nerveux autonome. L’essor récent de la neurocardiologie, c’est-à-dire :&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Gérer son Pacing en CrossFit - Science, Données et Application Concrète</title>
-      <link>http://localhost:1313/blog/cp_model/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/cp_model/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&#xD;&#xA;  &lt;a href=&#34;#introduction&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;En CrossFit, on se pose souvent la question de la gestion de notre allure, du &lt;strong&gt;pacing&lt;/strong&gt; sur un WOD avec ergomètres : rameur, Assault Bike, SkiErg… La gestion de l’allure est déterminante pour performer.&lt;/p&gt;&#xA;&lt;p&gt;👉 Par exemple, gagner seulement &lt;strong&gt;2 secondes sur un split de 500 m au rameur&lt;/strong&gt; peut paraître intéressant, mais le coût énergétique est colossal. On risque de brûler une grande partie de nos réserves pour un gain minime… qu’on reperdra ensuite dans les transitions pendant le WOD.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Peut-on prédire la qualité du lait avec le machine learning ?</title>
-      <link>http://localhost:1313/blog/milk_ml/</link>
-      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/milk_ml/</guid>
-      <description>&lt;h1 id=&#34;introduction-et-contexte-du-machine-learning--le-workflow&#34;&gt;Introduction et contexte du machine learning — le workflow&#xD;&#xA;  &lt;a href=&#34;#introduction-et-contexte-du-machine-learning--le-workflow&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;L’objectif du machine learning, c’est &lt;strong&gt;de ne pas avoir besoin de connaître toutes les équations scientifiques&lt;/strong&gt; qui décrivent un système.&lt;br&gt;&#xA;Avec un modèle physique classique, on part des lois (mécaniques, chimiques…) → on prend les entrées → on calcule les sorties.&#xA;Mais parfois, ces lois sont &lt;strong&gt;trop complexes&lt;/strong&gt; ou &lt;strong&gt;impossibles à écrire précisément&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;👉 Le &lt;strong&gt;machine learning&lt;/strong&gt; propose une autre approche :&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Le piège de la chaise</title>
-      <link>http://localhost:1313/blog/le_piege_chaise/</link>
-      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/le_piege_chaise/</guid>
-      <description>&lt;h1 id=&#34;le-piège-de-la-chaise&#34;&gt;Le piège de la chaise&#xD;&#xA;  &lt;a href=&#34;#le-pi%c3%a8ge-de-la-chaise&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;h2 id=&#34;sitting-is-the-new-smoking&#34;&gt;Sitting is the new smoking&#xD;&#xA;  &lt;a href=&#34;#sitting-is-the-new-smoking&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xD;&#xA;      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;&#xD;&#xA;      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;&#xD;&#xA;    &lt;/svg&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;L’Organisation mondiale de la Santé (OMS) actualise régulièrement la liste des principaux facteurs de mortalité &lt;em&gt;évitables&lt;/em&gt;. Depuis près de vingt ans, &lt;strong&gt;l’inactivité physique&lt;/strong&gt; se maintient au &lt;strong&gt;4ᵉ rang&lt;/strong&gt;, à l’origine d’environ &lt;strong&gt;4 à 5 millions de décès chaque année&lt;/strong&gt; , davantage que la consommation nocive d’alcool.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Le Simple Sabotage Field Manual, Quand la CIA enseignait l&#39;art du sabotage organisationnel</title>
-      <link>http://localhost:1313/blog/cia_sabotage/</link>
-      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/cia_sabotage/</guid>
-      <description>&lt;h1 id=&#34;quest-ce-que-le-simple-sabotage-field-manual-&#34;&gt;Qu’est-ce que le Simple Sabotage Field Manual ?&#xD;&#xA;  &lt;a href=&#34;#quest-ce-que-le-simple-sabotage-field-manual-&#34;&gt;&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;Le contenu de ce manuel doit être soigneusement contrôlé et ne doit pas être mis entre des mains non autorisées.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;William J. Donovan&lt;/strong&gt;, Directeur de la CIA, 1944&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Il existe en libre accès des guides d&amp;rsquo;espionnage conçu par CIA. L&amp;rsquo;objectif du &lt;strong&gt;Presidential Executive Order 13526&lt;/strong&gt; de 2009 est de promouvoir la transparence par la diffusion de documents confidentiels datant de plus de 25 ans au minimum. Ainsi, la CIA publie régulièrement des documents déclassifiés, nous permettant de découvrir certains de leurs sujets d&amp;rsquo;étude. On peut noter, par exemple :&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Alexandre CARTON</title><link>https://alexandrecarton.netlify.app/blog/</link><description>Recent content in Blog on Alexandre CARTON</description><generator>Hugo</generator><language>en</language><copyright>© 2025 Alexandre Carton, France</copyright><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://alexandrecarton.netlify.app/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Cohérence cardiaque, harmoniser le souffle, le cœur et l’esprit</title><link>https://alexandrecarton.netlify.app/blog/coherence_cardiaque/</link><pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate><guid>https://alexandrecarton.netlify.app/blog/coherence_cardiaque/</guid><description>&lt;h1 id="coherence-cardiaque">Coherence cardiaque
+ &lt;a href="#coherence-cardiaque">&lt;/a>
+&lt;/h1>
+
+
+
+
+&lt;h2 id="le-cœur-un-organe-méconnu">Le cœur un organe méconnu
+ &lt;a href="#le-c%c5%93ur-un-organe-m%c3%a9connu">&lt;svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+ &lt;path d="M0 0h24v24H0z" fill="currentColor">&lt;/path>
+ &lt;path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z">&lt;/path>
+ &lt;/svg>&lt;/a>
+&lt;/h2>
+&lt;p>Le cœur n’est pas juste une pompe. Le réduire à une fonction aussi simpliste nous fait passer à côté de son rôle primordial. En effet, le cœur est un véritable « cerveau secondaire » et joue un rôle important dans notre système nerveux autonome. L’essor récent de la neurocardiologie, c’est-à-dire :&lt;/p></description></item><item><title>Gérer son Pacing en CrossFit - Science, Données et Application Concrète</title><link>https://alexandrecarton.netlify.app/blog/cp_model/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://alexandrecarton.netlify.app/blog/cp_model/</guid><description>&lt;h1 id="introduction">Introduction
+ &lt;a href="#introduction">&lt;/a>
+&lt;/h1>
+&lt;p>En CrossFit, on se pose souvent la question de la gestion de notre allure, du &lt;strong>pacing&lt;/strong> sur un WOD avec ergomètres : rameur, Assault Bike, SkiErg… La gestion de l&amp;rsquo;allure est déterminante pour performer.&lt;/p>
+&lt;p>👉 Par exemple, gagner seulement &lt;strong>2 secondes sur un split de 500 m au rameur&lt;/strong> peut paraître intéressant, mais le coût énergétique est colossal. On risque de brûler une grande partie de nos réserves pour un gain minime… qu&amp;rsquo;on reperdra ensuite dans les transitions pendant le WOD.&lt;/p></description></item><item><title>Peut-on prédire la qualité du lait avec le machine learning ?</title><link>https://alexandrecarton.netlify.app/blog/milk_ml/</link><pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate><guid>https://alexandrecarton.netlify.app/blog/milk_ml/</guid><description>&lt;h2 id="1-introduction--le-machine-learning-une-approche-par-lexemple">1. Introduction : Le machine learning, une approche par l&amp;rsquo;exemple
+ &lt;a href="#1-introduction--le-machine-learning-une-approche-par-lexemple">&lt;svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+ &lt;path d="M0 0h24v24H0z" fill="currentColor">&lt;/path>
+ &lt;path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z">&lt;/path>
+ &lt;/svg>&lt;/a>
+&lt;/h2>
+&lt;p>L&amp;rsquo;objectif du machine learning, c&amp;rsquo;est &lt;strong>de ne pas avoir besoin de connaître toutes les équations scientifiques&lt;/strong> qui décrivent un système.
+Avec un modèle physique classique, on part des lois (mécaniques, chimiques…) → on prend les entrées → on calcule les sorties.
+Mais parfois, ces lois sont &lt;strong>trop complexes&lt;/strong> ou &lt;strong>impossibles à écrire précisément&lt;/strong>.&lt;/p></description></item><item><title>Le piège de la chaise</title><link>https://alexandrecarton.netlify.app/blog/le_piege_chaise/</link><pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate><guid>https://alexandrecarton.netlify.app/blog/le_piege_chaise/</guid><description>&lt;h1 id="le-piège-de-la-chaise">Le piège de la chaise
+ &lt;a href="#le-pi%c3%a8ge-de-la-chaise">&lt;/a>
+&lt;/h1>
+
+
+
+
+&lt;h2 id="sitting-is-the-new-smoking">Sitting is the new smoking
+ &lt;a href="#sitting-is-the-new-smoking">&lt;svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+ &lt;path d="M0 0h24v24H0z" fill="currentColor">&lt;/path>
+ &lt;path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z">&lt;/path>
+ &lt;/svg>&lt;/a>
+&lt;/h2>
+&lt;p>L&amp;rsquo;Organisation mondiale de la Santé (OMS) actualise régulièrement la liste des principaux facteurs de mortalité &lt;em>évitables&lt;/em>. Depuis près de vingt ans, &lt;strong>l&amp;rsquo;inactivité physique&lt;/strong> se maintient au &lt;strong>4ᵉ rang&lt;/strong>, à l&amp;rsquo;origine d&amp;rsquo;environ &lt;strong>4 à 5 millions de décès chaque année&lt;/strong> , davantage que la consommation nocive d&amp;rsquo;alcool.&lt;/p></description></item><item><title>Le Simple Sabotage Field Manual, Quand la CIA enseignait l'art du sabotage organisationnel</title><link>https://alexandrecarton.netlify.app/blog/cia_sabotage/</link><pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate><guid>https://alexandrecarton.netlify.app/blog/cia_sabotage/</guid><description>&lt;h1 id="quest-ce-que-le-simple-sabotage-field-manual-">Qu&amp;rsquo;est-ce que le Simple Sabotage Field Manual ?
+ &lt;a href="#quest-ce-que-le-simple-sabotage-field-manual-">&lt;/a>
+&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;em>Le contenu de ce manuel doit être soigneusement contrôlé et ne doit pas être mis entre des mains non autorisées.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>William J. Donovan&lt;/strong>, Directeur de la CIA, 1944&lt;/p>
+&lt;/blockquote>
+&lt;p>Il existe en libre accès des guides d&amp;rsquo;espionnage conçu par CIA. L&amp;rsquo;objectif du &lt;strong>Presidential Executive Order 13526&lt;/strong> de 2009 est de promouvoir la transparence par la diffusion de documents confidentiels datant de plus de 25 ans au minimum. Ainsi, la CIA publie régulièrement des documents déclassifiés, nous permettant de découvrir certains de leurs sujets d&amp;rsquo;étude. On peut noter, par exemple :&lt;/p></description></item></channel></rss>

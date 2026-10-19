@@ -1,0 +1,11 @@
+# robots.txt for alexandrecarton.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://alexandrecarton.netlify.app/sitemap.xml
+
+# Disallow admin or temporary paths if any
+# Disallow: /admin/
+# Disallow: /tmp/
