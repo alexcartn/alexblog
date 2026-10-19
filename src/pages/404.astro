@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Page introuvable">
+  <section class="wrap notfound">
+    <h1>404</h1>
+    <p>Cette page n'existe pas ou a changé d'adresse.</p>
+    <div class="hero-actions">
+      <a class="btn" href="/">Retour à l'accueil</a>
+      <a class="btn ghost" href="/blog/">Voir les articles</a>
+      <button type="button" class="btn ghost" data-search-open data-index="/search-index.json"><Icon name="search" size={16} /> Rechercher</button>
+    </div>
+  </section>
+</Base>

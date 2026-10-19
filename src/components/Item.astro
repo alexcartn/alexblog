@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import { formatDate, type Item } from '../lib/content';
+
+interface Props { item: Item; eager?: boolean }
+const { item, eager = false } = Astro.props;
+const search = [item.title, item.subtitle, item.topic, item.kind, ...item.categories, ...item.tags].join(' ');
+---
+<li class="item" data-kind={item.kind} data-topic={item.topic} data-live={item.interactive ? '1' : '0'} data-search={search}>
+  <div class={`item-thumb${item.cover ? '' : ' empty'}`} aria-hidden="true">
+    {item.cover
+      ? <Image src={item.cover} width={288} height={216} densities={[1, 2]} format="webp" quality={76} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      : <span>{item.title.charAt(0)}</span>}
+  </div>
+  <div class="item-body">
+    <p class="meta">
+      <span class="item-kind">{item.kind}</span>
+      <span>{item.topic}</span>
+      <time datetime={item.date.toISOString().slice(0, 10)}>{formatDate(item.date, true)}</time>
+      {item.kind === 'Article' && <span>{item.readingTime} min</span>}
+    </p>
+    <h3 class="item-title"><a href={item.url}>{item.title}</a></h3>
+    {item.subtitle && <p class="item-sub">{item.subtitle}</p>}
+    {item.interactive && <span class="badge">Interactif</span>}
+  </div>
+</li>

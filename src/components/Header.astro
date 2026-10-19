@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+import { SITE } from '../lib/site';
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(href);
+---
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="/" aria-label={`${SITE.title}, accueil`}>
+      <img src={SITE.logo} alt="" width="30" height="30" />
+      <span>{SITE.title}</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      {SITE.nav.map((l) => <a href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="site-search-btn" data-search-open data-index="/search-index.json" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" title="Rechercher sur le site (Ctrl K)">
+        <Icon name="search" size={16} />
+        <span class="site-search-label">Rechercher</span>
+        <kbd class="site-search-kbd" aria-hidden="true">Ctrl K</kbd>
+      </button>
+      <a class="icon-link" href={SITE.linkedin} target="_blank" rel="me noopener" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" size={22} /></a>
+    </div>
+  </div>
+</header>

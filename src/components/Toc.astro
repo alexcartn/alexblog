@@ -1,0 +1,30 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props { headings: MarkdownHeading[] }
+const { headings } = Astro.props;
+
+// Sommaire sur deux niveaux : les titres de niveau 1 et 2 du Markdown.
+interface Node { slug: string; text: string; children: Node[] }
+const tree: Node[] = [];
+for (const h of headings.filter((x) => x.depth <= 2)) {
+  const node = { slug: h.slug, text: h.text, children: [] };
+  const parent = tree[tree.length - 1];
+  if (h.depth === 2 && parent) parent.children.push(node);
+  else tree.push(node);
+}
+const total = tree.reduce((n, t) => n + 1 + t.children.length, 0);
+---
+{total >= 3 && (
+  <nav class="toc" aria-label="Sommaire" data-toc>
+    <p class="toc-title">Sommaire</p>
+    <ol>
+      {tree.map((n) => (
+        <li>
+          <a href={`#${n.slug}`}>{n.text}</a>
+          {n.children.length > 0 && <ol>{n.children.map((c) => <li><a href={`#${c.slug}`}>{c.text}</a></li>)}</ol>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}

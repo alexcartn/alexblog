@@ -1,0 +1,19 @@
+{
+  "name": "alexblog",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "dependencies": {
+    "@astrojs/rss": "4.0.19",
+    "astro": "7.3.5",
+    "sharp": "0.35.5"
+  }
+}

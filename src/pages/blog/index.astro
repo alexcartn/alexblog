@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import Explorer from '../../components/Explorer.astro';
+import { getArticles } from '../../lib/content';
+const items = await getArticles();
+---
+<Page title="Blog" lead="Une collection de mes articles sur divers sujets : sport, santé, data et management." wide>
+  <Explorer items={items} heading="Les articles" showKinds={false} id="articles" />
+</Page>

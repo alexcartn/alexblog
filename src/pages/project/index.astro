@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import Explorer from '../../components/Explorer.astro';
+import { getProjects } from '../../lib/content';
+const items = await getProjects();
+---
+<Page title="Projets" lead="Des outils et des programmes que j'ai construits : applications, entraînements, convertisseurs." wide>
+  <Explorer items={items} heading="Les projets" showKinds={false} id="projets" />
+</Page>

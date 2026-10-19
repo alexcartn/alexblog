@@ -1,9 +1,0 @@
-{{- /*
-  Guide de respiration pour la cohérence cardiaque.
-  Usage : {{< respiration >}} ou {{< respiration rythme="6" duree="5" >}}
-    rythme : 6 ou 12 respirations par minute, duree : durée de la séance en minutes
-*/ -}}
-{{- partial "widget-assets.html" (dict "page" .Page "script" "respiration") -}}
-<div class="wgt wgt-respiration" data-rythme="{{ .Get "rythme" | default "6" }}" data-duree="{{ .Get "duree" | default "5" }}">
-  <noscript><p class="wgt-nojs">Ce guide de respiration demande JavaScript.</p></noscript>
-</div>

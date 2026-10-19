@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import TermList from '../../components/TermList.astro';
+import { getAllItems, groupTerms } from '../../lib/content';
+const terms = groupTerms(await getAllItems(), 'tags');
+---
+<Page title="Mots-clés" wide>
+  <div class="wrap"><TermList terms={terms} base="tags" /></div>
+</Page>

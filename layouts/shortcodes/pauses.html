@@ -1,9 +1,0 @@
-{{- /*
-  Journée de bureau découpée en périodes assises et pauses de mouvement.
-  Usage : {{< pauses >}} ou {{< pauses intervalle="60" pause="2" >}}
-    intervalle : minutes assis entre deux pauses, pause : durée du mouvement en minutes
-*/ -}}
-{{- partial "widget-assets.html" (dict "page" .Page "script" "pauses") -}}
-<div class="wgt wgt-pauses" data-intervalle="{{ .Get "intervalle" | default "60" }}" data-pause="{{ .Get "pause" | default "2" }}">
-  <noscript><p class="wgt-nojs">Cette visualisation demande JavaScript.</p></noscript>
-</div>

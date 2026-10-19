@@ -1,0 +1,106 @@
+---
+import { render } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import Base from './Base.astro';
+import Toc from '../components/Toc.astro';
+import Item from '../components/Item.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../lib/site';
+import { formatDate, getAllItems, urlize, type Item as ItemType } from '../lib/content';
+import '../styles/widgets.css';
+
+interface Props { item: ItemType }
+const { item } = Astro.props;
+const { entry } = item;
+const { Content, headings } = await render(entry);
+const isPost = item.section === 'blog';
+const links = ('links' in entry.data && entry.data.links) || [];
+// Même règle que le composant Toc : au moins 3 titres de niveau 1 ou 2.
+const hasToc = headings.filter((h) => h.depth <= 2).length >= 3;
+
+const others = (await getAllItems()).filter((i) => i.url !== item.url && i.section === item.section);
+const related = others
+  .sort((a, b) => Number(b.topic === item.topic) - Number(a.topic === item.topic) || b.date.valueOf() - a.date.valueOf())
+  .slice(0, 2);
+
+const og = item.cover ? new URL((await getImage({ src: item.cover, width: 1200, format: 'jpg' })).src, Astro.site).href : undefined;
+const description = item.entry.data.description ?? item.subtitle ?? undefined;
+const jsonLd = isPost ? {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: item.title,
+  datePublished: item.date.toISOString(),
+  author: { '@type': 'Person', name: SITE.author, url: SITE.url },
+  image: og,
+  description: item.subtitle,
+  mainEntityOfPage: new URL(item.url, Astro.site).href,
+  inLanguage: 'fr-FR',
+} : undefined;
+const sectionHref = isPost ? '/blog/' : '/project/';
+---
+<Base title={item.title} description={description} image={og} type={isPost ? 'article' : 'website'} jsonLd={jsonLd}>
+  <article class={`post-layout${hasToc ? '' : ' no-toc'}`}>
+    <header class="post-head">
+      <p class="crumbs">
+        <a href={sectionHref}>← {isPost ? 'Blog' : 'Projets'}</a>
+        <a class="topic" href={`/?theme=${encodeURIComponent(item.topic)}#contenus`}>{item.topic}</a>
+      </p>
+      <h1>{item.title}</h1>
+      {item.subtitle && <p class="post-sub">{item.subtitle}</p>}
+      <p class="meta">
+        <time datetime={item.date.toISOString().slice(0, 10)}>{formatDate(item.date)}</time>
+        {isPost && <span>{item.readingTime} min de lecture</span>}
+      </p>
+      {links.length > 0 && (
+        <div class="project-links">
+          {links.map((l, i) => (
+            <a class={`btn${i > 0 ? ' ghost' : ''}`} href={l.url} target={/^https?:/.test(l.url) ? '_blank' : undefined} rel="noopener">
+              {l.name} <Icon name="arrow-up-right" size={15} />
+            </a>
+          ))}
+        </div>
+      )}
+      {item.categories.length > 0 && (
+        <ul class="post-tags" aria-label="Catégories">
+          {item.categories.map((c) => <li><a href={`/categories/${urlize(c)}/`}>{c}</a></li>)}
+        </ul>
+      )}
+      {!isPost && item.cover && (
+        <figure class="project-hero">
+          <Image src={item.cover} width={900} format="webp" quality={80} alt="" loading="eager" decoding="async" />
+        </figure>
+      )}
+    </header>
+
+    <div class="post-main">
+      {hasToc && (
+        <details class="toc-mobile">
+          <summary>Sommaire</summary>
+          <Toc headings={headings} />
+        </details>
+      )}
+      <div class="prose"><Content /></div>
+    </div>
+
+    {hasToc && <aside class="toc-side" aria-label="Sommaire de l'article"><Toc headings={headings} /></aside>}
+
+    {related.length > 0 && (
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title">{isPost ? 'À lire aussi' : 'Autres projets'}</h2>
+        <ul class="items">{related.map((r) => <Item item={r} />)}</ul>
+      </section>
+    )}
+  </article>
+</Base>
+
+<script>
+  // Chaque widget n'est chargé que s'il est présent dans la page.
+  const widgets = {
+    '.wgt-wprime': () => import('../scripts/widgets/wprime.js'),
+    '.wgt-respiration': () => import('../scripts/widgets/respiration.js'),
+    '.wgt-pauses': () => import('../scripts/widgets/pauses.js'),
+  };
+  for (const [selector, load] of Object.entries(widgets)) {
+    if (document.querySelector(selector)) load();
+  }
+</script>

@@ -1,0 +1,15 @@
+---
+import { getCollection, render } from 'astro:content';
+import Page from '../layouts/Page.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.filter((p) => !['home', 'about'].includes(p.id)).map((entry) => ({ params: { page: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+<Page title={d.title} heading={d.heading ?? undefined} description={d.description ?? undefined}>
+  <div class="read wide prose"><Content /></div>
+</Page>

@@ -1,0 +1,59 @@
+---
+import { getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Explorer from '../components/Explorer.astro';
+import Icon from '../components/Icon.astro';
+import profile from '../assets/profile.png';
+import { SITE } from '../lib/site';
+import { formatDate, getAllItems } from '../lib/content';
+
+const home = await getEntry('pages', 'home');
+if (!home) throw new Error('src/content/pages/home.md est introuvable');
+const { Content } = await render(home);
+const items = await getAllItems();
+const featured = items.find((i) => i.featured) ?? items.find((i) => i.section === 'blog');
+---
+<Base>
+  <section class="wrap hero">
+    <div>
+      <h1>{home.data.title}</h1>
+      <p class="hero-role">{home.data.subtitle}</p>
+      <div class="hero-lead"><Content /></div>
+      <div class="hero-actions">
+        <a class="btn" href="/blog/">Lire le blog <Icon name="arrow-right" size={16} /></a>
+        <a class="btn ghost" href="/about/">À propos</a>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <Image src={profile} width={900} format="webp" quality={82} loading="eager" alt="Illustration : un ingénieur travaille à son bureau devant un tableau de schémas techniques." />
+    </figure>
+  </section>
+
+  {featured && (
+    <section class="wrap" aria-labelledby="featured-title">
+      <p class="eyebrow" id="featured-title">À la une</p>
+      <article class="featured">
+        <div class="featured-img">
+          {featured.cover && <Image src={featured.cover} width={760} height={560} format="webp" quality={80} alt="" loading="lazy" decoding="async" />}
+        </div>
+        <div class="featured-body">
+          <p class="meta">
+            <span class="item-kind">{featured.kind}</span>
+            <span>{featured.topic}</span>
+            <time datetime={featured.date.toISOString().slice(0, 10)}>{formatDate(featured.date)}</time>
+            <span>{featured.readingTime} min</span>
+          </p>
+          <h2><a href={featured.url}>{featured.title}</a></h2>
+          {featured.subtitle && <p>{featured.subtitle}</p>}
+          <p>
+            {featured.interactive && <span class="badge">Interactif</span>}
+          </p>
+          <span class="go">Lire l'article <Icon name="arrow-right" size={16} /></span>
+        </div>
+      </article>
+    </section>
+  )}
+
+  <Explorer items={items} />
+</Base>

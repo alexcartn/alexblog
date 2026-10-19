@@ -1,0 +1,54 @@
+---
+import Item from './Item.astro';
+import Icon from './Icon.astro';
+import type { Item as ItemType } from '../lib/content';
+
+interface Props {
+  items: ItemType[];
+  heading?: string;
+  showKinds?: boolean;
+  id?: string;
+}
+const { items, heading = 'Tout lire et essayer', showKinds = true, id = 'contenus' } = Astro.props;
+
+const counts = new Map<string, number>();
+for (const it of items) counts.set(it.topic, (counts.get(it.topic) ?? 0) + 1);
+const topics = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'fr'));
+const kinds = ['Article', 'Projet'].filter((k) => items.some((i) => i.kind === k));
+const hasLive = items.some((i) => i.interactive);
+const plural = (n: number) => `${n} contenu${n > 1 ? 's' : ''}`;
+---
+<section class="explorer wrap" id={id} data-explorer>
+  <div class="explorer-head">
+    <h2>{heading}</h2>
+    <p class="count" data-count aria-live="polite">{plural(items.length)}</p>
+  </div>
+
+  <div class="filters">
+    <label class="f-search">
+      <span class="sr-only">Filtrer par mot-clé</span>
+      <Icon name="search" size={16} />
+      <input type="search" data-f-q placeholder="Filtrer par mot-clé" autocomplete="off" />
+    </label>
+    {showKinds && kinds.length > 1 && (
+      <div class="f-group" role="group" aria-label="Type de contenu">
+        <span class="f-label">Type</span>
+        <button type="button" class="chip" data-f-kind="" aria-pressed="true">Tout</button>
+        {kinds.map((k) => <button type="button" class="chip" data-f-kind={k} aria-pressed="false">{k === 'Article' ? 'Articles' : 'Projets'}</button>)}
+      </div>
+    )}
+    <div class="f-group" role="group" aria-label="Thème">
+      <span class="f-label">Thème</span>
+      <button type="button" class="chip" data-f-topic="" aria-pressed="true">Tous</button>
+      {topics.map(([t, n]) => <button type="button" class="chip" data-f-topic={t} aria-pressed="false">{t} <small>{n}</small></button>)}
+      {hasLive && <button type="button" class="chip" data-f-live aria-pressed="false">Interactifs</button>}
+    </div>
+  </div>
+
+  <ul class="items">
+    {items.map((it, i) => <Item item={it} eager={i < 3} />)}
+  </ul>
+  <p class="empty-state" data-empty hidden>
+    Aucun contenu ne correspond à ces filtres. <button type="button" class="chip" data-f-reset>Tout afficher</button>
+  </p>
+</section>

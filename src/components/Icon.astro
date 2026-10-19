@@ -1,0 +1,13 @@
+---
+interface Props { name: 'search' | 'linkedin' | 'arrow-right' | 'arrow-up-right' | 'rss'; size?: number }
+const { name, size = 18 } = Astro.props;
+const icons = {
+  search: { box: 16, d: '<circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>' },
+  linkedin: { box: 24, d: '<rect x="3.5" y="3.5" width="17" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8.3" cy="8.6" r="1.1" fill="currentColor"/><path d="M8.3 11.2v5.3M12 16.5v-5.3m0 2.1c0-1.4 1-2.2 2.2-2.2s2.2.8 2.2 2.3v3.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>' },
+  'arrow-right': { box: 16, d: '<path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>' },
+  'arrow-up-right': { box: 16, d: '<path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>' },
+  rss: { box: 16, d: '<path d="M3 3a10 10 0 0 1 10 10M3 7.5A5.5 5.5 0 0 1 8.5 13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="3.6" cy="12.4" r="1.2" fill="currentColor"/>' },
+} as const;
+const icon = icons[name];
+---
+<svg width={size} height={size} viewBox={`0 0 ${icon.box} ${icon.box}`} aria-hidden="true" focusable="false" set:html={icon.d} />

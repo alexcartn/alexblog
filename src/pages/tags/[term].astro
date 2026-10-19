@@ -1,0 +1,18 @@
+---
+import Page from '../../layouts/Page.astro';
+import TermList from '../../components/TermList.astro';
+import Item from '../../components/Item.astro';
+import { getAllItems, groupTerms } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const terms = groupTerms(await getAllItems(), 'tags');
+  return terms.map((term) => ({ params: { term: term.slug }, props: { term, terms } }));
+}
+const { term, terms } = Astro.props;
+---
+<Page title={`Mot-clé : ${term.name}`} heading={term.name} lead="Mot-clé" wide>
+  <div class="wrap">
+    <TermList terms={terms} base="tags" current={term.slug} />
+    <ul class="items">{term.items.map((it) => <Item item={it} />)}</ul>
+  </div>
+</Page>
