@@ -19,8 +19,6 @@ links:
 topic: "Santé"
 cover: ./featured-hex.jpg
 ---
-# Découvrez Coffee Caffeine Tracker
-
 *par **Alexandre CARTON***
 
 Coffee Caffeine Tracker est une application simple et intuitive qui vous aide à visualiser et maîtriser votre consommation de caféine au quotidien. En quelques clics, suivez vos cafés, thés ou sodas et gardez le contrôle sur votre énergie !

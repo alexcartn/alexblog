@@ -24,8 +24,6 @@ topic: "Performance"
 cover: ./featured-hex.jpg
 ---
 
-# S'entraîner Sans Matériel : Programme de Renforcement
-
 Ce programme est conçu pour vous permettre de rester actif et de renforcer votre corps sans avoir besoin de matériel spécifique. Que vous soyez à la maison, en voyage ou en extérieur, ces exercices sont adaptés à tous les niveaux.
 
 ## Objectifs du Programme

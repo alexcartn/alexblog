@@ -24,8 +24,6 @@ links:
 topic: "Divers"
 cover: ./featured-hex.jpg
 ---
-# Découvrez **PupFinder**
-
 PupFinder est une solution simple et universelle pour identifier votre chien : créez un QR code multilingue, attachez‑le à son collier et laissez n’importe qui vous contacter en un scan, dans sa langue.
 
 ## Pourquoi utiliser PupFinder ?

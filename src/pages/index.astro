@@ -55,5 +55,5 @@ const featured = items.find((i) => i.featured) ?? items.find((i) => i.section ==
     </section>
   )}
 
-  <Explorer items={items} />
+  <Explorer items={items} spotlight={featured?.url} />
 </Base>

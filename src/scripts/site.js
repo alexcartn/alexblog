@@ -22,21 +22,27 @@ function initExplorer(root) {
 
   function apply(updateUrl) {
     const tokens = norm(state.q).split(/\s+/).filter(Boolean);
+    // Sans filtre, l'élément « à la une » n'est pas répété dans la liste.
+    const idle = !tokens.length && !state.kind && !state.topic && !state.live;
     let shown = 0;
+    let total = 0;
     for (const { el, text } of items) {
+      const spot = idle && el.hasAttribute('data-spotlight');
       const ok =
+        !spot &&
         (!state.kind || el.dataset.kind === state.kind) &&
         (!state.topic || el.dataset.topic === state.topic) &&
         (!state.live || el.dataset.live === '1') &&
         tokens.every((t) => text.includes(t));
       el.hidden = !ok;
       if (ok) shown++;
+      if (!spot) total++;
     }
     root.querySelectorAll('[data-f-kind]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.fKind === state.kind)));
     root.querySelectorAll('[data-f-topic]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.fTopic === state.topic)));
     const live = root.querySelector('[data-f-live]');
     if (live) live.setAttribute('aria-pressed', String(state.live));
-    if (count) count.textContent = shown === items.length ? plural(shown) : `${shown} sur ${items.length}`;
+    if (count) count.textContent = shown === total ? plural(shown) : `${shown} sur ${total}`;
     if (empty) empty.hidden = shown !== 0;
     if (updateUrl) {
       const p = new URLSearchParams();
@@ -80,5 +86,30 @@ function initToc() {
   heads.forEach((h) => io.observe(h));
 }
 
+/* ---------- Tableaux larges : un dégradé signale les colonnes cachées ---------- */
+function initTables() {
+  document.querySelectorAll('.prose table').forEach((table) => {
+    const shell = document.createElement('div');
+    shell.className = 'table-shell';
+    const scroller = document.createElement('div');
+    scroller.className = 'table-scroll';
+    table.replaceWith(shell);
+    shell.append(scroller);
+    scroller.append(table);
+    const update = () => {
+      shell.classList.toggle('more-left', scroller.scrollLeft > 1);
+      shell.classList.toggle('more-right', scroller.scrollLeft + scroller.clientWidth < scroller.scrollWidth - 1);
+    };
+    scroller.addEventListener('scroll', update, { passive: true });
+    if ('ResizeObserver' in window) {
+      const ro = new ResizeObserver(update);
+      ro.observe(scroller);
+      ro.observe(table);
+    }
+    update();
+  });
+}
+
 document.querySelectorAll('[data-explorer]').forEach(initExplorer);
 initToc();
+initTables();

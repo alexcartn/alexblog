@@ -22,8 +22,6 @@ topic: "Performance"
 cover: ./featured-hex.jpg
 ---
 
-# FindYourWOD : Trouvez Votre WOD Idéal
-
 **FindYourWOD** est une application pensée pour les amateurs de fitness et de CrossFit. Avec une base de données de plus de 500 WODs (Workouts of the Day), elle vous aide à trouver l'entraînement parfait en fonction de vos besoins et de votre matériel disponible.
 
 ## Fonctionnalités principales

@@ -20,7 +20,7 @@
   --line: #e1dfd3;
   --line-2: #cfcdbe;
   --brand: #2f5d48;
-  --brand-2: #4a7862;
+  --brand-2: #437058;
   --brand-soft: #e2eee6;
   --on-brand: #faf9f0;
   --head: "EB Garamond", Georgia, "Times New Roman", serif;
@@ -89,13 +89,15 @@ main { min-height: 60vh; padding-bottom: 5rem; }
 .site-search-kbd { font: inherit; font-size: 0.7rem; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 0 0.35em; background: var(--bg); }
 
 @media (max-width: 52rem) {
+  :root { --header-h: 6rem; }
   .header-in { grid-template-columns: 1fr auto; grid-template-areas: "brand actions" "nav nav"; padding-top: 0.35rem; gap: 0 1rem; }
-  .nav { justify-content: space-between; overflow-x: auto; padding-bottom: 0.4rem; scrollbar-width: none; }
-  .nav a { padding: 0.4rem 0.42rem; font-size: 0.72rem; letter-spacing: 0.05em; }
-  .nav a[aria-current]::after { left: 0.42rem; right: 0.42rem; }
+  .nav { justify-content: space-between; overflow-x: auto; scrollbar-width: none; }
+  .nav a { padding: 0.8rem 0.42rem; font-size: 0.75rem; letter-spacing: 0.05em; }
+  .nav a[aria-current]::after { left: 0.42rem; right: 0.42rem; bottom: 0.45rem; }
   .nav::-webkit-scrollbar { display: none; }
   .site-search-label, .site-search-kbd { display: none; }
-  .site-search-btn { width: 2.4rem; padding: 0; justify-content: center; }
+  .icon-link { width: 2.75rem; height: 2.75rem; }
+  .site-search-btn { width: 2.75rem; height: 2.75rem; padding: 0; justify-content: center; }
 }
 
 /* ------------------------------------------------------------ pied de page */
@@ -166,7 +168,9 @@ main { min-height: 60vh; padding-bottom: 5rem; }
 .count { color: var(--muted); font-size: 0.9375rem; margin: 0; }
 .filters { display: none; gap: 0.9rem; margin-bottom: 1.25rem; }
 .js .filters { display: grid; }
-.f-search { position: relative; max-width: 24rem; }
+.f-top { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem; }
+.f-top .chip { min-height: 2.5rem; padding-inline: 1rem; }
+.f-search { position: relative; flex: 1 1 16rem; max-width: 24rem; }
 .f-search svg { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
 .f-search input {
   width: 100%; padding: 0.65rem 0.9rem 0.65rem 2.5rem; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface); outline-offset: 2px;
@@ -263,6 +267,18 @@ main { min-height: 60vh; padding-bottom: 5rem; }
 .prose th, .prose td { padding: 0.6rem 0.8rem; border: 1px solid var(--line); vertical-align: top; text-align: left; }
 .prose th { background: var(--surface-2); font-size: 0.8125rem; letter-spacing: 0.04em; }
 .prose tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--surface) 70%, transparent); }
+/* Tableaux enveloppés par site.js : sur écran étroit ils gardent une largeur lisible et défilent, avec un dégradé sur le bord qui cache des colonnes. */
+.table-shell { position: relative; margin: 1.5rem 0; }
+.table-scroll { overflow-x: auto; }
+.prose .table-scroll > table { display: table; width: max-content; max-width: max(100%, 40rem); margin: 0; }
+.table-shell::before, .table-shell::after { content: ""; position: absolute; top: 0; bottom: 0; width: 2rem; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+.table-shell::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+.table-shell::after { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+.table-shell.more-left::before, .table-shell.more-right::after { opacity: 1; }
+@media (max-width: 40rem) {
+  .prose table { font-size: 0.875rem; }
+  .prose th, .prose td { padding: 0.5rem 0.6rem; }
+}
 .prose code { background: var(--surface-2); padding: 0.1em 0.35em; border-radius: 5px; font-size: 0.9em; }
 .prose pre { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; overflow-x: auto; line-height: 1.5; font-size: 0.9rem; }
 .prose pre code { background: none; padding: 0; }

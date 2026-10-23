@@ -13,8 +13,6 @@ topic: "Santé"
 cover: ./sidebar-featured.png
 ---
 
-# Le piège de la chaise
-
 ## Sitting is the new smoking
 
 L'Organisation mondiale de la Santé (OMS) actualise régulièrement la liste des principaux facteurs de mortalité _évitables_. Depuis près de vingt ans, **l'inactivité physique** se maintient au **4ᵉ rang**, à l'origine d'environ **4 à 5 millions de décès chaque année** , davantage que la consommation nocive d'alcool.
