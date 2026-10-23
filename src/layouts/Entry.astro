@@ -1,5 +1,5 @@
 ---
-import { render } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import Base from './Base.astro';
 import Toc from '../components/Toc.astro';
@@ -18,10 +18,18 @@ const links = ('links' in entry.data && entry.data.links) || [];
 // Même règle que le composant Toc : au moins 3 titres de niveau 1 ou 2.
 const hasToc = headings.filter((h) => h.depth <= 2).length >= 3;
 
-const others = (await getAllItems()).filter((i) => i.url !== item.url && i.section === item.section);
-const related = others
+const siblings = (await getAllItems()).filter((i) => i.section === item.section);
+// Articles : voisins dans l'ordre chronologique pour la navigation de fin de page.
+const at = siblings.findIndex((i) => i.url === item.url);
+const newer = isPost && at > 0 ? siblings[at - 1] : undefined;
+const older = isPost && at >= 0 ? siblings[at + 1] : undefined;
+// « À lire aussi » ne répète pas ce que la navigation propose déjà.
+const shown = new Set([item.url, newer?.url, older?.url]);
+const related = siblings
+  .filter((i) => !shown.has(i.url))
   .sort((a, b) => Number(b.topic === item.topic) - Number(a.topic === item.topic) || b.date.valueOf() - a.date.valueOf())
   .slice(0, 2);
+const about = isPost ? await getEntry('pages', 'about') : undefined;
 
 const og = item.cover ? new URL((await getImage({ src: item.cover, width: 1200, format: 'jpg' })).src, Astro.site).href : undefined;
 const description = item.entry.data.description ?? item.subtitle ?? undefined;
@@ -80,12 +88,35 @@ const sectionHref = isPost ? '/blog/' : '/project/';
         </details>
       )}
       <div class="prose"><Content /></div>
+
+      {isPost && (
+        <div class="post-end">
+          <aside class="author" aria-label="L'auteur">
+            {about?.data.avatar && <Image src={about.data.avatar} width={112} height={112} format="webp" alt="" loading="lazy" decoding="async" />}
+            <div>
+              <p class="author-name">{SITE.author}</p>
+              <p class="author-bio">{SITE.bio}</p>
+              <p class="author-links">
+                <a href="/about/">À propos</a>
+                <a href={SITE.linkedin} target="_blank" rel="me noopener">LinkedIn</a>
+                <a href="/index.xml">RSS</a>
+              </p>
+            </div>
+          </aside>
+          {(older || newer) && (
+            <nav class="post-nav" aria-label="Autres articles">
+              {older && <a class="prev" rel="prev" href={older.url}><span class="post-nav-label">← Article plus ancien</span><span class="post-nav-title">{older.title}</span></a>}
+              {newer && <a class="next" rel="next" href={newer.url}><span class="post-nav-label">Article plus récent →</span><span class="post-nav-title">{newer.title}</span></a>}
+            </nav>
+          )}
+        </div>
+      )}
     </div>
 
     {hasToc && <aside class="toc-side" aria-label="Sommaire de l'article"><Toc headings={headings} /></aside>}
 
     {related.length > 0 && (
-      <section class="related" aria-labelledby="related-title">
+      <section class={`related${isPost ? ' after-end' : ''}`} aria-labelledby="related-title">
         <h2 id="related-title">{isPost ? 'À lire aussi' : 'Autres projets'}</h2>
         <ul class="items">{related.map((r) => <Item item={r} />)}</ul>
       </section>

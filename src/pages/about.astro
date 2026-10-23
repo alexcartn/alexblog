@@ -19,7 +19,12 @@ const d = page.data;
       <h2>{d.author}</h2>
       <p class="role">{d.role}</p>
       <a class="btn ghost" href={SITE.linkedin} target="_blank" rel="me noopener"><Icon name="linkedin" size={18} /> LinkedIn</a>
-      {d.interests.length > 0 && <div class="chips" aria-label="Centres d'intérêt">{d.interests.map((i) => <span class="chip">{i}</span>)}</div>}
+      {d.interests.length > 0 && (
+        <div class="interests">
+          <p class="interests-label">Centres d'intérêt</p>
+          <p>{d.interests.join(' · ')}</p>
+        </div>
+      )}
     </aside>
   </div>
 </Base>

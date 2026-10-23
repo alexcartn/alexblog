@@ -4,6 +4,7 @@ export const SITE = {
   description:
     "Blog technique et coaching par Alexandre Carton, ingénieur chef de projet. Découvrez des articles sur le CrossFit, la data science, le management et l'innovation industrielle.",
   author: 'Alexandre Carton',
+  bio: "Ingénieur mécanique devenu chef de projet. J'écris sur l'entraînement, la santé et la data.",
   linkedin: 'https://www.linkedin.com/in/alexandre-carton-741146175/',
   logo: '/img/logosite.png',
   locale: 'fr_FR',

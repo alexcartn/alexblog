@@ -16,22 +16,53 @@ Ingénieur mécanique devenu **Chef de Projet**, je transforme des défis techni
 
 ---
 
-## Expérience Professionnelle 
-**2024** : **Ingénieur Chef de Projet**, **YANMAR CONSTRUCTION EQUIPMENT EUROPE**  
-*Pôle technologies avancées*  
-- Pilotage d'équipes multidisciplinaires (mécanique, hydraulique, électronique et software) 
-- Coordination de projets internationaux
-- Mise en place d’une approche agile
+## Expérience Professionnelle
 
-**2019 – 2024** : **Ingénieur Chargé d’Études**, **YANMAR CONSTRUCTION EQUIPMENT EUROPE**  
-- Développement de [la mini‑pelle électrique SV17e](https://www.yanmar.com/fr/construction/products/mini_excavator/sv17e/), première pelle zéro‑émission du groupe Yanmar 
-- Accompagnement de l’industrialisation jusqu’à la production série
-
-**2018** : **Ingénieur R&D**, **POCLAIN HYDRAULICS**  
-- Développement d’une nouvelle gamme de produits hydrauliques  
-
-**2017** :  **Ingénieur Bureau d'Etudes**, **HAFFNER ENERGY**  
-- Conception et fabrication de prototypes pour les énergies renouvelables
+<ol class="timeline">
+  <li>
+    <p class="tl-when">2024</p>
+    <div class="tl-what">
+      <h3>Ingénieur Chef de Projet</h3>
+      <p class="tl-org"><strong>Yanmar Construction Equipment Europe</strong><span>Pôle technologies avancées</span></p>
+      <ul>
+        <li>Pilotage d'équipes multidisciplinaires (mécanique, hydraulique, électronique et software)</li>
+        <li>Coordination de projets internationaux</li>
+        <li>Mise en place d’une approche agile</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <p class="tl-when">2019 – 2024</p>
+    <div class="tl-what">
+      <h3>Ingénieur Chargé d’Études</h3>
+      <p class="tl-org"><strong>Yanmar Construction Equipment Europe</strong></p>
+      <ul>
+        <li>Développement de <a href="https://www.yanmar.com/fr/construction/products/mini_excavator/sv17e/">la mini‑pelle électrique SV17e</a>, première pelle zéro‑émission du groupe Yanmar</li>
+        <li>Accompagnement de l’industrialisation jusqu’à la production série</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <p class="tl-when">2018</p>
+    <div class="tl-what">
+      <h3>Ingénieur R&amp;D</h3>
+      <p class="tl-org"><strong>Poclain Hydraulics</strong></p>
+      <ul>
+        <li>Développement d’une nouvelle gamme de produits hydrauliques</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <p class="tl-when">2017</p>
+    <div class="tl-what">
+      <h3>Ingénieur Bureau d'Etudes</h3>
+      <p class="tl-org"><strong>Haffner Energy</strong></p>
+      <ul>
+        <li>Conception et fabrication de prototypes pour les énergies renouvelables</li>
+      </ul>
+    </div>
+  </li>
+</ol>
 
 ---
 

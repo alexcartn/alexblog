@@ -44,6 +44,12 @@ deployed on Netlify.
   - `<div class="wgt wgt-pauses" data-intervalle="60" data-pause="2"></div>`
 
   Their code is in `src/scripts/widgets/` and their style in `src/styles/widgets.css`.
+- The About page career is an HTML `<ol class="timeline">` in
+  `src/content/pages/about/index.md`. To add a position, copy an `<li>` (period,
+  `<h3>` role, organisation, bullet list) and keep the block free of blank lines,
+  otherwise Markdown breaks it.
+- Articles end with an author block (text in `src/lib/site.ts`, `bio`) and links
+  to the older and newer articles; "À lire aussi" lists the other articles.
 - The Ctrl K search reads `/search-index.json`, generated from the content at build time.
 
 ## Code style
