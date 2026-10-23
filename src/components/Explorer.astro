@@ -20,6 +20,8 @@ const kinds = ['Article', 'Projet'].filter((k) => items.some((i) => i.kind === k
 const hasLive = items.some((i) => i.interactive);
 const plural = (n: number) => `${n} contenu${n > 1 ? 's' : ''}`;
 const listed = items.filter((i) => i.url !== spotlight).length;
+// Rang d'apparition dans la liste visible, pour l'entrée en décalé.
+const rank = new Map(items.filter((i) => i.url !== spotlight).map((it, n) => [it.url, n]));
 ---
 <section class="explorer wrap" id={id} data-explorer>
   <div class="explorer-head">
@@ -51,7 +53,7 @@ const listed = items.filter((i) => i.url !== spotlight).length;
   </div>
 
   <ul class="items">
-    {items.map((it, i) => <Item item={it} eager={i < 3} spotlight={it.url === spotlight} />)}
+    {items.map((it, i) => <Item item={it} eager={i < 3} spotlight={it.url === spotlight} rank={rank.get(it.url)} />)}
   </ul>
   <p class="empty-state" data-empty hidden>
     Aucun contenu ne correspond à ces filtres. <button type="button" class="chip" data-f-reset>Tout afficher</button>

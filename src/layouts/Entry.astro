@@ -94,13 +94,5 @@ const sectionHref = isPost ? '/blog/' : '/project/';
 </Base>
 
 <script>
-  // Chaque widget n'est chargé que s'il est présent dans la page.
-  const widgets = {
-    '.wgt-wprime': () => import('../scripts/widgets/wprime.js'),
-    '.wgt-respiration': () => import('../scripts/widgets/respiration.js'),
-    '.wgt-pauses': () => import('../scripts/widgets/pauses.js'),
-  };
-  for (const [selector, load] of Object.entries(widgets)) {
-    if (document.querySelector(selector)) load();
-  }
+  import '../scripts/widgets/index.js';
 </script>

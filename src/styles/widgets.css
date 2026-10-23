@@ -37,7 +37,7 @@
 }
 .wgt-name { font-weight: 700; letter-spacing: 0.02em; }
 .wgt-hint { color: var(--wg-muted); margin-left: auto; }
-.wgt-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--wg-accent); flex: none; }
+.wgt-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--live, var(--wg-accent)); flex: none; }
 .wgt-body { display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; }
 .wgt-chart { padding: 0.9rem 0.9rem 0.5rem; min-width: 0; position: relative; }
 .wgt-panel {

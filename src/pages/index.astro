@@ -5,14 +5,16 @@ import Base from '../layouts/Base.astro';
 import Explorer from '../components/Explorer.astro';
 import Icon from '../components/Icon.astro';
 import profile from '../assets/profile.png';
-import { SITE } from '../lib/site';
 import { formatDate, getAllItems } from '../lib/content';
+import '../styles/widgets.css';
 
 const home = await getEntry('pages', 'home');
 if (!home) throw new Error('src/content/pages/home.md est introuvable');
 const { Content } = await render(home);
 const items = await getAllItems();
 const featured = items.find((i) => i.featured) ?? items.find((i) => i.section === 'blog');
+// Si l'article à la une contient un widget, c'est lui qui sert de visuel : on l'essaie sans quitter l'accueil.
+const widget = featured?.entry.body?.match(/<div class="wgt wgt-[a-z]+"[^>]*>[\s\S]*?<\/div>/)?.[0];
 ---
 <Base>
   <section class="wrap hero">
@@ -31,12 +33,9 @@ const featured = items.find((i) => i.featured) ?? items.find((i) => i.section ==
   </section>
 
   {featured && (
-    <section class="wrap" aria-labelledby="featured-title">
+    <section class="wrap featured" aria-labelledby="featured-title">
       <p class="eyebrow" id="featured-title">À la une</p>
-      <article class="featured">
-        <div class="featured-img">
-          {featured.cover && <Image src={featured.cover} width={760} height={560} format="webp" quality={80} alt="" loading="lazy" decoding="async" />}
-        </div>
+      <article class="featured-in">
         <div class="featured-body">
           <p class="meta">
             <span class="item-kind">{featured.kind}</span>
@@ -46,14 +45,23 @@ const featured = items.find((i) => i.featured) ?? items.find((i) => i.section ==
           </p>
           <h2><a href={featured.url}>{featured.title}</a></h2>
           {featured.subtitle && <p>{featured.subtitle}</p>}
-          <p>
-            {featured.interactive && <span class="badge">Interactif</span>}
-          </p>
+          {featured.interactive && <span class="badge">Interactif</span>}
           <span class="go">Lire l'article <Icon name="arrow-right" size={16} /></span>
         </div>
+        {widget
+          ? <div class="featured-live" set:html={widget} />
+          : featured.cover && (
+            <figure class="featured-img">
+              <Image src={featured.cover} width={760} format="webp" quality={80} alt="" loading="lazy" decoding="async" />
+            </figure>
+          )}
       </article>
     </section>
   )}
 
   <Explorer items={items} spotlight={featured?.url} />
 </Base>
+
+<script>
+  import '../scripts/widgets/index.js';
+</script>

@@ -31,8 +31,10 @@ deployed on Netlify.
   `topic` is one of Performance, Santé, Data, Management or Divers (it drives the
   filters on the home page). Optional: `subtitle`, `excerpt`, `description`,
   `categories`, `tags`, `cover` (image next to the Markdown file, used for
-  thumbnails and sharing), `featured: true` (the "À la une" card on the home
-  page, one article at a time), `links` (buttons on project pages), `draft`.
+  thumbnails and sharing), `featured: true` (the "À la une" block on the home
+  page, one article at a time; if the article contains a widget, the first one
+  is shown live there instead of the cover), `links` (buttons on project pages),
+  `draft`.
 - Put images in the same folder as the Markdown file, in lowercase, and reference
   them with a relative path (`![](graph.png)`). Names are case sensitive on Netlify.
 - Interactive widgets are plain HTML placeholders in the Markdown, loaded only on

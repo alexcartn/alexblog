@@ -45,6 +45,7 @@ function initExplorer(root) {
     if (count) count.textContent = shown === total ? plural(shown) : `${shown} sur ${total}`;
     if (empty) empty.hidden = shown !== 0;
     if (updateUrl) {
+      root.dataset.touched = ''; // fin de l'entrée en décalé : filtrer ne la rejoue pas
       const p = new URLSearchParams();
       if (state.q) p.set('q', state.q);
       if (state.kind) p.set('type', state.kind);
